@@ -52,11 +52,11 @@
 **cd /etc/nginx/sites-enabled/** *файл конфигурации nginx*
 
 **sudo snap install --classic certbot** *установка пакета certbot*
-# При успешной установке пакета в терминале выведется:
-# certbot 2.3.0 from Certbot Project (certbot-eff✓) installed
+*При успешной установке пакета в терминале выведется:
+certbot 2.3.0 from Certbot Project (certbot-eff✓) installed*
 
-# Создание ссылки на certbot в системной директории,
-# чтобы у пользователя с правами администратора был доступ к этому пакету.
+*Создание ссылки на certbot в системной директории,
+чтобы у пользователя с правами администратора был доступ к этому пакету.*
 **sudo ln -s /snap/bin/certbot /usr/bin/certbot**
 
 **sudo certbot certificates** *узнать актуальный статус сертификата*
