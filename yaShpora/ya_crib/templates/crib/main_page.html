@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}
+  Спринты
+{% endblock %}
+{% block content %}
+  {% for crib in cribs %}
+    <article class="mb-5">
+      Спринт {{crib.lesson.sprint_number}} {{crib.lesson.sprint_name}}, {{crib.lesson.topic}}, Урок {{crib.lesson.lesson_number}} <br>
+      <a href="{{ crib.crib.url }}" class="card-link">{{ crib.title }}</a>
+    </article>
+  {% endfor %}
+  {% include "includes/paginator.html" %}
+{% endblock %}
