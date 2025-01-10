@@ -25,6 +25,3 @@ htmlcov/
 .coverage.*
 coverage.xml
 *.cover
-
-
-# mop_organizer/
