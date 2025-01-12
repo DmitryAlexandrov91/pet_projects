@@ -11,8 +11,8 @@ from tkinter import filedialog
 from tkinter import ttk
 from tkinter import *
 
-from calculator import KM_open
-from calculator import KV_open
+from Dev.pet_projects.mop_organizer.calculator import KM_open
+from Dev.pet_projects.mop_organizer.calculator import KV_open
 
 
 # Две функции для копирования из буфера обмена при русской раскладке клавиатуры
