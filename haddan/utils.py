@@ -1,14 +1,17 @@
 """Тестирование api haddan.ru."""
-import requests
-import xml.etree.ElementTree as ET
+import requests_cache
+from bs4 import BeautifulSoup
 
 
 API_URL = 'https://haddan.ru/inner/api.php'
+LIBRIARY_URL = 'https://www.haddan.ru/thing.php?id='
+
+session = requests_cache.CachedSession()
 
 
 def xml_parser(response):
     """Парсер для обработки методом find."""
-    root = ET.fromstring(response.text)
+    root = BeautifulSoup(response.text, features='xml')
     return root
 
 
@@ -29,10 +32,16 @@ def get_wear_info_url(tid):
     return url
 
 
+def get_item_search_url(name):
+    """Формирует url на инфо предмета по имени."""
+    url = f'?op=thing&name={name}&fields=all'
+    return url
+
+
 def get_user_bool_online(username):
     """Возвращает True если пользователь в сети."""
     url = API_URL + get_username_online_url(username)
-    response = requests.get(url)
+    response = session.get(url)
     try:
         online_value = xml_parser(response).find('online').text
         if online_value == '1':
@@ -55,16 +64,19 @@ def get_user_online(username):
 def get_user_wear(username):
     """Сохраняет в файл весь надетый шмот юзера."""
     url = API_URL + get_user_wear_url(username)
-    response = requests.get(url)
+    response = session.get(url)
     root = xml_parser(response)
     data_dict = {}
-    for place in root.findall('.//place'):
-        data_dict[place.attrib['id']] = {
-            'thingid': place.find('thingid').text,
-            'thingtypeid': place.find('thingtypeid').text,
-            'durc': place.find('durc').text,
+    place = root.find_all('place')
+    for place in root.find_all('place'):
+        data_dict[place['id']] = {
+            'S/N': place.find('thingid').text,
+            'артикул': place.find('thingtypeid').text,
+            'прочность': place.find('durc').text,
+            'ссылка': LIBRIARY_URL + place.find('thingid').text
+
         }
-    with open(f'wear/user_wear/{username}_wear.xml', 'w') as f:
+    with open(f'wear/user_wear/{username}_wear.xml', 'w', encoding='utf-8') as f:
         for key, value in data_dict.items():
             f.write(f"{key}: {value}\n")
 
@@ -72,30 +84,26 @@ def get_user_wear(username):
 def get_wear_info(tid):
     """Сохраняет в xml файл полную инфо о вещи по её SN."""
     url = API_URL + get_wear_info_url(tid)
-    root = xml_parser(requests.get(url))
-    bonuses = root.find('BonusReqs')
+    root = xml_parser(session.get(url))
     keys = ('typefull', 'thingid', 'thingtypeid', 'name')
     wear_dict = {key: root.find(key).text for key in keys}
-    for req in bonuses.findall('./Requirments/Req'):
-        wear_dict[f'{req.attrib["name"]}'] = req.text
-    for req in bonuses.findall('./Bonuses/Bon'):
-        wear_dict[f'{req.attrib["name"]}'] = req.text
-    try:
-        with open(
-            f'wear/wear_id/{wear_dict["name"]}_SN={wear_dict["thingid"]}.xml',
-            'w',
-            encoding='utf-8'
-        ) as f:
-            for key, value in wear_dict.items():
-                f.write(f"{key}: {value}\n")
-    except Exception:
-        with open(
-            f'wear/wear_id/{wear_dict["name"]}_SN_недоступен.xml',
-            'w',
-            encoding='utf-8'
-        ) as f:
-            for key, value in wear_dict.items():
-                f.write(f"{key}: {value}\n")
+    for bon in root.BonusReqs.Bonuses:
+        wear_dict[bon['name']] = bon.text
+    with open(
+        f'wear/wear_id/{wear_dict["name"]}_SN={wear_dict["thingid"]}.xml',
+        'w',
+        encoding='utf-8'
+    ) as f:
+        for key, value in wear_dict.items():
+            f.write(f"{key}: {value}\n")
 
 
-get_wear_info('15575183')
+def item_search(name):
+    url_name = API_URL + get_item_search_url(name)
+    response = session.get(url_name)
+    soup = xml_parser(response)
+    print(soup)
+
+
+if __name__ == '__main__':
+    get_user_wear('Хазарская принцесса')
