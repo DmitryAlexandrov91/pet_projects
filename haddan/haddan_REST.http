@@ -6,4 +6,7 @@ GET https://haddan.ru/inner/api.php?op=user&name=SwordS&fields=wear
 GET https://haddan.ru/inner/api.php?op=thing&tid=634362921&fields=all
 
 ###
-GET http://haddan.ru/thing.php?type=8473 
+GET http://haddan.ru/inner/api.php
+
+###
+GET https://haddan.ru/inner/action_shop.php

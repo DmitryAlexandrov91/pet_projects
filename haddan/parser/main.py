@@ -1,4 +1,5 @@
 """Тестирование api haddan.ru."""
+from config import configure_argument_parser
 import requests_cache
 from bs4 import BeautifulSoup
 
@@ -76,7 +77,7 @@ def get_user_wear(username):
             'ссылка': LIBRIARY_URL + place.find('thingid').text
 
         }
-    with open(f'wear/user_wear/{username}_wear.xml', 'w', encoding='utf-8') as f:
+    with open(f'wear/user_wear/{username}_wear.txt', 'w', encoding='utf-8') as f:
         for key, value in data_dict.items():
             f.write(f"{key}: {value}\n")
 
@@ -105,5 +106,21 @@ def item_search(name):
     print(soup)
 
 
+MODE_TO_FUNCTION = {
+    'user-wear': get_user_wear,
+    'item-info': get_wear_info,
+}
+
+
+def main():
+    arg_parser = configure_argument_parser(MODE_TO_FUNCTION.keys())
+    args = arg_parser.parse_args()
+    session = requests_cache.CachedSession()
+    if args.clear_cache:
+        session.cache.clear()
+    parser_mode = args.mode
+    MODE_TO_FUNCTION[parser_mode](args.input)
+
+
 if __name__ == '__main__':
-    get_user_wear('Хазарская принцесса')
+    main()
