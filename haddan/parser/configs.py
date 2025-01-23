@@ -4,7 +4,8 @@ from logging.handlers import RotatingFileHandler
 
 from constants import (
     DATETIME_FORMAT, LOG_FORMAT, LOGS_DIR_PATH, LOG_FILE_PATH,
-    MAX_LOG_SIZE, MAX_LOGS_COUNT
+    MAX_LOG_SIZE, MAX_LOGS_COUNT, OUTPUT_FILE, OUTPUT_PRETTY,
+    OUTPUT_TELEGRAM_FILE, OUTPUT_TELEGRAM_TEXT
 )
 
 
@@ -27,10 +28,12 @@ def configure_argument_parser(available_modes):
         help='Очистка кеша'
     )
     parser.add_argument(
-        '-t',
-        '--telegram-send',
-        action='store_true',
-        help='Отправка результата себе в тележку.'
+        '-o',
+        '--output',
+        choices=(OUTPUT_PRETTY, OUTPUT_FILE,
+                 OUTPUT_TELEGRAM_FILE,
+                 OUTPUT_TELEGRAM_TEXT),
+        help='Дополнительные способы вывода данных'
     )
     return parser
 

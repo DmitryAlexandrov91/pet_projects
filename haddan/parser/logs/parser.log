@@ -1,2 +1,564 @@
 "2025-01-23_10-41-17 - [INFO] - Парсер запущен!"
 "2025-01-23_10-41-17 - [INFO] - Парсер завершил работу."
+"2025-01-23_11-01-02 - [INFO] - Парсер запущен!"
+"2025-01-23_11-01-02 - [INFO] - Файл с результатами был сохранён: C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\results\wear_2025-01-23_11-01-02.csv"
+"2025-01-23_11-01-02 - [INFO] - Парсер завершил работу."
+"2025-01-23_11-02-13 - [INFO] - Парсер запущен!"
+"2025-01-23_11-02-13 - [INFO] - Файл с результатами был сохранён: C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\results\wear_2025-01-23_11-02-13.csv"
+"2025-01-23_11-02-13 - [INFO] - Парсер завершил работу."
+"2025-01-23_11-04-26 - [INFO] - Парсер запущен!"
+"2025-01-23_11-04-26 - [ERROR] - 
+Возникло исключение name 'file_path' is not defined
+"
+Traceback (most recent call last):
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 123, in main
+    control_output(results, args)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\outputs.py", line 21, in control_output
+    handler(*args)
+    ~~~~~~~^^^^^^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\outputs.py", line 51, in file_output
+    logging.info(f'Файл с результатами был сохранён: {file_path}')
+                                                      ^^^^^^^^^
+NameError: name 'file_path' is not defined
+Stack (most recent call last):
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 133, in <module>
+    main()
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 125, in main
+    logging.exception(
+"2025-01-23_11-04-26 - [INFO] - Парсер завершил работу."
+"2025-01-23_11-04-49 - [INFO] - Парсер запущен!"
+"2025-01-23_11-04-49 - [INFO] - Файл с результатами был сохранён."
+"2025-01-23_11-04-49 - [INFO] - Парсер завершил работу."
+"2025-01-23_11-05-35 - [INFO] - Парсер запущен!"
+"2025-01-23_11-05-35 - [INFO] - Файл с результатами был сохранён."
+"2025-01-23_11-05-35 - [INFO] - Парсер завершил работу."
+"2025-01-23_11-06-22 - [INFO] - Парсер запущен!"
+"2025-01-23_11-06-22 - [INFO] - Файл с результатами был сохранён."
+"2025-01-23_11-06-22 - [INFO] - Парсер завершил работу."
+"2025-01-23_11-06-38 - [INFO] - Парсер запущен!"
+"2025-01-23_11-06-38 - [INFO] - Файл с результатами был сохранён."
+"2025-01-23_11-06-38 - [INFO] - Парсер завершил работу."
+"2025-01-23_11-07-03 - [INFO] - Парсер запущен!"
+"2025-01-23_11-07-03 - [INFO] - Файл с результатами был сохранён."
+"2025-01-23_11-07-03 - [INFO] - Парсер завершил работу."
+"2025-01-23_11-07-51 - [INFO] - Парсер запущен!"
+"2025-01-23_11-07-51 - [INFO] - Файл с результатами был сохранён."
+"2025-01-23_11-07-51 - [INFO] - Парсер завершил работу."
+"2025-01-23_11-09-02 - [INFO] - Парсер запущен!"
+"2025-01-23_11-09-02 - [ERROR] - 
+Возникло исключение 0
+"
+Traceback (most recent call last):
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 123, in main
+    control_output(results, args)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\outputs.py", line 21, in control_output
+    handler(*args)
+    ~~~~~~~^^^^^^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\outputs.py", line 31, in pretty_output
+    table.field_names = results[0]
+                        ~~~~~~~^^^
+KeyError: 0
+Stack (most recent call last):
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 133, in <module>
+    main()
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 125, in main
+    logging.exception(
+"2025-01-23_11-09-02 - [INFO] - Парсер завершил работу."
+"2025-01-23_11-09-57 - [INFO] - Парсер запущен!"
+"2025-01-23_11-09-57 - [ERROR] - 
+Возникло исключение Row has incorrect number of values, (actual) 4!=28 (expected)
+"
+Traceback (most recent call last):
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 123, in main
+    control_output(results, args)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\outputs.py", line 21, in control_output
+    handler(*args)
+    ~~~~~~~^^^^^^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\outputs.py", line 33, in pretty_output
+    table.add_rows(results.values())
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\prettytable\prettytable.py", line 1570, in add_rows
+    self.add_row(row)
+    ~~~~~~~~~~~~^^^^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\prettytable\prettytable.py", line 1585, in add_row
+    raise ValueError(msg)
+ValueError: Row has incorrect number of values, (actual) 4!=28 (expected)
+Stack (most recent call last):
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 133, in <module>
+    main()
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 125, in main
+    logging.exception(
+"2025-01-23_11-09-57 - [INFO] - Парсер завершил работу."
+"2025-01-23_11-10-21 - [INFO] - Парсер запущен!"
+"2025-01-23_11-10-21 - [ERROR] - 
+Возникло исключение Row has incorrect number of values, (actual) 4!=28 (expected)
+"
+Traceback (most recent call last):
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 123, in main
+    control_output(results, args)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\outputs.py", line 21, in control_output
+    handler(*args)
+    ~~~~~~~^^^^^^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\outputs.py", line 35, in pretty_output
+    table.add_rows(results.values())
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\prettytable\prettytable.py", line 1570, in add_rows
+    self.add_row(row)
+    ~~~~~~~~~~~~^^^^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\prettytable\prettytable.py", line 1585, in add_row
+    raise ValueError(msg)
+ValueError: Row has incorrect number of values, (actual) 4!=28 (expected)
+Stack (most recent call last):
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 133, in <module>
+    main()
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 125, in main
+    logging.exception(
+"2025-01-23_11-10-21 - [INFO] - Парсер завершил работу."
+"2025-01-23_11-11-14 - [INFO] - Парсер запущен!"
+"2025-01-23_11-11-14 - [ERROR] - 
+Возникло исключение 0
+"
+Traceback (most recent call last):
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 123, in main
+    control_output(results, args)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\outputs.py", line 21, in control_output
+    handler(*args)
+    ~~~~~~~^^^^^^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\outputs.py", line 32, in pretty_output
+    table.field_names = results[0]
+                        ~~~~~~~^^^
+KeyError: 0
+Stack (most recent call last):
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 133, in <module>
+    main()
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 125, in main
+    logging.exception(
+"2025-01-23_11-11-14 - [INFO] - Парсер завершил работу."
+"2025-01-23_11-12-20 - [INFO] - Парсер запущен!"
+"2025-01-23_11-12-20 - [ERROR] - 
+Возникло исключение slice(1, None, None)
+"
+Traceback (most recent call last):
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 123, in main
+    control_output(results, args)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\outputs.py", line 21, in control_output
+    handler(*args)
+    ~~~~~~~^^^^^^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\outputs.py", line 34, in pretty_output
+    table.add_rows(results[1:])
+                   ~~~~~~~^^^^
+KeyError: slice(1, None, None)
+Stack (most recent call last):
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 133, in <module>
+    main()
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 125, in main
+    logging.exception(
+"2025-01-23_11-12-20 - [INFO] - Парсер завершил работу."
+"2025-01-23_11-13-09 - [INFO] - Парсер запущен!"
+"2025-01-23_11-13-09 - [ERROR] - 
+Возникло исключение Row has incorrect number of values, (actual) 4!=28 (expected)
+"
+Traceback (most recent call last):
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 123, in main
+    control_output(results, args)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\outputs.py", line 21, in control_output
+    handler(*args)
+    ~~~~~~~^^^^^^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\outputs.py", line 33, in pretty_output
+    table.add_rows([key for key in results.values()])
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\prettytable\prettytable.py", line 1570, in add_rows
+    self.add_row(row)
+    ~~~~~~~~~~~~^^^^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\prettytable\prettytable.py", line 1585, in add_row
+    raise ValueError(msg)
+ValueError: Row has incorrect number of values, (actual) 4!=28 (expected)
+Stack (most recent call last):
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 133, in <module>
+    main()
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 125, in main
+    logging.exception(
+"2025-01-23_11-13-09 - [INFO] - Парсер завершил работу."
+"2025-01-23_11-13-43 - [INFO] - Парсер запущен!"
+"2025-01-23_11-13-43 - [ERROR] - 
+Возникло исключение Row has incorrect number of values, (actual) 4!=28 (expected)
+"
+Traceback (most recent call last):
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 123, in main
+    control_output(results, args)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\outputs.py", line 21, in control_output
+    handler(*args)
+    ~~~~~~~^^^^^^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\outputs.py", line 34, in pretty_output
+    table.add_rows([key for key in results.values()])
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\prettytable\prettytable.py", line 1570, in add_rows
+    self.add_row(row)
+    ~~~~~~~~~~~~^^^^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\prettytable\prettytable.py", line 1585, in add_row
+    raise ValueError(msg)
+ValueError: Row has incorrect number of values, (actual) 4!=28 (expected)
+Stack (most recent call last):
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 133, in <module>
+    main()
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 125, in main
+    logging.exception(
+"2025-01-23_11-13-43 - [INFO] - Парсер завершил работу."
+"2025-01-23_11-14-03 - [INFO] - Парсер запущен!"
+"2025-01-23_11-14-03 - [ERROR] - 
+Возникло исключение Row has incorrect number of values, (actual) 4!=28 (expected)
+"
+Traceback (most recent call last):
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 123, in main
+    control_output(results, args)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\outputs.py", line 21, in control_output
+    handler(*args)
+    ~~~~~~~^^^^^^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\outputs.py", line 34, in pretty_output
+    table.add_rows([key for key in results.values()])
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\prettytable\prettytable.py", line 1570, in add_rows
+    self.add_row(row)
+    ~~~~~~~~~~~~^^^^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\prettytable\prettytable.py", line 1585, in add_row
+    raise ValueError(msg)
+ValueError: Row has incorrect number of values, (actual) 4!=28 (expected)
+Stack (most recent call last):
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 133, in <module>
+    main()
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 125, in main
+    logging.exception(
+"2025-01-23_11-14-03 - [INFO] - Парсер завершил работу."
+"2025-01-23_11-17-32 - [INFO] - Парсер запущен!"
+"2025-01-23_11-17-32 - [ERROR] - 
+Возникло исключение Row has incorrect number of values, (actual) 4!=28 (expected)
+"
+Traceback (most recent call last):
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 123, in main
+    control_output(results, args)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\outputs.py", line 21, in control_output
+    handler(*args)
+    ~~~~~~~^^^^^^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\outputs.py", line 35, in pretty_output
+    table.add_rows(values_list)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\prettytable\prettytable.py", line 1570, in add_rows
+    self.add_row(row)
+    ~~~~~~~~~~~~^^^^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\prettytable\prettytable.py", line 1585, in add_row
+    raise ValueError(msg)
+ValueError: Row has incorrect number of values, (actual) 4!=28 (expected)
+Stack (most recent call last):
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 133, in <module>
+    main()
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 125, in main
+    logging.exception(
+"2025-01-23_11-17-32 - [INFO] - Парсер завершил работу."
+"2025-01-23_11-18-57 - [INFO] - Парсер запущен!"
+"2025-01-23_11-18-57 - [ERROR] - 
+Возникло исключение Row has incorrect number of values, (actual) 4!=28 (expected)
+"
+Traceback (most recent call last):
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 123, in main
+    control_output(results, args)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\outputs.py", line 21, in control_output
+    handler(*args)
+    ~~~~~~~^^^^^^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\outputs.py", line 37, in pretty_output
+    table.add_rows(values)
+    ~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\prettytable\prettytable.py", line 1570, in add_rows
+    self.add_row(row)
+    ~~~~~~~~~~~~^^^^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\prettytable\prettytable.py", line 1585, in add_row
+    raise ValueError(msg)
+ValueError: Row has incorrect number of values, (actual) 4!=28 (expected)
+Stack (most recent call last):
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 133, in <module>
+    main()
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 125, in main
+    logging.exception(
+"2025-01-23_11-18-57 - [INFO] - Парсер завершил работу."
+"2025-01-23_11-19-33 - [INFO] - Парсер запущен!"
+"2025-01-23_11-19-33 - [INFO] - Парсер завершил работу."
+"2025-01-23_11-20-56 - [INFO] - Парсер запущен!"
+"2025-01-23_11-20-56 - [INFO] - Парсер завершил работу."
+"2025-01-23_11-21-11 - [INFO] - Парсер запущен!"
+"2025-01-23_11-21-11 - [INFO] - Парсер завершил работу."
+"2025-01-23_11-21-52 - [INFO] - Парсер запущен!"
+"2025-01-23_11-21-52 - [INFO] - Парсер завершил работу."
+"2025-01-23_11-22-59 - [INFO] - Парсер запущен!"
+"2025-01-23_11-22-59 - [INFO] - Парсер завершил работу."
+"2025-01-23_11-23-20 - [INFO] - Парсер запущен!"
+"2025-01-23_11-23-20 - [INFO] - Парсер завершил работу."
+"2025-01-23_11-23-34 - [INFO] - Парсер запущен!"
+"2025-01-23_11-23-34 - [INFO] - Парсер завершил работу."
+"2025-01-23_11-24-02 - [INFO] - Парсер запущен!"
+"2025-01-23_11-24-02 - [INFO] - Парсер завершил работу."
+"2025-01-23_11-24-11 - [INFO] - Парсер запущен!"
+"2025-01-23_11-24-11 - [INFO] - Парсер завершил работу."
+"2025-01-23_11-24-25 - [INFO] - Парсер запущен!"
+"2025-01-23_11-24-25 - [INFO] - Парсер завершил работу."
+"2025-01-23_11-24-44 - [INFO] - Парсер запущен!"
+"2025-01-23_11-24-44 - [ERROR] - 
+Возникло исключение Row has incorrect number of values, (actual) 4!=28 (expected)
+"
+Traceback (most recent call last):
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 123, in main
+    control_output(results, args)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\outputs.py", line 21, in control_output
+    handler(*args)
+    ~~~~~~~^^^^^^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\outputs.py", line 34, in pretty_output
+    table.add_rows(values)
+    ~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\prettytable\prettytable.py", line 1570, in add_rows
+    self.add_row(row)
+    ~~~~~~~~~~~~^^^^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\prettytable\prettytable.py", line 1585, in add_row
+    raise ValueError(msg)
+ValueError: Row has incorrect number of values, (actual) 4!=28 (expected)
+Stack (most recent call last):
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 133, in <module>
+    main()
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 125, in main
+    logging.exception(
+"2025-01-23_11-24-44 - [INFO] - Парсер завершил работу."
+"2025-01-23_11-25-35 - [INFO] - Парсер запущен!"
+"2025-01-23_11-25-35 - [ERROR] - 
+Возникло исключение Alignment 10 is invalid, use l, c or r
+"
+Traceback (most recent call last):
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\prettytable\prettytable.py", line 606, in _validate_align
+    assert val in ["l", "c", "r"]
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 123, in main
+    control_output(results, args)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\outputs.py", line 21, in control_output
+    handler(*args)
+    ~~~~~~~^^^^^^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\outputs.py", line 32, in pretty_output
+    table.align = '10'
+    ^^^^^^^^^^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\prettytable\prettytable.py", line 801, in align
+    self._validate_align(val)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\prettytable\prettytable.py", line 609, in _validate_align
+    raise ValueError(msg)
+ValueError: Alignment 10 is invalid, use l, c or r
+Stack (most recent call last):
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 133, in <module>
+    main()
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 125, in main
+    logging.exception(
+"2025-01-23_11-25-35 - [INFO] - Парсер завершил работу."
+"2025-01-23_11-25-46 - [INFO] - Парсер запущен!"
+"2025-01-23_11-25-46 - [ERROR] - 
+Возникло исключение Row has incorrect number of values, (actual) 4!=28 (expected)
+"
+Traceback (most recent call last):
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 123, in main
+    control_output(results, args)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\outputs.py", line 21, in control_output
+    handler(*args)
+    ~~~~~~~^^^^^^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\outputs.py", line 34, in pretty_output
+    table.add_rows(values)
+    ~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\prettytable\prettytable.py", line 1570, in add_rows
+    self.add_row(row)
+    ~~~~~~~~~~~~^^^^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\prettytable\prettytable.py", line 1585, in add_row
+    raise ValueError(msg)
+ValueError: Row has incorrect number of values, (actual) 4!=28 (expected)
+Stack (most recent call last):
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 133, in <module>
+    main()
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 125, in main
+    logging.exception(
+"2025-01-23_11-25-46 - [INFO] - Парсер завершил работу."
+"2025-01-23_11-25-52 - [INFO] - Парсер запущен!"
+"2025-01-23_11-25-52 - [ERROR] - 
+Возникло исключение Row has incorrect number of values, (actual) 4!=28 (expected)
+"
+Traceback (most recent call last):
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 123, in main
+    control_output(results, args)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\outputs.py", line 21, in control_output
+    handler(*args)
+    ~~~~~~~^^^^^^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\outputs.py", line 34, in pretty_output
+    table.add_rows(values)
+    ~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\prettytable\prettytable.py", line 1570, in add_rows
+    self.add_row(row)
+    ~~~~~~~~~~~~^^^^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\prettytable\prettytable.py", line 1585, in add_row
+    raise ValueError(msg)
+ValueError: Row has incorrect number of values, (actual) 4!=28 (expected)
+Stack (most recent call last):
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 133, in <module>
+    main()
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 125, in main
+    logging.exception(
+"2025-01-23_11-25-52 - [INFO] - Парсер завершил работу."
+"2025-01-23_11-28-05 - [INFO] - Парсер запущен!"
+"2025-01-23_11-28-05 - [INFO] - Парсер завершил работу."
+"2025-01-23_11-28-45 - [INFO] - Парсер запущен!"
+"2025-01-23_11-28-45 - [INFO] - Парсер завершил работу."
+"2025-01-23_16-28-39 - [INFO] - Парсер запущен!"
+"2025-01-23_16-29-42 - [INFO] - Парсер запущен!"
+"2025-01-23_16-29-48 - [INFO] - Парсер запущен!"
+"2025-01-23_16-30-16 - [INFO] - Парсер запущен!"
+"2025-01-23_16-30-32 - [INFO] - Парсер запущен!"
+"2025-01-23_16-30-32 - [INFO] - Результат отправлен в тележку."
+"2025-01-23_16-30-32 - [INFO] - Парсер завершил работу."
+"2025-01-23_16-31-38 - [INFO] - Парсер запущен!"
+"2025-01-23_16-31-38 - [ERROR] - 
+Возникло исключение TeleBot.send_message() got an unexpected keyword argument 'file_output'
+"
+Traceback (most recent call last):
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 123, in main
+    control_output(results, args)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\outputs.py", line 22, in control_output
+    handler(*args)
+    ~~~~~~~^^^^^^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\outputs.py", line 68, in telegram_output
+    send_message(bot, results)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\outputs.py", line 54, in send_message
+    bot.send_message(
+    ~~~~~~~~~~~~~~~~^
+        chat_id=TELEGRAM_CHAT_ID,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+        file_output=message
+        ^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+TypeError: TeleBot.send_message() got an unexpected keyword argument 'file_output'
+Stack (most recent call last):
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 133, in <module>
+    main()
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 125, in main
+    logging.exception(
+"2025-01-23_16-31-38 - [INFO] - Парсер завершил работу."
+"2025-01-23_16-32-11 - [INFO] - Парсер запущен!"
+"2025-01-23_16-32-11 - [INFO] - Результат отправлен в тележку."
+"2025-01-23_16-32-11 - [INFO] - Парсер завершил работу."
+"2025-01-23_16-35-55 - [INFO] - Парсер запущен!"
+"2025-01-23_16-35-56 - [ERROR] - Ошибка при отправке сообщения:  A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: message is too long"
+"2025-01-23_16-35-56 - [INFO] - Результат отправлен в тележку."
+"2025-01-23_16-35-56 - [INFO] - Парсер завершил работу."
+"2025-01-23_16-43-32 - [INFO] - Парсер запущен!"
+"2025-01-23_16-43-32 - [INFO] - Файл с результатами был отправлен в Telegram."
+"2025-01-23_16-43-32 - [INFO] - Парсер завершил работу."
+"2025-01-23_16-44-07 - [INFO] - Парсер запущен!"
+"2025-01-23_16-44-08 - [INFO] - Файл с результатами был отправлен в Telegram."
+"2025-01-23_16-44-08 - [INFO] - Парсер завершил работу."
+"2025-01-23_16-51-29 - [INFO] - Парсер запущен!"
+"2025-01-23_16-51-31 - [INFO] - Парсер запущен!"
+"2025-01-23_16-52-02 - [INFO] - Парсер запущен!"
+"2025-01-23_16-52-05 - [INFO] - Парсер завершил работу."
+"2025-01-23_16-52-47 - [INFO] - Парсер запущен!"
+"2025-01-23_16-52-50 - [INFO] - Парсер завершил работу."
+"2025-01-23_16-53-26 - [INFO] - Парсер запущен!"
+"2025-01-23_16-53-29 - [INFO] - Парсер завершил работу."
+"2025-01-23_16-53-55 - [INFO] - Парсер запущен!"
+"2025-01-23_16-53-55 - [INFO] - Парсер завершил работу."
+"2025-01-23_16-56-11 - [INFO] - Парсер запущен!"
+"2025-01-23_16-56-16 - [INFO] - Парсер завершил работу."
+"2025-01-23_16-58-47 - [INFO] - Парсер запущен!"
+"2025-01-23_16-59-19 - [INFO] - Парсер завершил работу."
+"2025-01-23_17-00-27 - [INFO] - Парсер запущен!"
+"2025-01-23_17-00-46 - [INFO] - Парсер завершил работу."
+"2025-01-23_17-01-22 - [INFO] - Парсер запущен!"
+"2025-01-23_17-01-22 - [INFO] - Парсер завершил работу."
+"2025-01-23_17-02-26 - [INFO] - Парсер запущен!"
+"2025-01-23_17-02-26 - [INFO] - Парсер завершил работу."
+"2025-01-23_17-03-30 - [INFO] - Парсер запущен!"
+"2025-01-23_17-03-30 - [ERROR] - 
+Возникло исключение 'builtin_function_or_method' object has no attribute 'results'
+"
+Traceback (most recent call last):
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 123, in main
+    control_output(results, args)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\outputs.py", line 27, in control_output
+    handler(*args)
+    ~~~~~~~^^^^^^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\outputs.py", line 89, in telegram_text_output
+    print(sorted.results)
+          ^^^^^^^^^^^^^^
+AttributeError: 'builtin_function_or_method' object has no attribute 'results'
+Stack (most recent call last):
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 133, in <module>
+    main()
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 125, in main
+    logging.exception(
+"2025-01-23_17-03-30 - [INFO] - Парсер завершил работу."
+"2025-01-23_17-04-17 - [INFO] - Парсер запущен!"
+"2025-01-23_17-04-17 - [ERROR] - 
+Возникло исключение 'dict' object has no attribute 'sorted'
+"
+Traceback (most recent call last):
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 123, in main
+    control_output(results, args)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\outputs.py", line 27, in control_output
+    handler(*args)
+    ~~~~~~~^^^^^^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\outputs.py", line 89, in telegram_text_output
+    print(results.sorted)
+          ^^^^^^^^^^^^^^
+AttributeError: 'dict' object has no attribute 'sorted'
+Stack (most recent call last):
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 133, in <module>
+    main()
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 125, in main
+    logging.exception(
+"2025-01-23_17-04-17 - [INFO] - Парсер завершил работу."
+"2025-01-23_17-04-46 - [INFO] - Парсер запущен!"
+"2025-01-23_17-04-46 - [INFO] - Парсер завершил работу."
+"2025-01-23_17-08-47 - [INFO] - Парсер запущен!"
+"2025-01-23_17-08-48 - [INFO] - Парсер завершил работу."
+"2025-01-23_17-09-19 - [INFO] - Парсер запущен!"
+"2025-01-23_17-09-26 - [INFO] - Парсер завершил работу."
+"2025-01-23_17-12-45 - [INFO] - Парсер запущен!"
+"2025-01-23_17-12-45 - [INFO] - Файл с результатами был отправлен в Telegram."
+"2025-01-23_17-12-45 - [INFO] - Парсер завершил работу."
+"2025-01-23_17-13-40 - [INFO] - Парсер запущен!"
+"2025-01-23_17-13-40 - [INFO] - Файл с результатами был отправлен в Telegram."
+"2025-01-23_17-13-40 - [INFO] - Парсер завершил работу."
+"2025-01-23_17-14-48 - [INFO] - Парсер запущен!"
+"2025-01-23_17-14-48 - [INFO] - Файл с результатами был отправлен в Telegram."
+"2025-01-23_17-14-48 - [INFO] - Парсер завершил работу."
+"2025-01-23_17-20-04 - [INFO] - Парсер запущен!"
+"2025-01-23_17-20-05 - [INFO] - Файл с результатами был отправлен в Telegram."
+"2025-01-23_17-20-05 - [INFO] - Парсер завершил работу."
+"2025-01-23_17-20-09 - [INFO] - Парсер запущен!"
+"2025-01-23_17-20-09 - [INFO] - Файл с результатами был отправлен в Telegram."
+"2025-01-23_17-20-09 - [INFO] - Парсер завершил работу."
+"2025-01-23_17-20-50 - [INFO] - Парсер запущен!"
+"2025-01-23_17-20-58 - [INFO] - Парсер запущен!"
+"2025-01-23_17-21-04 - [INFO] - Парсер завершил работу."

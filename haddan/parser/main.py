@@ -5,6 +5,7 @@ import logging
 
 from configs import configure_argument_parser, configure_logging
 from constants import API_URL, LIBRIARY_URL
+from outputs import control_output
 
 
 def xml_parser(response):
@@ -64,21 +65,17 @@ def get_user_wear(session, username):
     url = API_URL + get_user_wear_url(username)
     response = session.get(url)
     root = xml_parser(response)
-    data_dict = {}
+    result = {}
     place = root.find_all('place')
     for place in root.find_all('place'):
-        data_dict[place['id']] = {
+        result[place['id']] = {
             'S/N': place.find('thingid').text,
             'артикул': place.find('thingtypeid').text,
             'прочность': place.find('durc').text,
             'ссылка': LIBRIARY_URL + place.find('thingid').text
 
         }
-    with open(f'wear/user_wear/{username}_wear.txt',
-              'w',
-              encoding='utf-8') as f:
-        for key, value in data_dict.items():
-            f.write(f"{key}: {value}\n")
+    return result
 
 
 def get_item_info(session, tid):
@@ -121,7 +118,9 @@ def main():
         if args.clear_cache:
             session.cache.clear()
         parser_mode = args.mode
-        MODE_TO_FUNCTION[parser_mode](session, args.input)
+        results = MODE_TO_FUNCTION[parser_mode](session, args.input)
+        if results:
+            control_output(results, args)
     except Exception as e:
         logging.exception(
             f'\nВозникло исключение {str(e)}\n',
