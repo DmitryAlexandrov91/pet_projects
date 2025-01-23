@@ -1,13 +1,10 @@
 """Тестирование api haddan.ru."""
-from config import configure_argument_parser
-import requests_cache
 from bs4 import BeautifulSoup
+import requests_cache
+import logging
 
-
-API_URL = 'https://haddan.ru/inner/api.php'
-LIBRIARY_URL = 'https://www.haddan.ru/thing.php?id='
-
-session = requests_cache.CachedSession()
+from configs import configure_argument_parser, configure_logging
+from constants import API_URL, LIBRIARY_URL
 
 
 def xml_parser(response):
@@ -39,7 +36,7 @@ def get_item_search_url(name):
     return url
 
 
-def get_user_bool_online(username):
+def get_user_bool_online(session, username):
     """Возвращает True если пользователь в сети."""
     url = API_URL + get_username_online_url(username)
     response = session.get(url)
@@ -54,7 +51,7 @@ def get_user_bool_online(username):
         exit()
 
 
-def get_user_online(username):
+def get_user_online(session, username):
     """Выводит читабельный ответ в сети юзер или нет."""
     if get_user_bool_online(username):
         print(f'Пользователь {username} в сети.')
@@ -62,7 +59,7 @@ def get_user_online(username):
         print(f'Пользователь {username} оффлайн.')
 
 
-def get_user_wear(username):
+def get_user_wear(session, username):
     """Сохраняет в файл весь надетый шмот юзера."""
     url = API_URL + get_user_wear_url(username)
     response = session.get(url)
@@ -77,13 +74,15 @@ def get_user_wear(username):
             'ссылка': LIBRIARY_URL + place.find('thingid').text
 
         }
-    with open(f'wear/user_wear/{username}_wear.txt', 'w', encoding='utf-8') as f:
+    with open(f'wear/user_wear/{username}_wear.txt',
+              'w',
+              encoding='utf-8') as f:
         for key, value in data_dict.items():
             f.write(f"{key}: {value}\n")
 
 
-def get_wear_info(tid):
-    """Сохраняет в xml файл полную инфо о вещи по её SN."""
+def get_item_info(session, tid):
+    """Сохраняет в txt файл инфо предмета по его SN."""
     url = API_URL + get_wear_info_url(tid)
     root = xml_parser(session.get(url))
     keys = ('typefull', 'thingid', 'thingtypeid', 'name')
@@ -91,7 +90,7 @@ def get_wear_info(tid):
     for bon in root.BonusReqs.Bonuses:
         wear_dict[bon['name']] = bon.text
     with open(
-        f'wear/wear_id/{wear_dict["name"]}_SN={wear_dict["thingid"]}.xml',
+        f'wear/item_id/{wear_dict["name"]}_SN={wear_dict["thingid"]}.txt',
         'w',
         encoding='utf-8'
     ) as f:
@@ -99,7 +98,7 @@ def get_wear_info(tid):
             f.write(f"{key}: {value}\n")
 
 
-def item_search(name):
+def item_search(session, name):
     url_name = API_URL + get_item_search_url(name)
     response = session.get(url_name)
     soup = xml_parser(response)
@@ -107,19 +106,28 @@ def item_search(name):
 
 
 MODE_TO_FUNCTION = {
-    'user-wear': get_user_wear,
-    'item-info': get_wear_info,
+    'wear': get_user_wear,
+    'item-info': get_item_info,
 }
 
 
 def main():
-    arg_parser = configure_argument_parser(MODE_TO_FUNCTION.keys())
-    args = arg_parser.parse_args()
-    session = requests_cache.CachedSession()
-    if args.clear_cache:
-        session.cache.clear()
-    parser_mode = args.mode
-    MODE_TO_FUNCTION[parser_mode](args.input)
+    configure_logging()
+    logging.info('Парсер запущен!')
+    try:
+        arg_parser = configure_argument_parser(MODE_TO_FUNCTION.keys())
+        args = arg_parser.parse_args()
+        session = requests_cache.CachedSession()
+        if args.clear_cache:
+            session.cache.clear()
+        parser_mode = args.mode
+        MODE_TO_FUNCTION[parser_mode](session, args.input)
+    except Exception as e:
+        logging.exception(
+            f'\nВозникло исключение {str(e)}\n',
+            stack_info=True
+        )
+    logging.info('Парсер завершил работу.')
 
 
 if __name__ == '__main__':
