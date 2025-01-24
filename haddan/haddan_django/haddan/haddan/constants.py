@@ -1,0 +1,24 @@
+"""Константы проекта haddan."""
+import os
+from pathlib import Path
+
+
+MIN_RECIPE_COOKING_TIME = 1
+MIN_RECIPE_INGREDIENT_QUANITY = 1
+MAX_RECIPE_NAME_LENGHT = 256
+MAX_USER_NAME_LENGTH = 150
+MAX_USER_EMAIL_LENGTH = 254
+MAX_INGREDIENT_NAME_LENGHT = 128
+MAX_INGREDIENT_MEASUREMENT_UNIT_LENGHT = 64
+MAX_TAG_NAME_LENGHT = 32
+MAX_RECIPELINKS_SHORTLINK_LENGHT = 5
+MAX_RECIPE_PER_PAGE = 6
+USERNAME_PATTERN = r'^[\w.@+-]+\Z'
+PAGINATION_PAGE_SIZE = 10
+TAG_SLUG_REGEX = '^[-a-zA-Z0-9_]+$'
+BASE_DIR = Path(__file__).resolve().parent.parent
+CSV_FOLDER_PATH = os.path.join(BASE_DIR, 'media\\shopping_carts')
+RECIPE_STATUS_CHOICES = (
+    (0, 'not_is_in'),
+    (1, 'is_in'),
+)
