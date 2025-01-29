@@ -1,3 +1,4 @@
+#!venv/scripts/python
 import tkinter as tk
 import webbrowser
 import subprocess

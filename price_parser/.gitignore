@@ -26,7 +26,4 @@ htmlcov/
 coverage.xml
 *.cover
 
-
-wear/
-
-.env*
+chromedriver/
