@@ -1,11 +1,15 @@
 """Тестирование api haddan.ru."""
 from bs4 import BeautifulSoup
 import requests_cache
+from requests_html import HTMLSession
 import logging
+from sqlalchemy import create_engine, insert
+from sqlalchemy.orm import Session
 
 from configs import configure_argument_parser, configure_logging
 from constants import API_URL, LIBRIARY_URL
 from outputs import control_output
+from db_utils import Thing, DATABASE_URL
 
 
 def xml_parser(response):
@@ -61,20 +65,52 @@ def get_user_online(session, username):
 
 
 def get_user_wear(session, username):
-    """Сохраняет в файл весь надетый шмот юзера."""
+    """Сохраняет в файл и обновляет в БД весь надетый шмот юзера."""
     url = API_URL + get_user_wear_url(username)
     response = session.get(url)
     root = xml_parser(response)
     result = {}
     place = root.find_all('place')
+    # engine = create_engine('sqlite:///haddan.db', echo=False)
+    engine = create_engine(DATABASE_URL, echo=False)
+    db_session = Session(engine)
     for place in root.find_all('place'):
+        thing_url = LIBRIARY_URL + place.find('thingid').text
+        thing_session = HTMLSession()
+        thing_response = thing_session.get(thing_url)
+        thing_response.html.render()
+        thing_soup = BeautifulSoup(thing_response.html.html, 'lxml')
+        thing_name = thing_soup.find('td', {'class': 'description'}).h3.text
+        thing_serial_number = int(place.find('thingid').text)
+        thing_part_number = int(place.find('thingtypeid').text)
         result[place['id']] = {
-            'S/N': place.find('thingid').text,
-            'артикул': place.find('thingtypeid').text,
+            'Название': thing_name,
+            'S/N': thing_serial_number,
+            'артикул': thing_part_number,
             'прочность': place.find('durc').text,
-            'ссылка': LIBRIARY_URL + place.find('thingid').text
-
+            'ссылка': thing_url
         }
+        existing_thing = db_session.query(
+            Thing).filter_by(
+                serial_number=thing_serial_number
+                ).first()
+        if existing_thing:
+            existing_thing.name = thing_name
+            existing_thing.type = place['id']
+            existing_thing.part_number = thing_part_number
+            existing_thing.owner = username
+            existing_thing.href = thing_url
+        else:
+            thing = Thing(
+                name=thing_name,
+                type=place['id'],
+                serial_number=thing_serial_number,
+                part_number=thing_part_number,
+                owner=username,
+                href=thing_url
+            )
+            db_session.add(thing)
+        db_session.commit()
     return result
 
 

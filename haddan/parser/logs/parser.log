@@ -566,3 +566,1763 @@ Stack (most recent call last):
 "2025-01-23_18-04-50 - [INFO] - Парсер завершил работу."
 "2025-01-23_22-47-23 - [INFO] - Парсер запущен!"
 "2025-01-23_22-47-27 - [INFO] - Парсер завершил работу."
+"2025-01-28_20-57-12 - [INFO] - Парсер запущен!"
+"2025-01-28_21-17-09 - [INFO] - Парсер запущен!"
+"2025-01-28_21-18-01 - [INFO] - Парсер запущен!"
+"2025-01-28_21-18-01 - [INFO] - Файл с результатами был сохранён."
+"2025-01-28_21-18-01 - [INFO] - Парсер завершил работу."
+"2025-01-28_21-18-35 - [INFO] - Парсер запущен!"
+"2025-01-28_21-18-35 - [INFO] - Файл с результатами был сохранён."
+"2025-01-28_21-18-35 - [INFO] - Парсер завершил работу."
+"2025-01-28_21-22-50 - [INFO] - Парсер запущен!"
+"2025-01-28_21-22-50 - [INFO] - Файл с результатами был сохранён."
+"2025-01-28_21-22-50 - [INFO] - Парсер завершил работу."
+"2025-01-28_21-26-19 - [INFO] - Парсер запущен!"
+"2025-01-28_21-26-19 - [ERROR] - 
+Возникло исключение Session.get() missing 1 required positional argument: 'ident'
+"
+Traceback (most recent call last):
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 139, in main
+    results = MODE_TO_FUNCTION[parser_mode](session, args.input)
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 84, in get_user_wear
+    thing_response = session.get(key['ссылка'])
+                     ~~~~~~~~~~~^^^^^^^^^^^^^^^
+TypeError: Session.get() missing 1 required positional argument: 'ident'
+Stack (most recent call last):
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 151, in <module>
+    main()
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 143, in main
+    logging.exception(
+"2025-01-28_21-26-19 - [INFO] - Парсер завершил работу."
+"2025-01-28_21-27-54 - [INFO] - Парсер запущен!"
+"2025-01-28_21-27-54 - [ERROR] - 
+Возникло исключение Session.get() missing 1 required positional argument: 'ident'
+"
+Traceback (most recent call last):
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 139, in main
+    results = MODE_TO_FUNCTION[parser_mode](session, args.input)
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 84, in get_user_wear
+    thing_response = session.get(LIBRIARY_URL + place.find('thingid').text)
+TypeError: Session.get() missing 1 required positional argument: 'ident'
+Stack (most recent call last):
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 151, in <module>
+    main()
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 143, in main
+    logging.exception(
+"2025-01-28_21-27-54 - [INFO] - Парсер завершил работу."
+"2025-01-28_21-28-43 - [INFO] - Парсер запущен!"
+"2025-01-28_21-28-47 - [INFO] - Файл с результатами был сохранён."
+"2025-01-28_21-28-47 - [INFO] - Парсер завершил работу."
+"2025-01-28_21-31-23 - [INFO] - Парсер запущен!"
+"2025-01-28_21-31-23 - [ERROR] - 
+Возникло исключение 'underarmor'
+"
+Traceback (most recent call last):
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 142, in main
+    results = MODE_TO_FUNCTION[parser_mode](session, args.input)
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 76, in get_user_wear
+    key = result[place['id']]
+          ~~~~~~^^^^^^^^^^^^^
+KeyError: 'underarmor'
+Stack (most recent call last):
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 154, in <module>
+    main()
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 146, in main
+    logging.exception(
+"2025-01-28_21-31-23 - [INFO] - Парсер завершил работу."
+"2025-01-28_21-32-47 - [INFO] - Парсер запущен!"
+"2025-01-28_21-32-47 - [ERROR] - 
+Возникло исключение 'NoneType' object has no attribute 'h3'
+"
+Traceback (most recent call last):
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 142, in main
+    results = MODE_TO_FUNCTION[parser_mode](session, args.input)
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 79, in get_user_wear
+    thing_name = soup.find('td', {'class': 'description'}).h3.text
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'h3'
+Stack (most recent call last):
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 154, in <module>
+    main()
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 146, in main
+    logging.exception(
+"2025-01-28_21-32-47 - [INFO] - Парсер завершил работу."
+"2025-01-28_21-33-00 - [INFO] - Парсер запущен!"
+"2025-01-28_21-33-00 - [ERROR] - 
+Возникло исключение 'NoneType' object has no attribute 'h3'
+"
+Traceback (most recent call last):
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 142, in main
+    results = MODE_TO_FUNCTION[parser_mode](session, args.input)
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 79, in get_user_wear
+    thing_name = soup.find('td', {'class': 'description'})
+AttributeError: 'NoneType' object has no attribute 'h3'
+Stack (most recent call last):
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 154, in <module>
+    main()
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 146, in main
+    logging.exception(
+"2025-01-28_21-33-00 - [INFO] - Парсер завершил работу."
+"2025-01-28_21-33-06 - [INFO] - Парсер запущен!"
+"2025-01-28_21-33-06 - [INFO] - Файл с результатами был сохранён."
+"2025-01-28_21-33-06 - [INFO] - Парсер завершил работу."
+"2025-01-28_21-46-53 - [INFO] - Парсер запущен!"
+"2025-01-28_21-46-54 - [INFO] - Browser listening on: ws://127.0.0.1:53411/devtools/browser/9da911f9-11a9-4fc9-8612-2c18289abaad"
+"2025-01-28_21-46-57 - [ERROR] - 
+Возникло исключение 'CachedResponse' object has no attribute 'html'
+"
+Traceback (most recent call last):
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 146, in main
+    results = MODE_TO_FUNCTION[parser_mode](session, args.input)
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 83, in get_user_wear
+    thing_soup = BeautifulSoup(response.html.html, 'lxml')
+                               ^^^^^^^^^^^^^
+AttributeError: 'CachedResponse' object has no attribute 'html'
+Stack (most recent call last):
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 158, in <module>
+    main()
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 150, in main
+    logging.exception(
+"2025-01-28_21-46-57 - [INFO] - Парсер завершил работу."
+"2025-01-28_21-46-57 - [INFO] - terminate chrome process..."
+"2025-01-28_21-47-48 - [INFO] - Парсер запущен!"
+"2025-01-28_21-47-49 - [INFO] - Browser listening on: ws://127.0.0.1:60356/devtools/browser/049224d4-1239-4cd4-9c82-e5c95b914637"
+"2025-01-28_21-47-52 - [INFO] - Browser listening on: ws://127.0.0.1:59305/devtools/browser/47e6b7b7-0b58-44cd-bdeb-fa3c262b6909"
+"2025-01-28_21-47-55 - [INFO] - Browser listening on: ws://127.0.0.1:51501/devtools/browser/38e413ea-436c-44f5-884b-de4fb5ce5e89"
+"2025-01-28_21-48-06 - [INFO] - Browser listening on: ws://127.0.0.1:53474/devtools/browser/3f7dcb84-2f09-4bb8-9535-6c48ccbdeb2b"
+"2025-01-28_21-48-09 - [INFO] - Browser listening on: ws://127.0.0.1:61190/devtools/browser/6b970d96-36bd-43a0-ae54-fb2a5c77993d"
+"2025-01-28_21-48-12 - [INFO] - Browser listening on: ws://127.0.0.1:51468/devtools/browser/393aec20-ade4-47ca-9508-77d420693b72"
+"2025-01-28_21-48-14 - [INFO] - Browser listening on: ws://127.0.0.1:56002/devtools/browser/33fefb8f-77d0-46dc-84ae-3d6298df0a64"
+"2025-01-28_21-48-17 - [INFO] - Browser listening on: ws://127.0.0.1:50959/devtools/browser/106a80ea-5d76-4921-8dcb-344c452068a1"
+"2025-01-28_21-48-20 - [INFO] - Browser listening on: ws://127.0.0.1:60610/devtools/browser/f9d7937f-0d97-4c25-8a3c-9ed770912e12"
+"2025-01-28_21-48-24 - [INFO] - Browser listening on: ws://127.0.0.1:51288/devtools/browser/b1a04f0a-3271-4ca5-9c94-83fb24c9059c"
+"2025-01-28_21-48-27 - [INFO] - Browser listening on: ws://127.0.0.1:50950/devtools/browser/84821f24-3093-4ea1-86d4-2c662a603053"
+"2025-01-28_21-48-31 - [INFO] - Browser listening on: ws://127.0.0.1:54129/devtools/browser/0e9369de-cfd5-4772-9017-b96d080e4fb0"
+"2025-01-28_21-48-34 - [INFO] - Browser listening on: ws://127.0.0.1:51551/devtools/browser/547da80d-d15a-4402-8405-4fb1f3e81e15"
+"2025-01-28_21-48-37 - [INFO] - Browser listening on: ws://127.0.0.1:57215/devtools/browser/a95b357a-bbc1-4e1f-b060-94ac707b827e"
+"2025-01-28_21-48-40 - [INFO] - Browser listening on: ws://127.0.0.1:60629/devtools/browser/6dd5b5cb-cff5-43e8-bd9e-6a83a7a15df1"
+"2025-01-28_21-48-45 - [INFO] - Browser listening on: ws://127.0.0.1:52556/devtools/browser/e97f5aa6-6c7a-4b0b-9556-ad58b2039131"
+"2025-01-28_21-48-47 - [INFO] - Browser listening on: ws://127.0.0.1:58756/devtools/browser/451d3b85-03e6-4123-a116-af0d47d237c3"
+"2025-01-28_21-48-50 - [INFO] - Browser listening on: ws://127.0.0.1:49396/devtools/browser/a5eebad9-945d-4b4d-8682-5bbbd640ef40"
+"2025-01-28_21-48-53 - [INFO] - Browser listening on: ws://127.0.0.1:51902/devtools/browser/e65a7924-ab32-4063-b0c8-bccb11f8c964"
+"2025-01-28_21-48-57 - [INFO] - Browser listening on: ws://127.0.0.1:49190/devtools/browser/f7b9fff1-f524-48a3-816c-e6aeac50da20"
+"2025-01-28_21-49-02 - [INFO] - Browser listening on: ws://127.0.0.1:52663/devtools/browser/a5df8133-5457-440d-a568-652c0cac726a"
+"2025-01-28_21-49-05 - [INFO] - Browser listening on: ws://127.0.0.1:57310/devtools/browser/5857639d-44f7-4890-9d16-828c09fa3891"
+"2025-01-28_21-49-09 - [INFO] - Browser listening on: ws://127.0.0.1:60090/devtools/browser/6f23e80d-eb1a-42db-a8ea-3ac3b69f914d"
+"2025-01-28_21-49-15 - [INFO] - Browser listening on: ws://127.0.0.1:65099/devtools/browser/b73484ea-6cf6-4ef4-99ec-efe50b16eb9b"
+"2025-01-28_21-49-17 - [INFO] - Browser listening on: ws://127.0.0.1:61181/devtools/browser/76d05111-74e2-4da3-af3b-6d247de70165"
+"2025-01-28_21-49-20 - [INFO] - Browser listening on: ws://127.0.0.1:63948/devtools/browser/41f37d41-392c-4081-9959-fe86b076b918"
+"2025-01-28_21-49-23 - [INFO] - Browser listening on: ws://127.0.0.1:49712/devtools/browser/c07d0693-8788-43b4-b7b1-a2ff4c964be7"
+"2025-01-28_21-49-26 - [INFO] - Browser listening on: ws://127.0.0.1:53084/devtools/browser/e5952aa5-0d7a-4b77-a067-c1310f76444f"
+"2025-01-28_21-49-28 - [INFO] - Файл с результатами был сохранён."
+"2025-01-28_21-49-28 - [INFO] - Парсер завершил работу."
+"2025-01-28_21-49-28 - [INFO] - terminate chrome process..."
+"2025-01-28_21-49-28 - [INFO] - terminate chrome process..."
+"2025-01-28_21-49-28 - [INFO] - terminate chrome process..."
+"2025-01-28_21-49-28 - [INFO] - terminate chrome process..."
+"2025-01-28_21-49-28 - [INFO] - terminate chrome process..."
+"2025-01-28_21-49-28 - [INFO] - terminate chrome process..."
+"2025-01-28_21-49-28 - [INFO] - terminate chrome process..."
+"2025-01-28_21-49-29 - [INFO] - terminate chrome process..."
+"2025-01-28_21-49-29 - [INFO] - terminate chrome process..."
+"2025-01-28_21-49-29 - [INFO] - terminate chrome process..."
+"2025-01-28_21-49-29 - [INFO] - terminate chrome process..."
+"2025-01-28_21-49-29 - [INFO] - terminate chrome process..."
+"2025-01-28_21-49-29 - [INFO] - terminate chrome process..."
+"2025-01-28_21-49-29 - [INFO] - terminate chrome process..."
+"2025-01-28_21-49-29 - [INFO] - terminate chrome process..."
+"2025-01-28_21-49-29 - [INFO] - terminate chrome process..."
+"2025-01-28_21-49-29 - [INFO] - terminate chrome process..."
+"2025-01-28_21-49-29 - [INFO] - terminate chrome process..."
+"2025-01-28_21-49-29 - [INFO] - terminate chrome process..."
+"2025-01-28_21-49-29 - [INFO] - terminate chrome process..."
+"2025-01-28_21-49-29 - [INFO] - terminate chrome process..."
+"2025-01-28_21-49-29 - [INFO] - terminate chrome process..."
+"2025-01-28_21-49-29 - [INFO] - terminate chrome process..."
+"2025-01-28_21-49-29 - [INFO] - terminate chrome process..."
+"2025-01-28_21-49-29 - [INFO] - terminate chrome process..."
+"2025-01-28_21-49-29 - [INFO] - terminate chrome process..."
+"2025-01-28_21-49-29 - [INFO] - terminate chrome process..."
+"2025-01-28_21-49-29 - [INFO] - terminate chrome process..."
+"2025-01-28_21-50-53 - [INFO] - Парсер запущен!"
+"2025-01-28_21-50-54 - [INFO] - Browser listening on: ws://127.0.0.1:61904/devtools/browser/972f7aa9-b016-4487-8061-1fc80f209c0c"
+"2025-01-28_21-50-57 - [INFO] - Browser listening on: ws://127.0.0.1:60608/devtools/browser/ea07d853-f48f-4931-83e9-a9f6c633ad91"
+"2025-01-28_21-51-00 - [INFO] - Browser listening on: ws://127.0.0.1:56227/devtools/browser/cd95870f-1263-4fcd-8d82-89f868b4b9f9"
+"2025-01-28_21-51-02 - [INFO] - Browser listening on: ws://127.0.0.1:52419/devtools/browser/f59fe6d2-bc51-47d9-bd72-6b7b585ae0eb"
+"2025-01-28_21-51-05 - [INFO] - Browser listening on: ws://127.0.0.1:52574/devtools/browser/a125670b-a3c6-4a5e-81b4-c8acb09c178d"
+"2025-01-28_21-51-08 - [INFO] - Browser listening on: ws://127.0.0.1:53696/devtools/browser/32c08612-0130-4b3d-8a23-8de2178abc35"
+"2025-01-28_21-51-12 - [INFO] - Browser listening on: ws://127.0.0.1:62101/devtools/browser/009e8682-3453-4089-88f5-1ca6a53eb6ef"
+"2025-01-28_21-51-15 - [INFO] - Browser listening on: ws://127.0.0.1:55627/devtools/browser/a097924b-4ad4-4f74-9d0f-6d94e3143a24"
+"2025-01-28_21-51-18 - [INFO] - Browser listening on: ws://127.0.0.1:52630/devtools/browser/b2179cea-94aa-455c-95e1-7884e641eff7"
+"2025-01-28_21-51-22 - [INFO] - Browser listening on: ws://127.0.0.1:63712/devtools/browser/476bcf76-16fe-4614-8c73-d67fcc8b98c5"
+"2025-01-28_21-51-26 - [INFO] - Browser listening on: ws://127.0.0.1:61820/devtools/browser/3ffbb587-3e84-4bbc-a7fe-7ea5c41fcecd"
+"2025-01-28_21-51-30 - [INFO] - Browser listening on: ws://127.0.0.1:62513/devtools/browser/5c593742-e3d2-4ba4-9dbc-3b6310db2579"
+"2025-01-28_21-51-35 - [INFO] - Browser listening on: ws://127.0.0.1:57844/devtools/browser/dd358fa4-5a7d-4a8f-a507-056b58d2c82c"
+"2025-01-28_21-51-38 - [INFO] - Browser listening on: ws://127.0.0.1:49281/devtools/browser/51da1595-521b-43de-a629-49067d8292fe"
+"2025-01-28_21-51-44 - [INFO] - Browser listening on: ws://127.0.0.1:57320/devtools/browser/f2e119c0-d0c4-4a57-aa25-9c5e7302ad54"
+"2025-01-28_21-51-47 - [INFO] - Browser listening on: ws://127.0.0.1:54652/devtools/browser/70d56cc0-fa4d-43fb-98c2-57152b9220a1"
+"2025-01-28_21-51-50 - [INFO] - Browser listening on: ws://127.0.0.1:56859/devtools/browser/0ce7ee39-0460-4160-807c-bc701e53dc41"
+"2025-01-28_21-51-56 - [INFO] - Browser listening on: ws://127.0.0.1:56300/devtools/browser/aa537bb0-4584-47e7-b020-f964dcbbea07"
+"2025-01-28_21-51-58 - [INFO] - Browser listening on: ws://127.0.0.1:52017/devtools/browser/2bfe2f24-ce3d-4b08-9186-2af6fb553721"
+"2025-01-28_21-52-01 - [INFO] - Browser listening on: ws://127.0.0.1:50083/devtools/browser/093e9fe8-2dc7-43ad-be22-797ae03dd57f"
+"2025-01-28_21-52-04 - [INFO] - Browser listening on: ws://127.0.0.1:64294/devtools/browser/6cdffc7c-1e3f-4e5b-907e-fa721f1ad53b"
+"2025-01-28_21-52-07 - [INFO] - Browser listening on: ws://127.0.0.1:50384/devtools/browser/49536734-7489-4a30-bd9b-80fc18f3933b"
+"2025-01-28_21-52-09 - [INFO] - Browser listening on: ws://127.0.0.1:52463/devtools/browser/68c2dbfe-17c2-4967-93f6-787f75c04be8"
+"2025-01-28_21-52-12 - [INFO] - Browser listening on: ws://127.0.0.1:56423/devtools/browser/e984ace1-308c-4be7-96d9-e804c3e88385"
+"2025-01-28_21-52-17 - [INFO] - Browser listening on: ws://127.0.0.1:57935/devtools/browser/54d1f37f-bff6-4019-861e-e13755552e37"
+"2025-01-28_21-52-21 - [INFO] - Browser listening on: ws://127.0.0.1:62105/devtools/browser/295e0090-19e2-4dc8-8e1a-125ad3e8239b"
+"2025-01-28_21-52-25 - [INFO] - Browser listening on: ws://127.0.0.1:63221/devtools/browser/bd253775-d09d-4781-8c95-a8c58da3bb39"
+"2025-01-28_21-52-28 - [INFO] - Browser listening on: ws://127.0.0.1:64141/devtools/browser/f38eed0b-6abc-4654-8cde-9fb85b58e1fd"
+"2025-01-28_21-52-30 - [INFO] - Файл с результатами был сохранён."
+"2025-01-28_21-52-30 - [INFO] - Парсер завершил работу."
+"2025-01-28_21-52-30 - [INFO] - terminate chrome process..."
+"2025-01-28_21-52-30 - [INFO] - terminate chrome process..."
+"2025-01-28_21-52-30 - [INFO] - terminate chrome process..."
+"2025-01-28_21-52-30 - [INFO] - terminate chrome process..."
+"2025-01-28_21-52-30 - [INFO] - terminate chrome process..."
+"2025-01-28_21-52-30 - [INFO] - terminate chrome process..."
+"2025-01-28_21-52-30 - [INFO] - terminate chrome process..."
+"2025-01-28_21-52-30 - [INFO] - terminate chrome process..."
+"2025-01-28_21-52-30 - [INFO] - terminate chrome process..."
+"2025-01-28_21-52-30 - [INFO] - terminate chrome process..."
+"2025-01-28_21-52-30 - [INFO] - terminate chrome process..."
+"2025-01-28_21-52-30 - [INFO] - terminate chrome process..."
+"2025-01-28_21-52-30 - [INFO] - terminate chrome process..."
+"2025-01-28_21-52-30 - [INFO] - terminate chrome process..."
+"2025-01-28_21-52-30 - [INFO] - terminate chrome process..."
+"2025-01-28_21-52-30 - [INFO] - terminate chrome process..."
+"2025-01-28_21-52-31 - [INFO] - terminate chrome process..."
+"2025-01-28_21-52-31 - [INFO] - terminate chrome process..."
+"2025-01-28_21-52-31 - [INFO] - terminate chrome process..."
+"2025-01-28_21-52-31 - [INFO] - terminate chrome process..."
+"2025-01-28_21-52-31 - [INFO] - terminate chrome process..."
+"2025-01-28_21-52-31 - [INFO] - terminate chrome process..."
+"2025-01-28_21-52-31 - [INFO] - terminate chrome process..."
+"2025-01-28_21-52-31 - [INFO] - terminate chrome process..."
+"2025-01-28_21-52-31 - [INFO] - terminate chrome process..."
+"2025-01-28_21-52-31 - [INFO] - terminate chrome process..."
+"2025-01-28_21-52-31 - [INFO] - terminate chrome process..."
+"2025-01-28_21-52-31 - [INFO] - terminate chrome process..."
+"2025-01-28_21-56-53 - [INFO] - Парсер запущен!"
+"2025-01-28_21-56-54 - [INFO] - Browser listening on: ws://127.0.0.1:64136/devtools/browser/031ad192-f0eb-4986-8e9d-f48a1469aaba"
+"2025-01-28_21-56-55 - [ERROR] - 
+Возникло исключение string indices must be integers, not 'str'
+"
+Traceback (most recent call last):
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 143, in main
+    results = MODE_TO_FUNCTION[parser_mode](session, args.input)
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 93, in get_user_wear
+    serial_number=place['id']['S/N'],
+                  ~~~~~~~~~~~^^^^^^^
+TypeError: string indices must be integers, not 'str'
+Stack (most recent call last):
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 155, in <module>
+    main()
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 147, in main
+    logging.exception(
+"2025-01-28_21-56-55 - [INFO] - Парсер завершил работу."
+"2025-01-28_21-56-55 - [INFO] - terminate chrome process..."
+"2025-01-28_21-57-40 - [INFO] - Парсер запущен!"
+"2025-01-28_21-57-41 - [INFO] - Browser listening on: ws://127.0.0.1:49510/devtools/browser/787bef59-3a25-4623-8f09-c3e4222e4171"
+"2025-01-28_21-57-44 - [ERROR] - 
+Возникло исключение string indices must be integers, not 'str'
+"
+Traceback (most recent call last):
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 143, in main
+    results = MODE_TO_FUNCTION[parser_mode](session, args.input)
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 93, in get_user_wear
+    serial_number=int(place['id']['S/N']),
+                      ~~~~~~~~~~~^^^^^^^
+TypeError: string indices must be integers, not 'str'
+Stack (most recent call last):
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 155, in <module>
+    main()
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 147, in main
+    logging.exception(
+"2025-01-28_21-57-44 - [INFO] - Парсер завершил работу."
+"2025-01-28_21-57-44 - [INFO] - terminate chrome process..."
+"2025-01-28_21-58-49 - [INFO] - Парсер запущен!"
+"2025-01-28_21-58-50 - [INFO] - Browser listening on: ws://127.0.0.1:62622/devtools/browser/63830a08-bc75-48c2-a0a7-620916f51ab2"
+"2025-01-28_21-58-52 - [INFO] - Browser listening on: ws://127.0.0.1:56022/devtools/browser/a6b1aff7-9c97-40a5-8a18-6f5c77cae7f7"
+"2025-01-28_21-58-53 - [INFO] - Browser listening on: ws://127.0.0.1:54430/devtools/browser/5b3741c1-2dc7-462a-9cd7-9b775b8c7dc2"
+"2025-01-28_21-58-55 - [INFO] - Browser listening on: ws://127.0.0.1:56327/devtools/browser/d3fc851d-9d71-49e7-9796-70d61c5aa9de"
+"2025-01-28_21-58-57 - [INFO] - Browser listening on: ws://127.0.0.1:63825/devtools/browser/92625636-4f34-4590-8ee5-25a74549c863"
+"2025-01-28_21-58-58 - [INFO] - Browser listening on: ws://127.0.0.1:52059/devtools/browser/c0b56bc5-d105-46d6-b821-a9a01085b695"
+"2025-01-28_21-59-00 - [INFO] - Browser listening on: ws://127.0.0.1:58176/devtools/browser/a111c08e-a697-4018-bb7a-88b10f73967e"
+"2025-01-28_21-59-02 - [INFO] - Browser listening on: ws://127.0.0.1:62526/devtools/browser/7ebf48ae-72cc-4d02-837a-9dd06268ac17"
+"2025-01-28_21-59-04 - [INFO] - Browser listening on: ws://127.0.0.1:51936/devtools/browser/6aba2802-5ea4-422c-94ba-96d9660f98b9"
+"2025-01-28_21-59-06 - [INFO] - Browser listening on: ws://127.0.0.1:59961/devtools/browser/1d652150-3ce4-484e-a7e2-980d7e3126ac"
+"2025-01-28_21-59-07 - [INFO] - Browser listening on: ws://127.0.0.1:57691/devtools/browser/fa71980d-6024-4fad-af18-6c851ee2d670"
+"2025-01-28_21-59-09 - [INFO] - Browser listening on: ws://127.0.0.1:59481/devtools/browser/210eb7f6-ade8-4831-910b-041ce301e996"
+"2025-01-28_21-59-11 - [INFO] - Browser listening on: ws://127.0.0.1:60002/devtools/browser/4f5dd077-790c-429c-aa02-ab9fc43a85f4"
+"2025-01-28_21-59-12 - [INFO] - Browser listening on: ws://127.0.0.1:62960/devtools/browser/c3c90229-cba9-4081-af9c-2e73996c7cbb"
+"2025-01-28_21-59-14 - [INFO] - Browser listening on: ws://127.0.0.1:51729/devtools/browser/092fa6fe-881c-4cfa-8fce-f8956183069c"
+"2025-01-28_21-59-16 - [INFO] - Browser listening on: ws://127.0.0.1:64817/devtools/browser/146fbc2a-e41e-404a-a4af-4858c5b7501a"
+"2025-01-28_21-59-19 - [INFO] - Browser listening on: ws://127.0.0.1:60191/devtools/browser/cc2898fc-6fc2-4c5b-848c-a7f04ad65eff"
+"2025-01-28_21-59-20 - [INFO] - Browser listening on: ws://127.0.0.1:59749/devtools/browser/1bce3144-cf17-4cf6-af5a-1498948fdbee"
+"2025-01-28_21-59-23 - [INFO] - Browser listening on: ws://127.0.0.1:56391/devtools/browser/08bdf375-4e43-4a05-9486-f0deefd60d92"
+"2025-01-28_21-59-25 - [INFO] - Browser listening on: ws://127.0.0.1:57664/devtools/browser/9aaf9661-709d-4844-8128-104f26f59169"
+"2025-01-28_21-59-27 - [INFO] - Browser listening on: ws://127.0.0.1:63949/devtools/browser/6b4d98e7-385a-40d9-944f-a7cde6b4e660"
+"2025-01-28_21-59-30 - [INFO] - Browser listening on: ws://127.0.0.1:54693/devtools/browser/e6afc802-5060-4470-b502-a560e12ddd8a"
+"2025-01-28_21-59-34 - [INFO] - Browser listening on: ws://127.0.0.1:65197/devtools/browser/94a071f0-7fa6-4a19-8ca2-5358b007b85f"
+"2025-01-28_21-59-36 - [INFO] - Browser listening on: ws://127.0.0.1:57666/devtools/browser/e0907e21-9f25-4ec5-99f0-02e95671fcac"
+"2025-01-28_21-59-39 - [INFO] - Browser listening on: ws://127.0.0.1:55519/devtools/browser/54aa6ac4-ed20-4e99-ab39-c3b924826086"
+"2025-01-28_21-59-41 - [INFO] - Browser listening on: ws://127.0.0.1:61890/devtools/browser/ae5f94c9-3e72-4340-8133-41481b84221b"
+"2025-01-28_21-59-42 - [INFO] - Browser listening on: ws://127.0.0.1:65328/devtools/browser/acbb0e66-c8a5-458e-b85b-c271b1d482c9"
+"2025-01-28_21-59-44 - [INFO] - Browser listening on: ws://127.0.0.1:62688/devtools/browser/5ee71970-d8c1-4630-afe1-e68003a6a919"
+"2025-01-28_21-59-45 - [INFO] - Файл с результатами был сохранён."
+"2025-01-28_21-59-45 - [INFO] - Парсер завершил работу."
+"2025-01-28_21-59-45 - [INFO] - terminate chrome process..."
+"2025-01-28_21-59-45 - [INFO] - terminate chrome process..."
+"2025-01-28_21-59-45 - [INFO] - terminate chrome process..."
+"2025-01-28_21-59-45 - [INFO] - terminate chrome process..."
+"2025-01-28_21-59-45 - [INFO] - terminate chrome process..."
+"2025-01-28_21-59-45 - [INFO] - terminate chrome process..."
+"2025-01-28_21-59-45 - [INFO] - terminate chrome process..."
+"2025-01-28_21-59-45 - [INFO] - terminate chrome process..."
+"2025-01-28_21-59-45 - [INFO] - terminate chrome process..."
+"2025-01-28_21-59-45 - [INFO] - terminate chrome process..."
+"2025-01-28_21-59-46 - [INFO] - terminate chrome process..."
+"2025-01-28_21-59-46 - [INFO] - terminate chrome process..."
+"2025-01-28_21-59-46 - [INFO] - terminate chrome process..."
+"2025-01-28_21-59-46 - [INFO] - terminate chrome process..."
+"2025-01-28_21-59-46 - [INFO] - terminate chrome process..."
+"2025-01-28_21-59-46 - [INFO] - terminate chrome process..."
+"2025-01-28_21-59-46 - [INFO] - terminate chrome process..."
+"2025-01-28_21-59-46 - [INFO] - terminate chrome process..."
+"2025-01-28_21-59-46 - [INFO] - terminate chrome process..."
+"2025-01-28_21-59-46 - [INFO] - terminate chrome process..."
+"2025-01-28_21-59-46 - [INFO] - terminate chrome process..."
+"2025-01-28_21-59-46 - [INFO] - terminate chrome process..."
+"2025-01-28_21-59-46 - [INFO] - terminate chrome process..."
+"2025-01-28_21-59-46 - [INFO] - terminate chrome process..."
+"2025-01-28_21-59-46 - [INFO] - terminate chrome process..."
+"2025-01-28_21-59-46 - [INFO] - terminate chrome process..."
+"2025-01-28_21-59-46 - [INFO] - terminate chrome process..."
+"2025-01-28_21-59-46 - [INFO] - terminate chrome process..."
+"2025-01-28_22-00-24 - [INFO] - Парсер запущен!"
+"2025-01-28_22-00-25 - [INFO] - Browser listening on: ws://127.0.0.1:54048/devtools/browser/4261a33c-60d6-4d81-bcf3-adda6fc39162"
+"2025-01-28_22-00-26 - [ERROR] - 
+Возникло исключение (sqlite3.IntegrityError) UNIQUE constraint failed: thing.href
+[SQL: INSERT INTO thing (name, type, serial_number, part_number, owner, href) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('Мантия', 'underarmor', 166819796, 8211, 'SwordS', 'https://www.haddan.ru/thing.php?id=166819796')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+"
+Traceback (most recent call last):
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 942, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.IntegrityError: UNIQUE constraint failed: thing.href
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 143, in main
+    results = MODE_TO_FUNCTION[parser_mode](session, args.input)
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 99, in get_user_wear
+    db_session.commit()
+    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2032, in commit
+    trans.commit(_to_root=True)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "<string>", line 2, in commit
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\orm\state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 1313, in commit
+    self._prepare_impl()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "<string>", line 2, in _prepare_impl
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\orm\state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 1288, in _prepare_impl
+    self.session.flush()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 4353, in flush
+    self._flush(objects)
+    ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 4488, in _flush
+    with util.safe_reraise():
+         ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 4449, in _flush
+    flush_context.execute()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\orm\unitofwork.py", line 466, in execute
+    rec.execute(self)
+    ~~~~~~~~~~~^^^^^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\orm\unitofwork.py", line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self.mapper,
+        ^^^^^^^^^^^^
+        uow.states_for_mapper_hierarchy(self.mapper, False, False),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        uow,
+        ^^^^
+    )
+    ^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\orm\persistence.py", line 93, in save_obj
+    _emit_insert_statements(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        base_mapper,
+        ^^^^^^^^^^^^
+    ...<3 lines>...
+        insert,
+        ^^^^^^^
+    )
+    ^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\orm\persistence.py", line 1233, in _emit_insert_statements
+    result = connection.execute(
+        statement,
+        params,
+        execution_options=execution_options,
+    )
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1416, in execute
+    return meth(
+        self,
+        distilled_parameters,
+        execution_options or NO_OPTIONS,
+    )
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\sql\elements.py", line 515, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self, distilled_params, execution_options
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1638, in _execute_clauseelement
+    ret = self._execute_context(
+        dialect,
+    ...<8 lines>...
+        cache_hit=cache_hit,
+    )
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1843, in _execute_context
+    return self._exec_single_context(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        dialect, context, statement, parameters
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1983, in _exec_single_context
+    self._handle_dbapi_exception(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        e, str_statement, effective_parameters, cursor, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2352, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 942, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: thing.href
+[SQL: INSERT INTO thing (name, type, serial_number, part_number, owner, href) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('Мантия', 'underarmor', 166819796, 8211, 'SwordS', 'https://www.haddan.ru/thing.php?id=166819796')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+Stack (most recent call last):
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 155, in <module>
+    main()
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 147, in main
+    logging.exception(
+"2025-01-28_22-00-26 - [INFO] - Парсер завершил работу."
+"2025-01-28_22-00-26 - [INFO] - terminate chrome process..."
+"2025-01-28_22-01-18 - [INFO] - Парсер запущен!"
+"2025-01-28_22-01-19 - [INFO] - Browser listening on: ws://127.0.0.1:59686/devtools/browser/f6e43ec6-a185-4c98-bc82-ddbeecda1b11"
+"2025-01-28_22-01-22 - [INFO] - Browser listening on: ws://127.0.0.1:64547/devtools/browser/60f84ba9-375a-494f-a0dd-427bd399bba3"
+"2025-01-28_22-01-25 - [INFO] - Browser listening on: ws://127.0.0.1:51391/devtools/browser/3008f771-c3df-4fdf-8017-c27bd749cbfc"
+"2025-01-28_22-01-27 - [INFO] - Browser listening on: ws://127.0.0.1:52407/devtools/browser/bfabbf93-4449-413f-be47-a216dc7890df"
+"2025-01-28_22-01-31 - [INFO] - Browser listening on: ws://127.0.0.1:59990/devtools/browser/20423386-30a1-490a-bbfc-7eae0dc4f17f"
+"2025-01-28_22-01-33 - [INFO] - Browser listening on: ws://127.0.0.1:50258/devtools/browser/814ce65d-b8ff-412a-ba1a-7f9d70a648b2"
+"2025-01-28_22-01-35 - [INFO] - Browser listening on: ws://127.0.0.1:62513/devtools/browser/aecd4b9e-813d-4e7f-ac3f-75a16281258e"
+"2025-01-28_22-01-36 - [INFO] - Browser listening on: ws://127.0.0.1:63507/devtools/browser/473a3440-c60f-4e5c-bb68-4ef618e519f0"
+"2025-01-28_22-01-38 - [INFO] - Browser listening on: ws://127.0.0.1:56830/devtools/browser/00ac3c8d-c0db-4ccf-b409-0d6226c5bffb"
+"2025-01-28_22-01-40 - [INFO] - Browser listening on: ws://127.0.0.1:55785/devtools/browser/8fa14723-8ffe-4d7c-8174-84d6d8cf4977"
+"2025-01-28_22-01-42 - [INFO] - Browser listening on: ws://127.0.0.1:56005/devtools/browser/a919ec5f-c595-4452-8b1f-fc12876de562"
+"2025-01-28_22-01-45 - [INFO] - Browser listening on: ws://127.0.0.1:63579/devtools/browser/d5358029-9d2f-4855-8512-60d3625dd959"
+"2025-01-28_22-01-46 - [INFO] - Browser listening on: ws://127.0.0.1:64311/devtools/browser/eb9aca17-441c-41a5-a3c1-2e98193ff146"
+"2025-01-28_22-01-48 - [INFO] - Browser listening on: ws://127.0.0.1:60535/devtools/browser/5e8c130f-8dab-407d-8455-6da8fb5bd9c9"
+"2025-01-28_22-01-50 - [INFO] - Browser listening on: ws://127.0.0.1:55830/devtools/browser/47374bb7-2f8e-455d-baf5-63b248257722"
+"2025-01-28_22-01-53 - [INFO] - Browser listening on: ws://127.0.0.1:57160/devtools/browser/10ef9801-2ee1-42b5-b315-6b64b18b59e7"
+"2025-01-28_22-01-55 - [INFO] - Browser listening on: ws://127.0.0.1:53467/devtools/browser/89864111-9484-4b6f-bf44-415d97f52c3e"
+"2025-01-28_22-01-56 - [INFO] - Browser listening on: ws://127.0.0.1:60898/devtools/browser/ed1f8aab-fe60-4c03-b2a3-1fbdaa6137f8"
+"2025-01-28_22-01-59 - [INFO] - Browser listening on: ws://127.0.0.1:63445/devtools/browser/553b3bcf-c10f-48a4-8536-3bab6a1fe3fe"
+"2025-01-28_22-02-01 - [INFO] - Browser listening on: ws://127.0.0.1:64057/devtools/browser/4babbd1a-a94a-4cb2-9d29-ad9351043ef9"
+"2025-01-28_22-02-03 - [INFO] - Browser listening on: ws://127.0.0.1:56197/devtools/browser/25afe68d-2279-4795-9d32-f6ecbc458b43"
+"2025-01-28_22-02-04 - [ERROR] - 
+Возникло исключение 'NoneType' object has no attribute 'h3'
+"
+Traceback (most recent call last):
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 143, in main
+    results = MODE_TO_FUNCTION[parser_mode](session, args.input)
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 82, in get_user_wear
+    thing_name = thing_soup.find('td', {'class': 'description'}).h3.text
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'h3'
+Stack (most recent call last):
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 155, in <module>
+    main()
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 147, in main
+    logging.exception(
+"2025-01-28_22-02-04 - [INFO] - Парсер завершил работу."
+"2025-01-28_22-02-04 - [INFO] - terminate chrome process..."
+"2025-01-28_22-02-04 - [INFO] - terminate chrome process..."
+"2025-01-28_22-02-04 - [INFO] - terminate chrome process..."
+"2025-01-28_22-02-04 - [INFO] - terminate chrome process..."
+"2025-01-28_22-02-04 - [INFO] - terminate chrome process..."
+"2025-01-28_22-02-04 - [INFO] - terminate chrome process..."
+"2025-01-28_22-02-04 - [INFO] - terminate chrome process..."
+"2025-01-28_22-02-04 - [INFO] - terminate chrome process..."
+"2025-01-28_22-02-04 - [INFO] - terminate chrome process..."
+"2025-01-28_22-02-04 - [INFO] - terminate chrome process..."
+"2025-01-28_22-02-04 - [INFO] - terminate chrome process..."
+"2025-01-28_22-02-04 - [INFO] - terminate chrome process..."
+"2025-01-28_22-02-04 - [INFO] - terminate chrome process..."
+"2025-01-28_22-02-04 - [INFO] - terminate chrome process..."
+"2025-01-28_22-02-05 - [INFO] - terminate chrome process..."
+"2025-01-28_22-02-05 - [INFO] - terminate chrome process..."
+"2025-01-28_22-02-05 - [INFO] - terminate chrome process..."
+"2025-01-28_22-02-05 - [INFO] - terminate chrome process..."
+"2025-01-28_22-02-05 - [INFO] - terminate chrome process..."
+"2025-01-28_22-02-05 - [INFO] - terminate chrome process..."
+"2025-01-28_22-02-05 - [INFO] - terminate chrome process..."
+"2025-01-28_22-06-42 - [INFO] - Парсер запущен!"
+"2025-01-28_22-06-43 - [INFO] - Browser listening on: ws://127.0.0.1:59067/devtools/browser/a89a0df2-67f0-4559-b6a7-47f51f6c970a"
+"2025-01-28_22-06-44 - [ERROR] - 
+Возникло исключение (sqlite3.IntegrityError) UNIQUE constraint failed: thing.href
+[SQL: INSERT INTO thing (name, type, serial_number, part_number, owner, href) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('Мантия', 'underarmor', 166819796, 8211, 'SwordS', 'https://www.haddan.ru/thing.php?id=166819796')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+"
+Traceback (most recent call last):
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 942, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.IntegrityError: UNIQUE constraint failed: thing.href
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 143, in main
+    results = MODE_TO_FUNCTION[parser_mode](session, args.input)
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 99, in get_user_wear
+    db_session.commit()
+    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2032, in commit
+    trans.commit(_to_root=True)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "<string>", line 2, in commit
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\orm\state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 1313, in commit
+    self._prepare_impl()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "<string>", line 2, in _prepare_impl
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\orm\state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 1288, in _prepare_impl
+    self.session.flush()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 4353, in flush
+    self._flush(objects)
+    ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 4488, in _flush
+    with util.safe_reraise():
+         ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 4449, in _flush
+    flush_context.execute()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\orm\unitofwork.py", line 466, in execute
+    rec.execute(self)
+    ~~~~~~~~~~~^^^^^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\orm\unitofwork.py", line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self.mapper,
+        ^^^^^^^^^^^^
+        uow.states_for_mapper_hierarchy(self.mapper, False, False),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        uow,
+        ^^^^
+    )
+    ^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\orm\persistence.py", line 93, in save_obj
+    _emit_insert_statements(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        base_mapper,
+        ^^^^^^^^^^^^
+    ...<3 lines>...
+        insert,
+        ^^^^^^^
+    )
+    ^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\orm\persistence.py", line 1233, in _emit_insert_statements
+    result = connection.execute(
+        statement,
+        params,
+        execution_options=execution_options,
+    )
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1416, in execute
+    return meth(
+        self,
+        distilled_parameters,
+        execution_options or NO_OPTIONS,
+    )
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\sql\elements.py", line 515, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self, distilled_params, execution_options
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1638, in _execute_clauseelement
+    ret = self._execute_context(
+        dialect,
+    ...<8 lines>...
+        cache_hit=cache_hit,
+    )
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1843, in _execute_context
+    return self._exec_single_context(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        dialect, context, statement, parameters
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1983, in _exec_single_context
+    self._handle_dbapi_exception(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        e, str_statement, effective_parameters, cursor, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2352, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 942, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: thing.href
+[SQL: INSERT INTO thing (name, type, serial_number, part_number, owner, href) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('Мантия', 'underarmor', 166819796, 8211, 'SwordS', 'https://www.haddan.ru/thing.php?id=166819796')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+Stack (most recent call last):
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 155, in <module>
+    main()
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 147, in main
+    logging.exception(
+"2025-01-28_22-06-44 - [INFO] - Парсер завершил работу."
+"2025-01-28_22-06-44 - [INFO] - terminate chrome process..."
+"2025-01-28_22-09-22 - [INFO] - Парсер запущен!"
+"2025-01-28_22-09-23 - [INFO] - Browser listening on: ws://127.0.0.1:52014/devtools/browser/9438f338-511c-4c10-9214-39ce71691467"
+"2025-01-28_22-09-25 - [INFO] - Browser listening on: ws://127.0.0.1:53093/devtools/browser/f8f23352-7d86-4954-9f7e-5cb5af5874c0"
+"2025-01-28_22-09-26 - [INFO] - Browser listening on: ws://127.0.0.1:52824/devtools/browser/50966504-cb4f-40e0-9985-f81f5dd87d79"
+"2025-01-28_22-09-28 - [INFO] - Browser listening on: ws://127.0.0.1:52593/devtools/browser/caff05cb-ae2f-464d-aa05-bf5af5c7620a"
+"2025-01-28_22-09-31 - [INFO] - Browser listening on: ws://127.0.0.1:57358/devtools/browser/ce726530-1433-4354-a731-087420efcb0c"
+"2025-01-28_22-09-33 - [INFO] - Browser listening on: ws://127.0.0.1:62565/devtools/browser/40ad3977-c019-4e0d-8e74-90e4ebe0ee87"
+"2025-01-28_22-09-34 - [INFO] - Browser listening on: ws://127.0.0.1:50599/devtools/browser/a935f0b6-7ac1-4553-99d1-45a7a08cf6c1"
+"2025-01-28_22-09-36 - [INFO] - Browser listening on: ws://127.0.0.1:58573/devtools/browser/4bb0da6f-0673-4d03-a2da-78be68efeeee"
+"2025-01-28_22-09-40 - [INFO] - Browser listening on: ws://127.0.0.1:55286/devtools/browser/2a44fa96-5de7-4eb9-b603-2c2eb523fabb"
+"2025-01-28_22-09-42 - [INFO] - Browser listening on: ws://127.0.0.1:61811/devtools/browser/a6afb696-2203-421d-8d17-7a031262ff4f"
+"2025-01-28_22-09-43 - [INFO] - Browser listening on: ws://127.0.0.1:54472/devtools/browser/f1a5e8f4-f80b-47c0-91ff-7614212b31df"
+"2025-01-28_22-09-46 - [INFO] - Browser listening on: ws://127.0.0.1:53731/devtools/browser/fcb7159e-f2f9-4fdb-9131-d5e3b69db7da"
+"2025-01-28_22-09-49 - [INFO] - Browser listening on: ws://127.0.0.1:61139/devtools/browser/cf32ba90-e70c-4d79-b49e-9ec68357e119"
+"2025-01-28_22-09-51 - [INFO] - Browser listening on: ws://127.0.0.1:49201/devtools/browser/dc392a13-8d2b-4c9c-ae71-ee0e2cdd95c9"
+"2025-01-28_22-09-52 - [INFO] - Browser listening on: ws://127.0.0.1:64077/devtools/browser/eebd1882-e593-4cb9-bd68-84b0fa873203"
+"2025-01-28_22-09-54 - [INFO] - Browser listening on: ws://127.0.0.1:65205/devtools/browser/1a19cea7-c626-4ade-b411-8ef1bae20203"
+"2025-01-28_22-09-56 - [INFO] - Browser listening on: ws://127.0.0.1:51151/devtools/browser/1db9621f-2cf2-4206-bab0-c6d5f10fccd5"
+"2025-01-28_22-09-57 - [INFO] - Browser listening on: ws://127.0.0.1:56160/devtools/browser/9b1fe496-4a2d-486e-b56e-2c61d5b423b8"
+"2025-01-28_22-09-59 - [INFO] - Browser listening on: ws://127.0.0.1:62300/devtools/browser/8f47b489-7c48-491d-857b-5ec0500d471f"
+"2025-01-28_22-10-02 - [INFO] - Browser listening on: ws://127.0.0.1:55555/devtools/browser/6013fc5e-67f1-48df-9311-79a68fc04693"
+"2025-01-28_22-10-04 - [INFO] - Browser listening on: ws://127.0.0.1:63760/devtools/browser/225b9faa-e005-4238-85fe-7f40b620062d"
+"2025-01-28_22-10-06 - [INFO] - Browser listening on: ws://127.0.0.1:49416/devtools/browser/aa0a9dc0-ec2a-4295-9795-bc264a452969"
+"2025-01-28_22-10-08 - [INFO] - Browser listening on: ws://127.0.0.1:50934/devtools/browser/20d938da-67da-4a81-a86f-7b10336379e7"
+"2025-01-28_22-10-10 - [INFO] - Browser listening on: ws://127.0.0.1:51058/devtools/browser/38846ecf-0659-4583-9755-421e997c98ff"
+"2025-01-28_22-10-11 - [INFO] - Browser listening on: ws://127.0.0.1:60420/devtools/browser/c89639ed-1407-4f61-b027-f49bc8e8eb0e"
+"2025-01-28_22-10-13 - [INFO] - Browser listening on: ws://127.0.0.1:51061/devtools/browser/13ff4dd7-5d56-4975-b08c-3a21ca75a47b"
+"2025-01-28_22-10-15 - [INFO] - Browser listening on: ws://127.0.0.1:64982/devtools/browser/ebec6d52-cf88-4ea8-8831-9372a7c493b8"
+"2025-01-28_22-10-16 - [INFO] - Browser listening on: ws://127.0.0.1:63245/devtools/browser/1522b311-2a2f-4e2d-823e-b1641788c2e5"
+"2025-01-28_22-10-17 - [INFO] - Файл с результатами был сохранён."
+"2025-01-28_22-10-17 - [INFO] - Парсер завершил работу."
+"2025-01-28_22-10-17 - [INFO] - terminate chrome process..."
+"2025-01-28_22-10-17 - [INFO] - terminate chrome process..."
+"2025-01-28_22-10-17 - [INFO] - terminate chrome process..."
+"2025-01-28_22-10-17 - [INFO] - terminate chrome process..."
+"2025-01-28_22-10-17 - [INFO] - terminate chrome process..."
+"2025-01-28_22-10-17 - [INFO] - terminate chrome process..."
+"2025-01-28_22-10-17 - [INFO] - terminate chrome process..."
+"2025-01-28_22-10-17 - [INFO] - terminate chrome process..."
+"2025-01-28_22-10-18 - [INFO] - terminate chrome process..."
+"2025-01-28_22-10-18 - [INFO] - terminate chrome process..."
+"2025-01-28_22-10-18 - [INFO] - terminate chrome process..."
+"2025-01-28_22-10-18 - [INFO] - terminate chrome process..."
+"2025-01-28_22-10-18 - [INFO] - terminate chrome process..."
+"2025-01-28_22-10-18 - [INFO] - terminate chrome process..."
+"2025-01-28_22-10-18 - [INFO] - terminate chrome process..."
+"2025-01-28_22-10-18 - [INFO] - terminate chrome process..."
+"2025-01-28_22-10-18 - [INFO] - terminate chrome process..."
+"2025-01-28_22-10-18 - [INFO] - terminate chrome process..."
+"2025-01-28_22-10-18 - [INFO] - terminate chrome process..."
+"2025-01-28_22-10-18 - [INFO] - terminate chrome process..."
+"2025-01-28_22-10-18 - [INFO] - terminate chrome process..."
+"2025-01-28_22-10-18 - [INFO] - terminate chrome process..."
+"2025-01-28_22-10-18 - [INFO] - terminate chrome process..."
+"2025-01-28_22-10-18 - [INFO] - terminate chrome process..."
+"2025-01-28_22-10-18 - [INFO] - terminate chrome process..."
+"2025-01-28_22-10-18 - [INFO] - terminate chrome process..."
+"2025-01-28_22-10-18 - [INFO] - terminate chrome process..."
+"2025-01-28_22-10-18 - [INFO] - terminate chrome process..."
+"2025-01-28_22-16-09 - [INFO] - Парсер запущен!"
+"2025-01-28_22-16-10 - [INFO] - Browser listening on: ws://127.0.0.1:57343/devtools/browser/de457652-bc83-48e8-b7a6-4b717c0a9dc9"
+"2025-01-28_22-16-11 - [ERROR] - 
+Возникло исключение 'int' object has no attribute 'first'
+"
+Traceback (most recent call last):
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 156, in main
+    results = MODE_TO_FUNCTION[parser_mode](session, args.input)
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 94, in get_user_wear
+    serial_number=thing_serial_number.first()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'int' object has no attribute 'first'
+Stack (most recent call last):
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 168, in <module>
+    main()
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 160, in main
+    logging.exception(
+"2025-01-28_22-16-11 - [INFO] - Парсер завершил работу."
+"2025-01-28_22-16-11 - [INFO] - terminate chrome process..."
+"2025-01-28_22-17-00 - [INFO] - Парсер запущен!"
+"2025-01-28_22-17-02 - [INFO] - Browser listening on: ws://127.0.0.1:50762/devtools/browser/e8e208d6-2943-4e01-ab21-89c0d9d78ac8"
+"2025-01-28_22-17-03 - [ERROR] - 
+Возникло исключение 'str' object has no attribute 'first'
+"
+Traceback (most recent call last):
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 156, in main
+    results = MODE_TO_FUNCTION[parser_mode](session, args.input)
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 94, in get_user_wear
+    serial_number=place.find('thingid').text.first()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'first'
+Stack (most recent call last):
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 168, in <module>
+    main()
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 160, in main
+    logging.exception(
+"2025-01-28_22-17-03 - [INFO] - Парсер завершил работу."
+"2025-01-28_22-17-03 - [INFO] - terminate chrome process..."
+"2025-01-28_22-18-31 - [INFO] - Парсер запущен!"
+"2025-01-28_22-18-32 - [INFO] - Browser listening on: ws://127.0.0.1:57009/devtools/browser/b3a966a5-37eb-4ad5-8ab3-1c3b3f78a577"
+"2025-01-28_22-18-34 - [ERROR] - 
+Возникло исключение 'int' object has no attribute 'text'
+"
+Traceback (most recent call last):
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 156, in main
+    results = MODE_TO_FUNCTION[parser_mode](session, args.input)
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 94, in get_user_wear
+    serial_number=thing_serial_number.text).first()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'int' object has no attribute 'text'
+Stack (most recent call last):
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 168, in <module>
+    main()
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 160, in main
+    logging.exception(
+"2025-01-28_22-18-34 - [INFO] - Парсер завершил работу."
+"2025-01-28_22-18-34 - [INFO] - terminate chrome process..."
+"2025-01-28_22-19-54 - [INFO] - Парсер запущен!"
+"2025-01-28_22-19-55 - [INFO] - Browser listening on: ws://127.0.0.1:60209/devtools/browser/1b7bb419-14b4-43c8-be86-b99fd41b24fe"
+"2025-01-28_22-19-57 - [INFO] - Browser listening on: ws://127.0.0.1:55983/devtools/browser/c17b7c86-7bec-4ae3-a530-bdf068f07a39"
+"2025-01-28_22-19-59 - [INFO] - Browser listening on: ws://127.0.0.1:54751/devtools/browser/25d4ee2b-2ac4-49f7-a64a-e800955985a8"
+"2025-01-28_22-20-01 - [INFO] - Browser listening on: ws://127.0.0.1:62725/devtools/browser/ec6003b2-31c7-41e8-a365-4015f70744c7"
+"2025-01-28_22-20-03 - [INFO] - Browser listening on: ws://127.0.0.1:52183/devtools/browser/d74b312a-2e6b-4db7-8bf9-f71009b2554f"
+"2025-01-28_22-20-04 - [INFO] - Browser listening on: ws://127.0.0.1:51437/devtools/browser/c2f2ed6b-0701-4f08-8922-a51595f7ca3a"
+"2025-01-28_22-20-06 - [INFO] - Browser listening on: ws://127.0.0.1:62085/devtools/browser/bc1c74f8-acb6-4e9d-9f6e-fc7b6487fa78"
+"2025-01-28_22-20-09 - [INFO] - Browser listening on: ws://127.0.0.1:51886/devtools/browser/de6b09a4-932d-466f-b443-a7fd35589a25"
+"2025-01-28_22-20-11 - [INFO] - Browser listening on: ws://127.0.0.1:52684/devtools/browser/f36df04f-616e-4278-920d-8ff03b771c77"
+"2025-01-28_22-20-14 - [INFO] - Browser listening on: ws://127.0.0.1:63136/devtools/browser/e920686c-a30c-4263-8e8c-be08a4e8e05d"
+"2025-01-28_22-20-16 - [INFO] - Browser listening on: ws://127.0.0.1:60411/devtools/browser/632ed50a-fc68-4673-b159-6332a5383399"
+"2025-01-28_22-20-18 - [INFO] - Browser listening on: ws://127.0.0.1:49891/devtools/browser/0352793f-7c18-45bc-8881-d979b2be8587"
+"2025-01-28_22-20-19 - [INFO] - Browser listening on: ws://127.0.0.1:55560/devtools/browser/60e2606c-1486-412f-8e69-7b416caf61e7"
+"2025-01-28_22-20-22 - [INFO] - Browser listening on: ws://127.0.0.1:54860/devtools/browser/d001fac5-3688-4ee5-8113-d1346857d059"
+"2025-01-28_22-20-24 - [INFO] - Browser listening on: ws://127.0.0.1:57471/devtools/browser/f2e820ed-3f92-4925-94d6-2fdbb83e796c"
+"2025-01-28_22-20-25 - [INFO] - Browser listening on: ws://127.0.0.1:60540/devtools/browser/2b410da8-1175-4730-9460-ae08ae081731"
+"2025-01-28_22-20-27 - [INFO] - Browser listening on: ws://127.0.0.1:63449/devtools/browser/2f70bfe5-ac42-43d4-9be5-3bc30fba8f98"
+"2025-01-28_22-20-30 - [INFO] - Browser listening on: ws://127.0.0.1:50206/devtools/browser/b4051ad6-6dba-4db2-8365-dfe9d2f651ac"
+"2025-01-28_22-20-31 - [INFO] - Browser listening on: ws://127.0.0.1:63152/devtools/browser/9d682913-5716-4da5-8ed6-f4993ff1e113"
+"2025-01-28_22-20-36 - [INFO] - Browser listening on: ws://127.0.0.1:59209/devtools/browser/42d3dccf-1033-4634-ae7e-771855434060"
+"2025-01-28_22-20-37 - [INFO] - Browser listening on: ws://127.0.0.1:61122/devtools/browser/0487f9fb-99e7-40d3-b797-adfe5e808e27"
+"2025-01-28_22-20-39 - [INFO] - Browser listening on: ws://127.0.0.1:49548/devtools/browser/012ae97b-ce40-4958-be09-69581c0e2a47"
+"2025-01-28_22-20-41 - [INFO] - Browser listening on: ws://127.0.0.1:62849/devtools/browser/0f9de4bc-9530-4e79-acf2-3ce103a2eb2f"
+"2025-01-28_22-20-42 - [INFO] - Browser listening on: ws://127.0.0.1:56592/devtools/browser/a810574d-04ec-4732-a6f4-ccf48637b303"
+"2025-01-28_22-20-44 - [INFO] - Browser listening on: ws://127.0.0.1:52186/devtools/browser/e46c007d-2831-4a77-aa7b-f1b5778f6f7e"
+"2025-01-28_22-20-46 - [INFO] - Browser listening on: ws://127.0.0.1:54045/devtools/browser/2b21dd5b-c176-4b98-81ed-b5b5013619eb"
+"2025-01-28_22-20-50 - [INFO] - Browser listening on: ws://127.0.0.1:61403/devtools/browser/7e81a826-6dfb-400e-a390-ee791e746672"
+"2025-01-28_22-20-52 - [INFO] - Browser listening on: ws://127.0.0.1:57961/devtools/browser/a6ecf744-d4aa-491b-8257-295f0f292cdc"
+"2025-01-28_22-20-53 - [INFO] - Файл с результатами был сохранён."
+"2025-01-28_22-20-53 - [INFO] - Парсер завершил работу."
+"2025-01-28_22-20-53 - [INFO] - terminate chrome process..."
+"2025-01-28_22-20-53 - [INFO] - terminate chrome process..."
+"2025-01-28_22-20-53 - [INFO] - terminate chrome process..."
+"2025-01-28_22-20-53 - [INFO] - terminate chrome process..."
+"2025-01-28_22-20-53 - [INFO] - terminate chrome process..."
+"2025-01-28_22-20-53 - [INFO] - terminate chrome process..."
+"2025-01-28_22-20-53 - [INFO] - terminate chrome process..."
+"2025-01-28_22-20-53 - [INFO] - terminate chrome process..."
+"2025-01-28_22-20-53 - [INFO] - terminate chrome process..."
+"2025-01-28_22-20-53 - [INFO] - terminate chrome process..."
+"2025-01-28_22-20-53 - [INFO] - terminate chrome process..."
+"2025-01-28_22-20-53 - [INFO] - terminate chrome process..."
+"2025-01-28_22-20-53 - [INFO] - terminate chrome process..."
+"2025-01-28_22-20-53 - [INFO] - terminate chrome process..."
+"2025-01-28_22-20-54 - [INFO] - terminate chrome process..."
+"2025-01-28_22-20-54 - [INFO] - terminate chrome process..."
+"2025-01-28_22-20-54 - [INFO] - terminate chrome process..."
+"2025-01-28_22-20-54 - [INFO] - terminate chrome process..."
+"2025-01-28_22-20-54 - [INFO] - terminate chrome process..."
+"2025-01-28_22-20-54 - [INFO] - terminate chrome process..."
+"2025-01-28_22-20-54 - [INFO] - terminate chrome process..."
+"2025-01-28_22-20-54 - [INFO] - terminate chrome process..."
+"2025-01-28_22-20-54 - [INFO] - terminate chrome process..."
+"2025-01-28_22-20-54 - [INFO] - terminate chrome process..."
+"2025-01-28_22-20-54 - [INFO] - terminate chrome process..."
+"2025-01-28_22-20-54 - [INFO] - terminate chrome process..."
+"2025-01-28_22-20-54 - [INFO] - terminate chrome process..."
+"2025-01-28_22-20-54 - [INFO] - terminate chrome process..."
+"2025-01-28_22-21-57 - [INFO] - Парсер запущен!"
+"2025-01-28_22-21-57 - [INFO] - Clearing all items from the cache"
+"2025-01-28_22-21-58 - [INFO] - Browser listening on: ws://127.0.0.1:56916/devtools/browser/6e096354-3077-4f6d-9337-fafb3632dac0"
+"2025-01-28_22-22-00 - [INFO] - Browser listening on: ws://127.0.0.1:63743/devtools/browser/cadef093-1252-4b03-b435-25601ca66ed7"
+"2025-01-28_22-22-04 - [INFO] - Browser listening on: ws://127.0.0.1:49766/devtools/browser/047590ab-bfe2-4acc-b0cd-6b17dd59775a"
+"2025-01-28_22-22-05 - [INFO] - Browser listening on: ws://127.0.0.1:57037/devtools/browser/8c868cb5-2612-460f-bec2-c2caac83867f"
+"2025-01-28_22-22-07 - [INFO] - Browser listening on: ws://127.0.0.1:49312/devtools/browser/38de53a5-a994-4f3d-8a68-a2ece710e6e3"
+"2025-01-28_22-22-09 - [INFO] - Browser listening on: ws://127.0.0.1:60942/devtools/browser/5ae01294-944f-448b-b7b0-9f078f0c2903"
+"2025-01-28_22-22-11 - [INFO] - Browser listening on: ws://127.0.0.1:60480/devtools/browser/7e8f021b-d7ec-4000-9b4c-5c2706d2a57a"
+"2025-01-28_22-22-13 - [INFO] - Browser listening on: ws://127.0.0.1:56461/devtools/browser/9a258187-1692-44e0-8949-d8c27bb25990"
+"2025-01-28_22-22-15 - [INFO] - Browser listening on: ws://127.0.0.1:55808/devtools/browser/f91e3950-b190-42ec-b938-85db882c9f13"
+"2025-01-28_22-22-17 - [INFO] - Browser listening on: ws://127.0.0.1:62613/devtools/browser/48ce2b22-a6c5-4066-88e8-3b2867cfdc65"
+"2025-01-28_22-22-19 - [INFO] - Browser listening on: ws://127.0.0.1:62372/devtools/browser/99b57057-1a2b-4eda-958c-dc35ae283aa9"
+"2025-01-28_22-22-22 - [INFO] - Browser listening on: ws://127.0.0.1:60169/devtools/browser/2587df89-cd13-49b6-884f-8d739442cbb5"
+"2025-01-28_22-22-27 - [INFO] - Browser listening on: ws://127.0.0.1:58667/devtools/browser/32a41810-e226-4993-8319-401445ea0987"
+"2025-01-28_22-22-31 - [INFO] - Browser listening on: ws://127.0.0.1:57858/devtools/browser/137ebbf4-3d05-4086-8c75-15994d5ff0eb"
+"2025-01-28_22-22-32 - [INFO] - Browser listening on: ws://127.0.0.1:61210/devtools/browser/e6a35c5b-ca2d-4d80-bd76-bfa6f54c0272"
+"2025-01-28_22-22-35 - [INFO] - Browser listening on: ws://127.0.0.1:61201/devtools/browser/cbc29f8c-c6c4-4cd3-8972-07eae2de9b62"
+"2025-01-28_22-22-37 - [INFO] - Browser listening on: ws://127.0.0.1:51743/devtools/browser/c8fec77a-3bf8-4275-9d4e-7a9bcf87c8d8"
+"2025-01-28_22-22-39 - [INFO] - Browser listening on: ws://127.0.0.1:54181/devtools/browser/22be2bcf-f97b-42bb-a8ef-b44684e543a9"
+"2025-01-28_22-22-41 - [INFO] - Browser listening on: ws://127.0.0.1:53366/devtools/browser/82427937-0acf-4782-80d4-41d1550e44bd"
+"2025-01-28_22-22-43 - [INFO] - Browser listening on: ws://127.0.0.1:50841/devtools/browser/f8c7b3f9-ac74-415d-8876-6f99c14a13d1"
+"2025-01-28_22-22-46 - [INFO] - Browser listening on: ws://127.0.0.1:49608/devtools/browser/f7379465-708d-4ef9-a7cc-c7d47619f25d"
+"2025-01-28_22-22-47 - [INFO] - Browser listening on: ws://127.0.0.1:64403/devtools/browser/c574515b-a8bd-4ffb-9d32-9fd6216a56f4"
+"2025-01-28_22-22-49 - [INFO] - Browser listening on: ws://127.0.0.1:64049/devtools/browser/0efc9ce0-edc5-4a7e-a817-20728ced3e5a"
+"2025-01-28_22-22-52 - [INFO] - Browser listening on: ws://127.0.0.1:61057/devtools/browser/e98546be-ac2d-4436-bddc-bb181a718507"
+"2025-01-28_22-22-54 - [INFO] - Browser listening on: ws://127.0.0.1:61164/devtools/browser/503051e4-3e81-4296-9813-0a10d2b5e437"
+"2025-01-28_22-22-56 - [INFO] - Browser listening on: ws://127.0.0.1:55632/devtools/browser/53d47482-5cf6-441c-a14f-43ac0afd1c17"
+"2025-01-28_22-22-57 - [INFO] - Browser listening on: ws://127.0.0.1:54695/devtools/browser/feef6f36-5de5-46ca-9cee-dac0dceb1414"
+"2025-01-28_22-22-59 - [INFO] - Browser listening on: ws://127.0.0.1:58746/devtools/browser/0c7588ef-37f2-4df8-95c9-a2b7b02f6e3c"
+"2025-01-28_22-23-02 - [INFO] - Browser listening on: ws://127.0.0.1:57012/devtools/browser/28a40130-dd47-437e-afb0-a425b8365633"
+"2025-01-28_22-23-04 - [INFO] - Browser listening on: ws://127.0.0.1:61586/devtools/browser/287c29fd-cc92-4a40-80ee-f69c1a8c2e08"
+"2025-01-28_22-23-07 - [INFO] - Browser listening on: ws://127.0.0.1:49621/devtools/browser/71bafd0e-be92-4492-9b0f-76794b956ad6"
+"2025-01-28_22-23-09 - [INFO] - Browser listening on: ws://127.0.0.1:58478/devtools/browser/6c680ba4-e974-41b8-a77d-f65c45ff28b6"
+"2025-01-28_22-23-11 - [INFO] - Browser listening on: ws://127.0.0.1:56239/devtools/browser/4da2f07c-1375-4b9a-8249-aae63032418a"
+"2025-01-28_22-23-11 - [INFO] - Файл с результатами был сохранён."
+"2025-01-28_22-23-11 - [INFO] - Парсер завершил работу."
+"2025-01-28_22-23-11 - [INFO] - terminate chrome process..."
+"2025-01-28_22-23-12 - [INFO] - terminate chrome process..."
+"2025-01-28_22-23-12 - [INFO] - terminate chrome process..."
+"2025-01-28_22-23-12 - [INFO] - terminate chrome process..."
+"2025-01-28_22-23-12 - [INFO] - terminate chrome process..."
+"2025-01-28_22-23-12 - [INFO] - terminate chrome process..."
+"2025-01-28_22-23-12 - [INFO] - terminate chrome process..."
+"2025-01-28_22-23-12 - [INFO] - terminate chrome process..."
+"2025-01-28_22-23-12 - [INFO] - terminate chrome process..."
+"2025-01-28_22-23-12 - [INFO] - terminate chrome process..."
+"2025-01-28_22-23-12 - [INFO] - terminate chrome process..."
+"2025-01-28_22-23-12 - [INFO] - terminate chrome process..."
+"2025-01-28_22-23-12 - [INFO] - terminate chrome process..."
+"2025-01-28_22-23-12 - [INFO] - terminate chrome process..."
+"2025-01-28_22-23-12 - [INFO] - terminate chrome process..."
+"2025-01-28_22-23-12 - [INFO] - terminate chrome process..."
+"2025-01-28_22-23-12 - [INFO] - terminate chrome process..."
+"2025-01-28_22-23-12 - [INFO] - terminate chrome process..."
+"2025-01-28_22-23-12 - [INFO] - terminate chrome process..."
+"2025-01-28_22-23-12 - [INFO] - terminate chrome process..."
+"2025-01-28_22-23-12 - [INFO] - terminate chrome process..."
+"2025-01-28_22-23-13 - [INFO] - terminate chrome process..."
+"2025-01-28_22-23-13 - [INFO] - terminate chrome process..."
+"2025-01-28_22-23-13 - [INFO] - terminate chrome process..."
+"2025-01-28_22-23-13 - [INFO] - terminate chrome process..."
+"2025-01-28_22-23-13 - [INFO] - terminate chrome process..."
+"2025-01-28_22-23-13 - [INFO] - terminate chrome process..."
+"2025-01-28_22-23-13 - [INFO] - terminate chrome process..."
+"2025-01-28_22-23-13 - [INFO] - terminate chrome process..."
+"2025-01-28_22-23-13 - [INFO] - terminate chrome process..."
+"2025-01-28_22-23-13 - [INFO] - terminate chrome process..."
+"2025-01-28_22-23-13 - [INFO] - terminate chrome process..."
+"2025-01-28_22-23-13 - [INFO] - terminate chrome process..."
+"2025-01-29_10-29-56 - [INFO] - Парсер запущен!"
+"2025-01-29_10-29-57 - [INFO] - Browser listening on: ws://127.0.0.1:52961/devtools/browser/6dce4bc0-7a50-4410-a644-49ccb67fe32e"
+"2025-01-29_10-29-59 - [INFO] - Browser listening on: ws://127.0.0.1:55945/devtools/browser/83c455f7-59cd-4e42-a20f-b404dc48253c"
+"2025-01-29_10-30-01 - [INFO] - Browser listening on: ws://127.0.0.1:50585/devtools/browser/decddf5e-c219-4235-8ce2-0de71f119568"
+"2025-01-29_10-30-02 - [INFO] - Browser listening on: ws://127.0.0.1:60401/devtools/browser/ef9975d5-3c67-4cd4-ae8e-c322e90122b2"
+"2025-01-29_10-30-04 - [INFO] - Browser listening on: ws://127.0.0.1:49469/devtools/browser/e23fb490-c755-446f-b544-a799a5fdf2e7"
+"2025-01-29_10-30-06 - [INFO] - Browser listening on: ws://127.0.0.1:51385/devtools/browser/73da2889-5526-4a66-be18-05253ea4e87c"
+"2025-01-29_10-30-07 - [INFO] - Browser listening on: ws://127.0.0.1:54006/devtools/browser/d17ab8d4-9107-4b0c-ba3e-fc80aefd9dc4"
+"2025-01-29_10-30-09 - [INFO] - Browser listening on: ws://127.0.0.1:61038/devtools/browser/ab68788f-deed-4a7c-9e86-b106c0ea8aac"
+"2025-01-29_10-30-12 - [INFO] - Browser listening on: ws://127.0.0.1:55527/devtools/browser/442d368a-8f94-4ef9-956b-32934b9f7106"
+"2025-01-29_10-30-16 - [INFO] - Browser listening on: ws://127.0.0.1:59429/devtools/browser/c89401de-b6ab-46c0-ba35-fea95ffeb861"
+"2025-01-29_10-30-17 - [INFO] - Browser listening on: ws://127.0.0.1:63683/devtools/browser/d373af6d-636c-4231-a41f-c3f409ca969e"
+"2025-01-29_10-30-19 - [INFO] - Browser listening on: ws://127.0.0.1:52537/devtools/browser/f279f3f5-4256-4249-8d78-7f2664eb3ee5"
+"2025-01-29_10-30-21 - [INFO] - Browser listening on: ws://127.0.0.1:52192/devtools/browser/b5f3aae6-319b-4251-80cd-48702491a77d"
+"2025-01-29_10-30-23 - [INFO] - Browser listening on: ws://127.0.0.1:60551/devtools/browser/1ece6f94-b6b0-44ba-93ea-79b600740ab0"
+"2025-01-29_10-30-24 - [INFO] - Browser listening on: ws://127.0.0.1:65196/devtools/browser/37e6582b-15e4-4938-9312-c594b1fa7800"
+"2025-01-29_10-30-26 - [INFO] - Browser listening on: ws://127.0.0.1:53544/devtools/browser/8abc3612-c74c-4fec-a4cd-26f42a96c549"
+"2025-01-29_10-30-28 - [INFO] - Browser listening on: ws://127.0.0.1:52326/devtools/browser/03528637-718d-4be6-9398-022f811248b7"
+"2025-01-29_10-30-29 - [ERROR] - 
+Возникло исключение (psycopg2.errors.NumericValueOutOfRange) integer out of range
+
+[SQL: INSERT INTO thing (name, type, serial_number, part_number, owner, href) VALUES (%(name)s, %(type)s, %(serial_number)s, %(part_number)s, %(owner)s, %(href)s) RETURNING thing.id]
+[parameters: {'name': 'Эпические Золотые Штаны', 'type': 'pants', 'serial_number': 2320502016, 'part_number': 10541, 'owner': 'SwordS', 'href': 'https://www.haddan.ru/thing.php?id=2320502016'}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+"
+Traceback (most recent call last):
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 942, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.NumericValueOutOfRange: integer out of range
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 157, in main
+    results = MODE_TO_FUNCTION[parser_mode](session, args.input)
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 113, in get_user_wear
+    db_session.commit()
+    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2032, in commit
+    trans.commit(_to_root=True)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "<string>", line 2, in commit
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\orm\state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 1313, in commit
+    self._prepare_impl()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "<string>", line 2, in _prepare_impl
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\orm\state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 1288, in _prepare_impl
+    self.session.flush()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 4353, in flush
+    self._flush(objects)
+    ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 4488, in _flush
+    with util.safe_reraise():
+         ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 4449, in _flush
+    flush_context.execute()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\orm\unitofwork.py", line 466, in execute
+    rec.execute(self)
+    ~~~~~~~~~~~^^^^^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\orm\unitofwork.py", line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self.mapper,
+        ^^^^^^^^^^^^
+        uow.states_for_mapper_hierarchy(self.mapper, False, False),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        uow,
+        ^^^^
+    )
+    ^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\orm\persistence.py", line 93, in save_obj
+    _emit_insert_statements(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        base_mapper,
+        ^^^^^^^^^^^^
+    ...<3 lines>...
+        insert,
+        ^^^^^^^
+    )
+    ^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\orm\persistence.py", line 1233, in _emit_insert_statements
+    result = connection.execute(
+        statement,
+        params,
+        execution_options=execution_options,
+    )
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1416, in execute
+    return meth(
+        self,
+        distilled_parameters,
+        execution_options or NO_OPTIONS,
+    )
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\sql\elements.py", line 515, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self, distilled_params, execution_options
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1638, in _execute_clauseelement
+    ret = self._execute_context(
+        dialect,
+    ...<8 lines>...
+        cache_hit=cache_hit,
+    )
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1843, in _execute_context
+    return self._exec_single_context(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        dialect, context, statement, parameters
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1983, in _exec_single_context
+    self._handle_dbapi_exception(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        e, str_statement, effective_parameters, cursor, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2352, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 942, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+sqlalchemy.exc.DataError: (psycopg2.errors.NumericValueOutOfRange) integer out of range
+
+[SQL: INSERT INTO thing (name, type, serial_number, part_number, owner, href) VALUES (%(name)s, %(type)s, %(serial_number)s, %(part_number)s, %(owner)s, %(href)s) RETURNING thing.id]
+[parameters: {'name': 'Эпические Золотые Штаны', 'type': 'pants', 'serial_number': 2320502016, 'part_number': 10541, 'owner': 'SwordS', 'href': 'https://www.haddan.ru/thing.php?id=2320502016'}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+Stack (most recent call last):
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 169, in <module>
+    main()
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 161, in main
+    logging.exception(
+"2025-01-29_10-30-29 - [INFO] - Парсер завершил работу."
+"2025-01-29_10-30-29 - [INFO] - terminate chrome process..."
+"2025-01-29_10-30-29 - [INFO] - terminate chrome process..."
+"2025-01-29_10-30-29 - [INFO] - terminate chrome process..."
+"2025-01-29_10-30-29 - [INFO] - terminate chrome process..."
+"2025-01-29_10-30-29 - [INFO] - terminate chrome process..."
+"2025-01-29_10-30-29 - [INFO] - terminate chrome process..."
+"2025-01-29_10-30-29 - [INFO] - terminate chrome process..."
+"2025-01-29_10-30-29 - [INFO] - terminate chrome process..."
+"2025-01-29_10-30-29 - [INFO] - terminate chrome process..."
+"2025-01-29_10-30-29 - [INFO] - terminate chrome process..."
+"2025-01-29_10-30-29 - [INFO] - terminate chrome process..."
+"2025-01-29_10-30-29 - [INFO] - terminate chrome process..."
+"2025-01-29_10-30-29 - [INFO] - terminate chrome process..."
+"2025-01-29_10-30-29 - [INFO] - terminate chrome process..."
+"2025-01-29_10-30-29 - [INFO] - terminate chrome process..."
+"2025-01-29_10-30-29 - [INFO] - terminate chrome process..."
+"2025-01-29_10-30-29 - [INFO] - terminate chrome process..."
+"2025-01-29_11-06-21 - [INFO] - Парсер запущен!"
+"2025-01-29_11-06-35 - [INFO] - Парсер запущен!"
+"2025-01-29_11-06-50 - [INFO] - Парсер запущен!"
+"2025-01-29_11-06-50 - [INFO] - Clearing all items from the cache"
+"2025-01-29_11-06-52 - [INFO] - Browser listening on: ws://127.0.0.1:63197/devtools/browser/c0419c9a-ff9a-4a3e-9383-8f6b466e64cb"
+"2025-01-29_11-06-53 - [INFO] - Browser listening on: ws://127.0.0.1:58510/devtools/browser/8216424c-6c80-4769-8749-4809f60e682f"
+"2025-01-29_11-06-55 - [INFO] - Browser listening on: ws://127.0.0.1:62979/devtools/browser/24367372-ac5c-487c-9978-d852a51ee485"
+"2025-01-29_11-06-57 - [INFO] - Browser listening on: ws://127.0.0.1:50858/devtools/browser/97a803c7-f6d4-47da-85c6-9ec2a599431f"
+"2025-01-29_11-07-00 - [INFO] - Browser listening on: ws://127.0.0.1:54980/devtools/browser/825bfaf8-0a75-42cc-8f36-00968d01a2bb"
+"2025-01-29_11-07-02 - [INFO] - Browser listening on: ws://127.0.0.1:51582/devtools/browser/c742fd62-5b2e-4978-8a28-93adc0312b6b"
+"2025-01-29_11-07-04 - [INFO] - Browser listening on: ws://127.0.0.1:64051/devtools/browser/2c81969c-2e31-447d-9699-c4350fe7417b"
+"2025-01-29_11-07-07 - [INFO] - Browser listening on: ws://127.0.0.1:49928/devtools/browser/823de2ea-fb26-4a5c-9234-4974f87b34c5"
+"2025-01-29_11-07-09 - [INFO] - Browser listening on: ws://127.0.0.1:49674/devtools/browser/7fa41605-b235-4e76-a3eb-e3e403934cad"
+"2025-01-29_11-07-10 - [INFO] - Browser listening on: ws://127.0.0.1:54943/devtools/browser/6bd16521-67bb-41e4-a014-b1d93d179f08"
+"2025-01-29_11-07-12 - [INFO] - Browser listening on: ws://127.0.0.1:58242/devtools/browser/0dcc9561-5c69-46cd-b80d-4705d97c4a06"
+"2025-01-29_11-07-14 - [INFO] - Browser listening on: ws://127.0.0.1:61168/devtools/browser/6470d4f9-73de-4eb6-98e5-e4c959b1d641"
+"2025-01-29_11-07-15 - [INFO] - Browser listening on: ws://127.0.0.1:52193/devtools/browser/ef791ce4-638c-4421-bafe-9657ad739362"
+"2025-01-29_11-07-17 - [INFO] - Browser listening on: ws://127.0.0.1:53760/devtools/browser/c5a1fb53-8977-4219-8110-5d60205a868c"
+"2025-01-29_11-07-20 - [INFO] - Browser listening on: ws://127.0.0.1:62478/devtools/browser/5e4d64e4-40a4-455c-b3fc-b8f9dac33437"
+"2025-01-29_11-07-23 - [INFO] - Browser listening on: ws://127.0.0.1:65525/devtools/browser/c2a95b48-d079-4e33-8f9a-f91fcbf73492"
+"2025-01-29_11-07-25 - [INFO] - Browser listening on: ws://127.0.0.1:58074/devtools/browser/07e264e6-364a-40c0-91cd-cf0b08331afc"
+"2025-01-29_11-07-26 - [ERROR] - 
+Возникло исключение (psycopg2.errors.NumericValueOutOfRange) integer out of range
+
+[SQL: INSERT INTO thing (name, type, serial_number, part_number, owner, href) VALUES (%(name)s, %(type)s, %(serial_number)s, %(part_number)s, %(owner)s, %(href)s) RETURNING thing.id]
+[parameters: {'name': 'Эпические Золотые Штаны', 'type': 'pants', 'serial_number': 2320502016, 'part_number': 10541, 'owner': 'SwordS', 'href': 'https://www.haddan.ru/thing.php?id=2320502016'}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+"
+Traceback (most recent call last):
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 942, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.NumericValueOutOfRange: integer out of range
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 157, in main
+    results = MODE_TO_FUNCTION[parser_mode](session, args.input)
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 113, in get_user_wear
+    db_session.commit()
+    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2032, in commit
+    trans.commit(_to_root=True)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "<string>", line 2, in commit
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\orm\state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 1313, in commit
+    self._prepare_impl()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "<string>", line 2, in _prepare_impl
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\orm\state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 1288, in _prepare_impl
+    self.session.flush()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 4353, in flush
+    self._flush(objects)
+    ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 4488, in _flush
+    with util.safe_reraise():
+         ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 4449, in _flush
+    flush_context.execute()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\orm\unitofwork.py", line 466, in execute
+    rec.execute(self)
+    ~~~~~~~~~~~^^^^^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\orm\unitofwork.py", line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self.mapper,
+        ^^^^^^^^^^^^
+        uow.states_for_mapper_hierarchy(self.mapper, False, False),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        uow,
+        ^^^^
+    )
+    ^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\orm\persistence.py", line 93, in save_obj
+    _emit_insert_statements(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        base_mapper,
+        ^^^^^^^^^^^^
+    ...<3 lines>...
+        insert,
+        ^^^^^^^
+    )
+    ^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\orm\persistence.py", line 1233, in _emit_insert_statements
+    result = connection.execute(
+        statement,
+        params,
+        execution_options=execution_options,
+    )
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1416, in execute
+    return meth(
+        self,
+        distilled_parameters,
+        execution_options or NO_OPTIONS,
+    )
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\sql\elements.py", line 515, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self, distilled_params, execution_options
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1638, in _execute_clauseelement
+    ret = self._execute_context(
+        dialect,
+    ...<8 lines>...
+        cache_hit=cache_hit,
+    )
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1843, in _execute_context
+    return self._exec_single_context(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        dialect, context, statement, parameters
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1983, in _exec_single_context
+    self._handle_dbapi_exception(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        e, str_statement, effective_parameters, cursor, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2352, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 942, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+sqlalchemy.exc.DataError: (psycopg2.errors.NumericValueOutOfRange) integer out of range
+
+[SQL: INSERT INTO thing (name, type, serial_number, part_number, owner, href) VALUES (%(name)s, %(type)s, %(serial_number)s, %(part_number)s, %(owner)s, %(href)s) RETURNING thing.id]
+[parameters: {'name': 'Эпические Золотые Штаны', 'type': 'pants', 'serial_number': 2320502016, 'part_number': 10541, 'owner': 'SwordS', 'href': 'https://www.haddan.ru/thing.php?id=2320502016'}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+Stack (most recent call last):
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 169, in <module>
+    main()
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 161, in main
+    logging.exception(
+"2025-01-29_11-07-26 - [INFO] - Парсер завершил работу."
+"2025-01-29_11-07-26 - [INFO] - terminate chrome process..."
+"2025-01-29_11-07-26 - [INFO] - terminate chrome process..."
+"2025-01-29_11-07-26 - [INFO] - terminate chrome process..."
+"2025-01-29_11-07-26 - [INFO] - terminate chrome process..."
+"2025-01-29_11-07-26 - [INFO] - terminate chrome process..."
+"2025-01-29_11-07-26 - [INFO] - terminate chrome process..."
+"2025-01-29_11-07-26 - [INFO] - terminate chrome process..."
+"2025-01-29_11-07-26 - [INFO] - terminate chrome process..."
+"2025-01-29_11-07-26 - [INFO] - terminate chrome process..."
+"2025-01-29_11-07-26 - [INFO] - terminate chrome process..."
+"2025-01-29_11-07-26 - [INFO] - terminate chrome process..."
+"2025-01-29_11-07-26 - [INFO] - terminate chrome process..."
+"2025-01-29_11-07-26 - [INFO] - terminate chrome process..."
+"2025-01-29_11-07-26 - [INFO] - terminate chrome process..."
+"2025-01-29_11-07-26 - [INFO] - terminate chrome process..."
+"2025-01-29_11-07-26 - [INFO] - terminate chrome process..."
+"2025-01-29_11-07-27 - [INFO] - terminate chrome process..."
+"2025-01-29_11-08-34 - [INFO] - Парсер запущен!"
+"2025-01-29_11-08-34 - [INFO] - Clearing all items from the cache"
+"2025-01-29_11-08-36 - [INFO] - Browser listening on: ws://127.0.0.1:52214/devtools/browser/7d9ddd06-efc0-4f6e-b0c6-18fcbbc6f871"
+"2025-01-29_11-08-37 - [INFO] - Browser listening on: ws://127.0.0.1:53590/devtools/browser/1f633a18-3981-411f-b65f-be888c21a6ec"
+"2025-01-29_11-08-39 - [INFO] - Browser listening on: ws://127.0.0.1:54064/devtools/browser/fc876069-74d1-4983-b8f0-b8d603b1c65a"
+"2025-01-29_11-08-40 - [ERROR] - 
+Возникло исключение (psycopg2.errors.NumericValueOutOfRange) integer out of range
+
+[SQL: INSERT INTO thing (name, type, serial_number, part_number, owner, href) VALUES (%(name)s, %(type)s, %(serial_number)s, %(part_number)s, %(owner)s, %(href)s) RETURNING thing.id]
+[parameters: {'name': 'Кольцо Связи Демона', 'type': 'ring3', 'serial_number': 2221901917, 'part_number': 103102, 'owner': 'Air Gear', 'href': 'https://www.haddan.ru/thing.php?id=2221901917'}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+"
+Traceback (most recent call last):
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 942, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.NumericValueOutOfRange: integer out of range
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 157, in main
+    results = MODE_TO_FUNCTION[parser_mode](session, args.input)
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 113, in get_user_wear
+    db_session.commit()
+    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2032, in commit
+    trans.commit(_to_root=True)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "<string>", line 2, in commit
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\orm\state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 1313, in commit
+    self._prepare_impl()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "<string>", line 2, in _prepare_impl
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\orm\state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 1288, in _prepare_impl
+    self.session.flush()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 4353, in flush
+    self._flush(objects)
+    ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 4488, in _flush
+    with util.safe_reraise():
+         ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 4449, in _flush
+    flush_context.execute()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\orm\unitofwork.py", line 466, in execute
+    rec.execute(self)
+    ~~~~~~~~~~~^^^^^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\orm\unitofwork.py", line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self.mapper,
+        ^^^^^^^^^^^^
+        uow.states_for_mapper_hierarchy(self.mapper, False, False),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        uow,
+        ^^^^
+    )
+    ^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\orm\persistence.py", line 93, in save_obj
+    _emit_insert_statements(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        base_mapper,
+        ^^^^^^^^^^^^
+    ...<3 lines>...
+        insert,
+        ^^^^^^^
+    )
+    ^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\orm\persistence.py", line 1233, in _emit_insert_statements
+    result = connection.execute(
+        statement,
+        params,
+        execution_options=execution_options,
+    )
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1416, in execute
+    return meth(
+        self,
+        distilled_parameters,
+        execution_options or NO_OPTIONS,
+    )
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\sql\elements.py", line 515, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self, distilled_params, execution_options
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1638, in _execute_clauseelement
+    ret = self._execute_context(
+        dialect,
+    ...<8 lines>...
+        cache_hit=cache_hit,
+    )
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1843, in _execute_context
+    return self._exec_single_context(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        dialect, context, statement, parameters
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1983, in _exec_single_context
+    self._handle_dbapi_exception(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        e, str_statement, effective_parameters, cursor, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2352, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 942, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+sqlalchemy.exc.DataError: (psycopg2.errors.NumericValueOutOfRange) integer out of range
+
+[SQL: INSERT INTO thing (name, type, serial_number, part_number, owner, href) VALUES (%(name)s, %(type)s, %(serial_number)s, %(part_number)s, %(owner)s, %(href)s) RETURNING thing.id]
+[parameters: {'name': 'Кольцо Связи Демона', 'type': 'ring3', 'serial_number': 2221901917, 'part_number': 103102, 'owner': 'Air Gear', 'href': 'https://www.haddan.ru/thing.php?id=2221901917'}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+Stack (most recent call last):
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 169, in <module>
+    main()
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 161, in main
+    logging.exception(
+"2025-01-29_11-08-40 - [INFO] - Парсер завершил работу."
+"2025-01-29_11-08-40 - [INFO] - terminate chrome process..."
+"2025-01-29_11-08-40 - [INFO] - terminate chrome process..."
+"2025-01-29_11-08-40 - [INFO] - terminate chrome process..."
+"2025-01-29_11-11-04 - [INFO] - Парсер запущен!"
+"2025-01-29_11-11-04 - [INFO] - Clearing all items from the cache"
+"2025-01-29_11-11-05 - [INFO] - Browser listening on: ws://127.0.0.1:61132/devtools/browser/3548281d-f84b-4114-ad1d-14d610e043aa"
+"2025-01-29_11-11-07 - [INFO] - Browser listening on: ws://127.0.0.1:58314/devtools/browser/96ec393e-5f82-48a5-a722-a59f5690f214"
+"2025-01-29_11-11-08 - [INFO] - Browser listening on: ws://127.0.0.1:59311/devtools/browser/f4547b9e-e32f-429c-bc1c-589954ee4b38"
+"2025-01-29_11-11-09 - [ERROR] - 
+Возникло исключение (psycopg2.errors.NumericValueOutOfRange) integer out of range
+
+[SQL: INSERT INTO thing (name, type, serial_number, part_number, owner, href) VALUES (%(name)s, %(type)s, %(serial_number)s, %(part_number)s, %(owner)s, %(href)s) RETURNING thing.id]
+[parameters: {'name': 'Кольцо Связи Демона', 'type': 'ring3', 'serial_number': 2221901917, 'part_number': 103102, 'owner': 'Air Gear', 'href': 'https://www.haddan.ru/thing.php?id=2221901917'}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+"
+Traceback (most recent call last):
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 942, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.NumericValueOutOfRange: integer out of range
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 157, in main
+    results = MODE_TO_FUNCTION[parser_mode](session, args.input)
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 113, in get_user_wear
+    db_session.commit()
+    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2032, in commit
+    trans.commit(_to_root=True)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "<string>", line 2, in commit
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\orm\state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 1313, in commit
+    self._prepare_impl()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "<string>", line 2, in _prepare_impl
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\orm\state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 1288, in _prepare_impl
+    self.session.flush()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 4353, in flush
+    self._flush(objects)
+    ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 4488, in _flush
+    with util.safe_reraise():
+         ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 4449, in _flush
+    flush_context.execute()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\orm\unitofwork.py", line 466, in execute
+    rec.execute(self)
+    ~~~~~~~~~~~^^^^^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\orm\unitofwork.py", line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self.mapper,
+        ^^^^^^^^^^^^
+        uow.states_for_mapper_hierarchy(self.mapper, False, False),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        uow,
+        ^^^^
+    )
+    ^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\orm\persistence.py", line 93, in save_obj
+    _emit_insert_statements(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        base_mapper,
+        ^^^^^^^^^^^^
+    ...<3 lines>...
+        insert,
+        ^^^^^^^
+    )
+    ^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\orm\persistence.py", line 1233, in _emit_insert_statements
+    result = connection.execute(
+        statement,
+        params,
+        execution_options=execution_options,
+    )
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1416, in execute
+    return meth(
+        self,
+        distilled_parameters,
+        execution_options or NO_OPTIONS,
+    )
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\sql\elements.py", line 515, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self, distilled_params, execution_options
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1638, in _execute_clauseelement
+    ret = self._execute_context(
+        dialect,
+    ...<8 lines>...
+        cache_hit=cache_hit,
+    )
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1843, in _execute_context
+    return self._exec_single_context(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        dialect, context, statement, parameters
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1983, in _exec_single_context
+    self._handle_dbapi_exception(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        e, str_statement, effective_parameters, cursor, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2352, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 942, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+sqlalchemy.exc.DataError: (psycopg2.errors.NumericValueOutOfRange) integer out of range
+
+[SQL: INSERT INTO thing (name, type, serial_number, part_number, owner, href) VALUES (%(name)s, %(type)s, %(serial_number)s, %(part_number)s, %(owner)s, %(href)s) RETURNING thing.id]
+[parameters: {'name': 'Кольцо Связи Демона', 'type': 'ring3', 'serial_number': 2221901917, 'part_number': 103102, 'owner': 'Air Gear', 'href': 'https://www.haddan.ru/thing.php?id=2221901917'}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+Stack (most recent call last):
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 169, in <module>
+    main()
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 161, in main
+    logging.exception(
+"2025-01-29_11-11-09 - [INFO] - Парсер завершил работу."
+"2025-01-29_11-11-09 - [INFO] - terminate chrome process..."
+"2025-01-29_11-11-09 - [INFO] - terminate chrome process..."
+"2025-01-29_11-11-09 - [INFO] - terminate chrome process..."
+"2025-01-29_11-14-51 - [INFO] - Парсер запущен!"
+"2025-01-29_11-14-51 - [INFO] - Clearing all items from the cache"
+"2025-01-29_11-14-52 - [INFO] - Browser listening on: ws://127.0.0.1:58366/devtools/browser/5c0d5886-cc7f-4b57-8c0d-a70f9068b30a"
+"2025-01-29_11-14-54 - [INFO] - Browser listening on: ws://127.0.0.1:51387/devtools/browser/664cdba1-1004-4617-ba9d-5968bdaaa9cc"
+"2025-01-29_11-14-57 - [INFO] - Browser listening on: ws://127.0.0.1:50617/devtools/browser/65271120-4fdd-4613-999a-eb274ca1d31b"
+"2025-01-29_11-14-58 - [INFO] - Browser listening on: ws://127.0.0.1:63911/devtools/browser/e1e9d9da-7af7-48c8-b0c9-50395de600d3"
+"2025-01-29_11-15-00 - [INFO] - Browser listening on: ws://127.0.0.1:58984/devtools/browser/82bd33ff-1902-4e94-8f27-fda52a304b4f"
+"2025-01-29_11-15-02 - [INFO] - Browser listening on: ws://127.0.0.1:64766/devtools/browser/6213e066-6dfd-4bcf-8b53-d1a0731bf26a"
+"2025-01-29_11-15-03 - [INFO] - Browser listening on: ws://127.0.0.1:58697/devtools/browser/fcf6de36-1cae-4d9f-a503-8373c1a41b90"
+"2025-01-29_11-15-05 - [INFO] - Browser listening on: ws://127.0.0.1:54823/devtools/browser/e7821ebc-bc04-4234-80ab-62e9109702bf"
+"2025-01-29_11-15-07 - [INFO] - Browser listening on: ws://127.0.0.1:56748/devtools/browser/daf36622-4de8-4023-8821-f663a15c10ab"
+"2025-01-29_11-15-08 - [INFO] - Browser listening on: ws://127.0.0.1:53760/devtools/browser/1d518fc7-3f22-4b2b-9db3-7c2553b98d20"
+"2025-01-29_11-15-10 - [INFO] - Browser listening on: ws://127.0.0.1:59894/devtools/browser/ed5c1f52-6cce-46b7-aa25-a29adcb96a72"
+"2025-01-29_11-15-12 - [INFO] - Browser listening on: ws://127.0.0.1:53072/devtools/browser/85fa2d96-b5e5-49c9-a167-17047fc6365b"
+"2025-01-29_11-15-15 - [INFO] - Browser listening on: ws://127.0.0.1:64512/devtools/browser/34b60c43-2553-412f-bd6c-1670b664bfac"
+"2025-01-29_11-15-17 - [INFO] - Browser listening on: ws://127.0.0.1:65473/devtools/browser/b3450c08-2edd-4a09-98e6-eaa2c29529cf"
+"2025-01-29_11-15-18 - [INFO] - Browser listening on: ws://127.0.0.1:58531/devtools/browser/96d81d0b-0bf0-409f-a6a6-4969e0089912"
+"2025-01-29_11-15-20 - [INFO] - Browser listening on: ws://127.0.0.1:56348/devtools/browser/85979440-080d-4951-b452-9f7babfec604"
+"2025-01-29_11-15-22 - [INFO] - Browser listening on: ws://127.0.0.1:56042/devtools/browser/a18b69d5-75fe-4692-aedf-3e03a6cceb4a"
+"2025-01-29_11-15-23 - [INFO] - Файл с результатами был сохранён."
+"2025-01-29_11-15-23 - [INFO] - Парсер завершил работу."
+"2025-01-29_11-15-23 - [INFO] - terminate chrome process..."
+"2025-01-29_11-15-23 - [INFO] - terminate chrome process..."
+"2025-01-29_11-15-23 - [INFO] - terminate chrome process..."
+"2025-01-29_11-15-23 - [INFO] - terminate chrome process..."
+"2025-01-29_11-15-23 - [INFO] - terminate chrome process..."
+"2025-01-29_11-15-23 - [INFO] - terminate chrome process..."
+"2025-01-29_11-15-23 - [INFO] - terminate chrome process..."
+"2025-01-29_11-15-23 - [INFO] - terminate chrome process..."
+"2025-01-29_11-15-23 - [INFO] - terminate chrome process..."
+"2025-01-29_11-15-23 - [INFO] - terminate chrome process..."
+"2025-01-29_11-15-23 - [INFO] - terminate chrome process..."
+"2025-01-29_11-15-23 - [INFO] - terminate chrome process..."
+"2025-01-29_11-15-23 - [INFO] - terminate chrome process..."
+"2025-01-29_11-15-23 - [INFO] - terminate chrome process..."
+"2025-01-29_11-15-23 - [INFO] - terminate chrome process..."
+"2025-01-29_11-15-23 - [INFO] - terminate chrome process..."
+"2025-01-29_11-15-24 - [INFO] - terminate chrome process..."
+"2025-01-29_11-15-44 - [INFO] - Парсер запущен!"
+"2025-01-29_11-15-44 - [INFO] - Clearing all items from the cache"
+"2025-01-29_11-15-46 - [INFO] - Browser listening on: ws://127.0.0.1:55578/devtools/browser/02fc005d-9bec-4924-8d16-df0a4a441f98"
+"2025-01-29_11-15-47 - [INFO] - Browser listening on: ws://127.0.0.1:59506/devtools/browser/68402224-9dd8-446f-84bc-79d5a1bc99d7"
+"2025-01-29_11-15-49 - [INFO] - Browser listening on: ws://127.0.0.1:64760/devtools/browser/ae44bdd3-065a-4078-b024-dcbda777fb40"
+"2025-01-29_11-15-51 - [INFO] - Browser listening on: ws://127.0.0.1:55944/devtools/browser/b6c2c2ed-4bb7-416b-95dc-783045d15b15"
+"2025-01-29_11-15-52 - [INFO] - Browser listening on: ws://127.0.0.1:49395/devtools/browser/72d6fbff-f7db-42be-a16e-f028741789a3"
+"2025-01-29_11-15-54 - [INFO] - Browser listening on: ws://127.0.0.1:59719/devtools/browser/9cbc5eef-a0e9-4554-bd5b-29428a021b85"
+"2025-01-29_11-15-56 - [INFO] - Browser listening on: ws://127.0.0.1:57751/devtools/browser/308f1d1e-30a6-45bc-8e77-4cac76c73004"
+"2025-01-29_11-15-57 - [INFO] - Browser listening on: ws://127.0.0.1:54113/devtools/browser/575bb337-9f34-4f57-a895-88405327c8e0"
+"2025-01-29_11-15-59 - [INFO] - Browser listening on: ws://127.0.0.1:49985/devtools/browser/c669fc2b-a17f-42e2-87d7-25071185dd6d"
+"2025-01-29_11-16-00 - [INFO] - Browser listening on: ws://127.0.0.1:61966/devtools/browser/18574164-653f-4bce-9502-bd74b2d0cb4f"
+"2025-01-29_11-16-02 - [INFO] - Browser listening on: ws://127.0.0.1:57940/devtools/browser/1dec1e3b-f371-4008-b11a-e118faf3ff20"
+"2025-01-29_11-16-05 - [INFO] - Browser listening on: ws://127.0.0.1:50217/devtools/browser/740d4d86-7765-48da-89f5-c42e0d19235b"
+"2025-01-29_11-16-07 - [INFO] - Browser listening on: ws://127.0.0.1:63319/devtools/browser/c75e9b72-6dc2-42b0-b5a1-049811c1bce9"
+"2025-01-29_11-16-08 - [INFO] - Browser listening on: ws://127.0.0.1:52193/devtools/browser/a8257101-8ec3-4bff-8363-5e97f20d809a"
+"2025-01-29_11-16-10 - [INFO] - Browser listening on: ws://127.0.0.1:55592/devtools/browser/4aa317e4-1a5b-42b5-87e9-d4b5cf647616"
+"2025-01-29_11-16-12 - [INFO] - Browser listening on: ws://127.0.0.1:60174/devtools/browser/98e89626-6866-4d2b-b4f4-77a0c3e9d380"
+"2025-01-29_11-16-13 - [INFO] - Browser listening on: ws://127.0.0.1:63173/devtools/browser/6dbbba9e-b65f-4bd9-8797-b032a8285680"
+"2025-01-29_11-16-15 - [INFO] - Browser listening on: ws://127.0.0.1:50499/devtools/browser/c13d2952-4cb4-42ab-8c53-a18378d9f2cf"
+"2025-01-29_11-16-17 - [INFO] - Browser listening on: ws://127.0.0.1:57676/devtools/browser/4a6649f1-444f-40dc-a38c-c69a615a7d40"
+"2025-01-29_11-16-18 - [INFO] - Browser listening on: ws://127.0.0.1:49584/devtools/browser/a4c06555-3fb0-4c5e-a779-99533b40ace0"
+"2025-01-29_11-16-23 - [INFO] - Browser listening on: ws://127.0.0.1:62672/devtools/browser/4a915329-4e61-4d20-a313-d0e0ea525563"
+"2025-01-29_11-16-24 - [INFO] - Browser listening on: ws://127.0.0.1:50777/devtools/browser/5d815370-9df4-4f67-81da-cf0ae2b76302"
+"2025-01-29_11-16-28 - [INFO] - Browser listening on: ws://127.0.0.1:50282/devtools/browser/3d6a69be-4942-4683-8568-5c565c71bd70"
+"2025-01-29_11-16-30 - [INFO] - Browser listening on: ws://127.0.0.1:57557/devtools/browser/4ef2385a-0fbb-476f-b3cb-9534249b4767"
+"2025-01-29_11-16-32 - [INFO] - Browser listening on: ws://127.0.0.1:50904/devtools/browser/06fa6cea-386d-4a4c-a165-d15d7dfa9573"
+"2025-01-29_11-16-33 - [INFO] - Browser listening on: ws://127.0.0.1:62829/devtools/browser/50b80bd7-68c1-4991-82db-832234c0c14f"
+"2025-01-29_11-16-35 - [INFO] - Browser listening on: ws://127.0.0.1:55082/devtools/browser/3eeca821-b77f-41d4-afb2-a3e4c25dc013"
+"2025-01-29_11-16-39 - [INFO] - Browser listening on: ws://127.0.0.1:54004/devtools/browser/61a050a5-b18b-44f1-b5a3-4fd4c4a06cba"
+"2025-01-29_11-16-40 - [INFO] - Browser listening on: ws://127.0.0.1:56480/devtools/browser/5f1c3d55-6e57-42eb-997c-edc7da626ba0"
+"2025-01-29_11-16-42 - [INFO] - Browser listening on: ws://127.0.0.1:50531/devtools/browser/e97af320-6309-4716-8125-2f0cd817ffd8"
+"2025-01-29_11-16-44 - [INFO] - Browser listening on: ws://127.0.0.1:62914/devtools/browser/7d3c6d20-e121-404e-9572-9c5d3b42239d"
+"2025-01-29_11-16-45 - [INFO] - Browser listening on: ws://127.0.0.1:51328/devtools/browser/dd7e97b6-b1c8-4618-8449-2ee5792aff5d"
+"2025-01-29_11-16-47 - [INFO] - Browser listening on: ws://127.0.0.1:49178/devtools/browser/7d3c646b-9359-44a8-aadd-0fbf21e522e8"
+"2025-01-29_11-16-48 - [INFO] - Файл с результатами был сохранён."
+"2025-01-29_11-16-48 - [INFO] - Парсер завершил работу."
+"2025-01-29_11-16-48 - [INFO] - terminate chrome process..."
+"2025-01-29_11-16-48 - [INFO] - terminate chrome process..."
+"2025-01-29_11-16-48 - [INFO] - terminate chrome process..."
+"2025-01-29_11-16-48 - [INFO] - terminate chrome process..."
+"2025-01-29_11-16-48 - [INFO] - terminate chrome process..."
+"2025-01-29_11-16-48 - [INFO] - terminate chrome process..."
+"2025-01-29_11-16-48 - [INFO] - terminate chrome process..."
+"2025-01-29_11-16-49 - [INFO] - terminate chrome process..."
+"2025-01-29_11-16-49 - [INFO] - terminate chrome process..."
+"2025-01-29_11-16-49 - [INFO] - terminate chrome process..."
+"2025-01-29_11-16-49 - [INFO] - terminate chrome process..."
+"2025-01-29_11-16-49 - [INFO] - terminate chrome process..."
+"2025-01-29_11-16-49 - [INFO] - terminate chrome process..."
+"2025-01-29_11-16-49 - [INFO] - terminate chrome process..."
+"2025-01-29_11-16-49 - [INFO] - terminate chrome process..."
+"2025-01-29_11-16-49 - [INFO] - terminate chrome process..."
+"2025-01-29_11-16-49 - [INFO] - terminate chrome process..."
+"2025-01-29_11-16-49 - [INFO] - terminate chrome process..."
+"2025-01-29_11-16-49 - [INFO] - terminate chrome process..."
+"2025-01-29_11-16-49 - [INFO] - terminate chrome process..."
+"2025-01-29_11-16-49 - [INFO] - terminate chrome process..."
+"2025-01-29_11-16-49 - [INFO] - terminate chrome process..."
+"2025-01-29_11-16-49 - [INFO] - terminate chrome process..."
+"2025-01-29_11-16-49 - [INFO] - terminate chrome process..."
+"2025-01-29_11-16-50 - [INFO] - terminate chrome process..."
+"2025-01-29_11-16-50 - [INFO] - terminate chrome process..."
+"2025-01-29_11-16-50 - [INFO] - terminate chrome process..."
+"2025-01-29_11-16-50 - [INFO] - terminate chrome process..."
+"2025-01-29_11-16-50 - [INFO] - terminate chrome process..."
+"2025-01-29_11-16-50 - [INFO] - terminate chrome process..."
+"2025-01-29_11-16-50 - [INFO] - terminate chrome process..."
+"2025-01-29_11-16-50 - [INFO] - terminate chrome process..."
+"2025-01-29_11-16-50 - [INFO] - terminate chrome process..."
+"2025-01-29_11-17-52 - [INFO] - Парсер запущен!"
+"2025-01-29_11-17-53 - [INFO] - Browser listening on: ws://127.0.0.1:50406/devtools/browser/085ada93-ae62-4df1-ae0e-70367e10a002"
+"2025-01-29_11-17-55 - [INFO] - Browser listening on: ws://127.0.0.1:53831/devtools/browser/f75834ac-9cff-47c5-aab3-f7450f3ae37b"
+"2025-01-29_11-17-57 - [INFO] - Browser listening on: ws://127.0.0.1:52191/devtools/browser/55430e35-d7fd-4e93-8837-c8535590b874"
+"2025-01-29_11-17-58 - [INFO] - Browser listening on: ws://127.0.0.1:62700/devtools/browser/86f5aed8-06d8-4418-9c8f-71ededbfc363"
+"2025-01-29_11-18-00 - [INFO] - Browser listening on: ws://127.0.0.1:57821/devtools/browser/964e64ed-c14c-48d9-b4a5-02f079bf2ce2"
+"2025-01-29_11-18-02 - [INFO] - Browser listening on: ws://127.0.0.1:49486/devtools/browser/153d86a1-c545-4d5b-a928-8b4d5e209485"
+"2025-01-29_11-18-03 - [INFO] - Browser listening on: ws://127.0.0.1:49361/devtools/browser/18dd300e-3158-41bc-8e68-440a11d72759"
+"2025-01-29_11-18-05 - [INFO] - Browser listening on: ws://127.0.0.1:62425/devtools/browser/848fdcf5-641d-440a-845b-5a8c0356f5b4"
+"2025-01-29_11-18-07 - [INFO] - Browser listening on: ws://127.0.0.1:63937/devtools/browser/6bb36132-57b5-4371-82df-ea6ef67e5994"
+"2025-01-29_11-18-08 - [INFO] - Browser listening on: ws://127.0.0.1:59690/devtools/browser/b7a8e5ea-6306-4a73-bfd9-47c4a57e4757"
+"2025-01-29_11-18-10 - [INFO] - Browser listening on: ws://127.0.0.1:51295/devtools/browser/317ebb6d-ec90-434d-9ed9-e01ea461feed"
+"2025-01-29_11-18-11 - [INFO] - Browser listening on: ws://127.0.0.1:49675/devtools/browser/bb43ab1e-22bf-4596-895c-1b6e3420af46"
+"2025-01-29_11-18-13 - [INFO] - Browser listening on: ws://127.0.0.1:52820/devtools/browser/f3a6cd43-9565-415e-8faa-9efa2c441fe0"
+"2025-01-29_11-18-15 - [INFO] - Browser listening on: ws://127.0.0.1:53779/devtools/browser/d1b7182e-b5e8-4ad2-b998-fcc77480c5f3"
+"2025-01-29_11-18-17 - [INFO] - Browser listening on: ws://127.0.0.1:59192/devtools/browser/5e206606-92b7-41cd-9d34-d138c46dbd71"
+"2025-01-29_11-18-18 - [INFO] - Browser listening on: ws://127.0.0.1:61554/devtools/browser/b99034e8-3a9e-40f0-84e1-78e0703ce522"
+"2025-01-29_11-18-20 - [INFO] - Browser listening on: ws://127.0.0.1:55461/devtools/browser/acc54e86-65f0-4eea-ace6-f576ccf2c6b1"
+"2025-01-29_11-18-23 - [INFO] - Browser listening on: ws://127.0.0.1:54829/devtools/browser/27244ee2-bcd4-49a0-b902-e378a673f48f"
+"2025-01-29_11-18-24 - [INFO] - Browser listening on: ws://127.0.0.1:64528/devtools/browser/1226cb5f-680c-476e-85cc-64a2a0cd6462"
+"2025-01-29_11-18-26 - [INFO] - Browser listening on: ws://127.0.0.1:58875/devtools/browser/a8b26a43-75db-47a7-a135-e5c5b7238502"
+"2025-01-29_11-18-28 - [INFO] - Browser listening on: ws://127.0.0.1:54063/devtools/browser/7e719cf8-f199-43be-8869-122f056d8495"
+"2025-01-29_11-18-30 - [INFO] - Browser listening on: ws://127.0.0.1:50065/devtools/browser/3d32c9c9-913f-496f-be20-427fcc7c48b6"
+"2025-01-29_11-18-31 - [INFO] - Browser listening on: ws://127.0.0.1:52220/devtools/browser/2fbc25cc-9e25-4f16-8f89-a0f18f4ff673"
+"2025-01-29_11-18-33 - [INFO] - Browser listening on: ws://127.0.0.1:50306/devtools/browser/ec32504e-de1e-4dbb-b8b1-512c15f75e31"
+"2025-01-29_11-18-35 - [INFO] - Browser listening on: ws://127.0.0.1:59136/devtools/browser/b0f3f4a2-8668-450e-ad16-0b060ad29a80"
+"2025-01-29_11-18-37 - [INFO] - Browser listening on: ws://127.0.0.1:56291/devtools/browser/7829f6d3-bdcf-40c1-8d8d-94d39ab74927"
+"2025-01-29_11-18-39 - [INFO] - Browser listening on: ws://127.0.0.1:57675/devtools/browser/d1c9db19-a4de-46cc-a3f5-4cb56a7a0e02"
+"2025-01-29_11-18-41 - [INFO] - Browser listening on: ws://127.0.0.1:55272/devtools/browser/6ba891e4-03d6-410b-983c-c4eafa04664d"
+"2025-01-29_11-18-45 - [INFO] - Browser listening on: ws://127.0.0.1:49644/devtools/browser/8b654ef9-d0e3-47ff-b199-ca88f172e76a"
+"2025-01-29_11-18-46 - [INFO] - Browser listening on: ws://127.0.0.1:58847/devtools/browser/9fb6fcc4-f3e9-4afa-b47c-72663a8cab6b"
+"2025-01-29_11-18-48 - [INFO] - Browser listening on: ws://127.0.0.1:53362/devtools/browser/58f987e8-270d-46c1-96d3-07ec00ebfade"
+"2025-01-29_11-18-50 - [INFO] - Browser listening on: ws://127.0.0.1:58355/devtools/browser/43f25232-2e91-45cf-b516-4e8751c19116"
+"2025-01-29_11-18-52 - [INFO] - Browser listening on: ws://127.0.0.1:62347/devtools/browser/93fe99c6-26e3-4d7b-964a-f769a69579d4"
+"2025-01-29_11-18-54 - [INFO] - Browser listening on: ws://127.0.0.1:50841/devtools/browser/69d6cceb-2018-4185-9792-73b84f18a6fe"
+"2025-01-29_11-18-57 - [INFO] - Browser listening on: ws://127.0.0.1:60239/devtools/browser/09a463a0-a2bb-4449-90c4-b69f0a04e97f"
+"2025-01-29_11-18-59 - [INFO] - Browser listening on: ws://127.0.0.1:49473/devtools/browser/6a1ce225-1df0-4f1e-8943-5d7dc4553d47"
+"2025-01-29_11-19-00 - [INFO] - Browser listening on: ws://127.0.0.1:61852/devtools/browser/690600dc-42d6-4d1c-b7d9-8aa08a589ecd"
+"2025-01-29_11-19-02 - [INFO] - Browser listening on: ws://127.0.0.1:64940/devtools/browser/cbb687b8-835e-4c9e-a165-20f9cc774c5e"
+"2025-01-29_11-19-03 - [INFO] - Файл с результатами был сохранён."
+"2025-01-29_11-19-03 - [INFO] - Парсер завершил работу."
+"2025-01-29_11-19-03 - [INFO] - terminate chrome process..."
+"2025-01-29_11-19-03 - [INFO] - terminate chrome process..."
+"2025-01-29_11-19-03 - [INFO] - terminate chrome process..."
+"2025-01-29_11-19-03 - [INFO] - terminate chrome process..."
+"2025-01-29_11-19-03 - [INFO] - terminate chrome process..."
+"2025-01-29_11-19-03 - [INFO] - terminate chrome process..."
+"2025-01-29_11-19-03 - [INFO] - terminate chrome process..."
+"2025-01-29_11-19-03 - [INFO] - terminate chrome process..."
+"2025-01-29_11-19-03 - [INFO] - terminate chrome process..."
+"2025-01-29_11-19-03 - [INFO] - terminate chrome process..."
+"2025-01-29_11-19-03 - [INFO] - terminate chrome process..."
+"2025-01-29_11-19-03 - [INFO] - terminate chrome process..."
+"2025-01-29_11-19-03 - [INFO] - terminate chrome process..."
+"2025-01-29_11-19-03 - [INFO] - terminate chrome process..."
+"2025-01-29_11-19-03 - [INFO] - terminate chrome process..."
+"2025-01-29_11-19-04 - [INFO] - terminate chrome process..."
+"2025-01-29_11-19-04 - [INFO] - terminate chrome process..."
+"2025-01-29_11-19-04 - [INFO] - terminate chrome process..."
+"2025-01-29_11-19-04 - [INFO] - terminate chrome process..."
+"2025-01-29_11-19-04 - [INFO] - terminate chrome process..."
+"2025-01-29_11-19-04 - [INFO] - terminate chrome process..."
+"2025-01-29_11-19-04 - [INFO] - terminate chrome process..."
+"2025-01-29_11-19-04 - [INFO] - terminate chrome process..."
+"2025-01-29_11-19-04 - [INFO] - terminate chrome process..."
+"2025-01-29_11-19-04 - [INFO] - terminate chrome process..."
+"2025-01-29_11-19-04 - [INFO] - terminate chrome process..."
+"2025-01-29_11-19-04 - [INFO] - terminate chrome process..."
+"2025-01-29_11-19-04 - [INFO] - terminate chrome process..."
+"2025-01-29_11-19-04 - [INFO] - terminate chrome process..."
+"2025-01-29_11-19-04 - [INFO] - terminate chrome process..."
+"2025-01-29_11-19-04 - [INFO] - terminate chrome process..."
+"2025-01-29_11-19-05 - [INFO] - terminate chrome process..."
+"2025-01-29_11-19-05 - [INFO] - terminate chrome process..."
+"2025-01-29_11-19-05 - [INFO] - terminate chrome process..."
+"2025-01-29_11-19-05 - [INFO] - terminate chrome process..."
+"2025-01-29_11-19-05 - [INFO] - terminate chrome process..."
+"2025-01-29_11-19-05 - [INFO] - terminate chrome process..."
+"2025-01-29_11-19-05 - [INFO] - terminate chrome process..."
