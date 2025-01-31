@@ -8,7 +8,7 @@ from sqlalchemy.orm import Session
 from tqdm import tqdm
 
 from configs import configure_argument_parser, configure_logging
-from constants import API_URL, LIBRIARY_URL
+from constants import API_URL, THING_ID_URL
 from outputs import control_output
 from db_utils import Thing, DATABASE_URL
 
@@ -77,13 +77,13 @@ def get_user_wear(session, username):
     db_session = Session(engine)
     thing_session = HTMLSession()
     for place in tqdm(root.find_all('place')):
-        thing_url = LIBRIARY_URL + place.find('thingid').text
+        thing_url = THING_ID_URL + place.find('thingid').text
         thing_response = thing_session.get(thing_url)
         thing_response.html.render()
         thing_soup = BeautifulSoup(thing_response.html.html, 'lxml')
         thing_name = thing_soup.find('td', {'class': 'description'}).h3.text
-        thing_serial_number = int(place.find('thingid').text)
-        thing_part_number = int(place.find('thingtypeid').text)
+        thing_serial_number = place.find('thingid').text
+        thing_part_number = place.find('thingtypeid').text
         result[thing_name] = {
             'Тип': place['id'],
             'S/N': thing_serial_number,

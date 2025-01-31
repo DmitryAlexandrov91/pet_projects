@@ -2,7 +2,7 @@
 import os
 
 from dotenv import load_dotenv
-from sqlalchemy import create_engine, Column, Integer, String, BigInteger
+from sqlalchemy import create_engine, Column, Integer, String
 from sqlalchemy.orm import declared_attr, declarative_base
 
 
@@ -30,16 +30,24 @@ Base = declarative_base(cls=PreBase)
 
 
 class Thing(Base):
-    """Модель предметов."""
+    """Модель вещей игроков."""
     name = Column(String)
     type = Column(String(200))
-    serial_number = Column(BigInteger, unique=True)
-    part_number = Column(BigInteger)
+    serial_number = Column(String, unique=True)
+    part_number = Column(String)
     owner = Column(String, nullable=True)
+    href = Column(String, unique=True)
+
+
+class Item(Base):
+    """Модель предмета"""
+    part_number = Column(String, unique=True)
+    name = Column(String)
+    type = Column(String)
     href = Column(String, unique=True)
 
 
 if __name__ == '__main__':
     engine = create_engine(DATABASE_URL, echo=False)
-    # Base.metadata.drop_all(engine) - не запускать иначе пездес
+    # Base.metadata.drop_all(engine)  # - не запускать иначе пездес
     Base.metadata.create_all(engine)

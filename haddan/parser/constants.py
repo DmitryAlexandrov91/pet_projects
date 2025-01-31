@@ -9,7 +9,9 @@ load_dotenv()
 
 # Константы url адресов.
 API_URL = 'https://haddan.ru/inner/api.php'
-LIBRIARY_URL = 'https://www.haddan.ru/thing.php?id='
+THING_ID_URL = 'https://www.haddan.ru/thing.php?id='
+THINGS_API_URL = 'https://haddan.ru/inner/api_lib.php?cat=thingtype&t=0'
+THING_TYPE_URL = 'https://haddan.ru/thing.php?type='
 
 # Константы директорий, путей.
 BASE_DIR = Path(__file__).parent

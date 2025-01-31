@@ -2582,3 +2582,156 @@ Stack (most recent call last):
 "2025-01-29_19-15-29 - [INFO] - Файл с результатами был отправлен в Telegram."
 "2025-01-29_19-15-29 - [INFO] - Парсер завершил работу."
 "2025-01-29_19-15-29 - [INFO] - terminate chrome process..."
+"2025-01-31_22-58-31 - [INFO] - Парсер запущен!"
+"2025-01-31_22-58-32 - [INFO] - Browser listening on: ws://127.0.0.1:58689/devtools/browser/9a07da21-2112-48fc-9f65-c23c34a42076"
+"2025-01-31_22-58-33 - [ERROR] - 
+Возникло исключение (psycopg2.errors.UndefinedFunction) operator does not exist: character varying = integer
+LINE 3: WHERE thing.serial_number = 166819796 
+                                  ^
+HINT:  No operator matches the given name and argument types. You might need to add explicit type casts.
+
+[SQL: SELECT thing.name AS thing_name, thing.type AS thing_type, thing.serial_number AS thing_serial_number, thing.part_number AS thing_part_number, thing.owner AS thing_owner, thing.href AS thing_href, thing.id AS thing_id 
+FROM thing 
+WHERE thing.serial_number = %(serial_number_1)s 
+ LIMIT %(param_1)s]
+[parameters: {'serial_number_1': 166819796, 'param_1': 1}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+"
+Traceback (most recent call last):
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 942, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.UndefinedFunction: operator does not exist: character varying = integer
+LINE 3: WHERE thing.serial_number = 166819796 
+                                  ^
+HINT:  No operator matches the given name and argument types. You might need to add explicit type casts.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 158, in main
+    results = MODE_TO_FUNCTION[parser_mode](session, args.input)
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 97, in get_user_wear
+    ).first()
+      ~~~~~^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\orm\query.py", line 2754, in first
+    return self.limit(1)._iter().first()  # type: ignore
+           ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\orm\query.py", line 2853, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+                                                  ~~~~~~~~~~~~~~~~~~~~^
+        statement,
+        ^^^^^^^^^^
+        params,
+        ^^^^^^^
+        execution_options={"_sa_orm_load_options": self.load_options},
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2365, in execute
+    return self._execute_internal(
+           ~~~~~~~~~~~~~~~~~~~~~~^
+        statement,
+        ^^^^^^^^^^
+    ...<4 lines>...
+        _add_event=_add_event,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2251, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self,
+        ^^^^^
+    ...<4 lines>...
+        conn,
+        ^^^^^
+    )
+    ^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\orm\context.py", line 305, in orm_execute_statement
+    result = conn.execute(
+        statement, params or {}, execution_options=execution_options
+    )
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1416, in execute
+    return meth(
+        self,
+        distilled_parameters,
+        execution_options or NO_OPTIONS,
+    )
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\sql\elements.py", line 515, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self, distilled_params, execution_options
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1638, in _execute_clauseelement
+    ret = self._execute_context(
+        dialect,
+    ...<8 lines>...
+        cache_hit=cache_hit,
+    )
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1843, in _execute_context
+    return self._exec_single_context(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        dialect, context, statement, parameters
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1983, in _exec_single_context
+    self._handle_dbapi_exception(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        e, str_statement, effective_parameters, cursor, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2352, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 942, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.UndefinedFunction) operator does not exist: character varying = integer
+LINE 3: WHERE thing.serial_number = 166819796 
+                                  ^
+HINT:  No operator matches the given name and argument types. You might need to add explicit type casts.
+
+[SQL: SELECT thing.name AS thing_name, thing.type AS thing_type, thing.serial_number AS thing_serial_number, thing.part_number AS thing_part_number, thing.owner AS thing_owner, thing.href AS thing_href, thing.id AS thing_id 
+FROM thing 
+WHERE thing.serial_number = %(serial_number_1)s 
+ LIMIT %(param_1)s]
+[parameters: {'serial_number_1': 166819796, 'param_1': 1}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+Stack (most recent call last):
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 170, in <module>
+    main()
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 162, in main
+    logging.exception(
+"2025-01-31_22-58-33 - [INFO] - Парсер завершил работу."
+"2025-01-31_22-58-33 - [INFO] - terminate chrome process..."
+"2025-01-31_22-59-22 - [INFO] - Парсер запущен!"
+"2025-01-31_22-59-23 - [INFO] - Browser listening on: ws://127.0.0.1:61710/devtools/browser/d757b06f-fead-4dba-8613-ed75e68d790b"
+"2025-01-31_22-59-44 - [INFO] - Файл с результатами был сохранён."
+"2025-01-31_22-59-44 - [INFO] - Парсер завершил работу."
+"2025-01-31_22-59-44 - [INFO] - terminate chrome process..."
+"2025-01-31_23-01-07 - [INFO] - Парсер запущен!"
+"2025-01-31_23-01-08 - [INFO] - Парсер завершил работу."
+"2025-01-31_23-01-15 - [INFO] - Парсер запущен!"
+"2025-01-31_23-01-16 - [INFO] - Browser listening on: ws://127.0.0.1:63151/devtools/browser/44303c48-b7db-49dc-bc59-45aa49fa89e9"
+"2025-01-31_23-01-46 - [INFO] - Файл с результатами был сохранён."
+"2025-01-31_23-01-46 - [INFO] - Парсер завершил работу."
+"2025-01-31_23-01-46 - [INFO] - terminate chrome process..."
