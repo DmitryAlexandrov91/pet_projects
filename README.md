@@ -73,6 +73,6 @@ certbot 2.3.0 from Certbot Project (certbot-eff✓) installed*
 
 **scrapy crawl my_spider** *запуск паука*
 
-**scrapy crawl my_spider -O название_файла.формат** *запуск паука и перезапись(заглавное -O) данных в файл (csv, json, xml) 
+**scrapy crawl my_spider -O название_файла.формат** *запуск паука и перезапись(заглавное -O) данных в файл (csv, json, xml)*
 
 
