@@ -3,8 +3,9 @@ from bs4 import BeautifulSoup
 import requests_cache
 from requests_html import HTMLSession
 import logging
-from sqlalchemy import create_engine, insert
+from sqlalchemy import create_engine
 from sqlalchemy.orm import Session
+from tqdm import tqdm
 
 from configs import configure_argument_parser, configure_logging
 from constants import API_URL, LIBRIARY_URL
@@ -74,17 +75,17 @@ def get_user_wear(session, username):
     # engine = create_engine('sqlite:///haddan.db', echo=False)
     engine = create_engine(DATABASE_URL, echo=False)
     db_session = Session(engine)
-    for place in root.find_all('place'):
+    thing_session = HTMLSession()
+    for place in tqdm(root.find_all('place')):
         thing_url = LIBRIARY_URL + place.find('thingid').text
-        thing_session = HTMLSession()
         thing_response = thing_session.get(thing_url)
         thing_response.html.render()
         thing_soup = BeautifulSoup(thing_response.html.html, 'lxml')
         thing_name = thing_soup.find('td', {'class': 'description'}).h3.text
         thing_serial_number = int(place.find('thingid').text)
         thing_part_number = int(place.find('thingtypeid').text)
-        result[place['id']] = {
-            'Название': thing_name,
+        result[thing_name] = {
+            'Тип': place['id'],
             'S/N': thing_serial_number,
             'артикул': thing_part_number,
             'прочность': place.find('durc').text,

@@ -29,4 +29,3 @@ def get_spar_catalog(url):
     response = session.get(url)
     soup = BeautifulSoup(response.text, 'lxml')
     return soup
-

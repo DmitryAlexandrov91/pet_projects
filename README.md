@@ -64,3 +64,15 @@ certbot 2.3.0 from Certbot Project (certbot-eff✓) installed*
 **sudo certbot renew --dry-run**     *убедиться что сертификат будет обновляться автоматически*
 
 **sudo certbot renew --pre-hook "service nginx stop" --post-hook "service nginx start"**    *ручное обновление сертификата*
+
+### Scrapy
+
+**scrapy startproject my_project** *создать scrapy проект*
+
+**scrapy genspider название_паука url_адрес** *сгенерировать нового паука*
+
+**scrapy crawl my_spider** *запуск паука*
+
+**scrapy crawl my_spider -O название_файла.формат** *запуск паука и перезапись(заглавное -O) данных в файл (csv, json, xml) 
+
+

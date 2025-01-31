@@ -2326,3 +2326,259 @@ Stack (most recent call last):
 "2025-01-29_11-19-05 - [INFO] - terminate chrome process..."
 "2025-01-29_11-19-05 - [INFO] - terminate chrome process..."
 "2025-01-29_11-19-05 - [INFO] - terminate chrome process..."
+"2025-01-29_11-30-51 - [INFO] - Парсер запущен!"
+"2025-01-29_11-31-01 - [INFO] - Парсер запущен!"
+"2025-01-29_11-31-01 - [INFO] - Clearing all items from the cache"
+"2025-01-29_11-31-03 - [INFO] - Browser listening on: ws://127.0.0.1:49825/devtools/browser/437a5846-31a5-46a4-8b96-6a72fbbbec47"
+"2025-01-29_11-31-05 - [INFO] - Browser listening on: ws://127.0.0.1:64823/devtools/browser/6e62b90b-89b7-4f2c-a316-2b1fe3a1c6aa"
+"2025-01-29_11-31-06 - [INFO] - Browser listening on: ws://127.0.0.1:60586/devtools/browser/23cc4a0b-037e-48d5-a599-8da0fca3c23c"
+"2025-01-29_11-31-08 - [INFO] - Browser listening on: ws://127.0.0.1:61057/devtools/browser/910235dc-d971-4075-b7cd-561511e47b62"
+"2025-01-29_11-31-11 - [INFO] - Browser listening on: ws://127.0.0.1:65250/devtools/browser/7a5e303f-ba4e-4f3c-b9ca-a207ccaaa250"
+"2025-01-29_11-31-12 - [INFO] - Browser listening on: ws://127.0.0.1:54562/devtools/browser/e079ba82-f99c-44b8-9d7f-4f8e61121dd6"
+"2025-01-29_11-31-14 - [INFO] - Browser listening on: ws://127.0.0.1:55841/devtools/browser/cff9e803-57e7-4153-9ea4-e914bc1abb14"
+"2025-01-29_11-31-16 - [INFO] - Browser listening on: ws://127.0.0.1:63214/devtools/browser/79609b64-900c-42ed-b8a4-f2e4e7867a59"
+"2025-01-29_11-31-18 - [INFO] - Browser listening on: ws://127.0.0.1:53843/devtools/browser/160c74d8-20b2-4fef-8cd1-1327cb565e09"
+"2025-01-29_11-31-21 - [INFO] - Browser listening on: ws://127.0.0.1:61072/devtools/browser/372f5581-d032-4a18-9189-2143624ad3af"
+"2025-01-29_11-31-22 - [INFO] - Browser listening on: ws://127.0.0.1:60803/devtools/browser/caa6c808-6d72-4ec7-aa9b-337652c9e766"
+"2025-01-29_11-31-24 - [INFO] - Browser listening on: ws://127.0.0.1:53891/devtools/browser/091e254d-e6a5-41b1-ba3b-09e340c48912"
+"2025-01-29_11-31-26 - [INFO] - Browser listening on: ws://127.0.0.1:57797/devtools/browser/9f6a6208-802d-405f-a3bf-80c79c9bbe89"
+"2025-01-29_11-31-28 - [INFO] - Browser listening on: ws://127.0.0.1:49693/devtools/browser/edae38d0-ca27-444c-81d1-f33a2ea29d76"
+"2025-01-29_11-31-30 - [INFO] - Browser listening on: ws://127.0.0.1:62502/devtools/browser/6a1270f5-711e-4ad4-ae78-9f19fde462e0"
+"2025-01-29_11-31-32 - [INFO] - Browser listening on: ws://127.0.0.1:64990/devtools/browser/21c619bd-54c8-415e-95cd-969d4c2737a5"
+"2025-01-29_11-31-34 - [INFO] - Browser listening on: ws://127.0.0.1:61355/devtools/browser/3e67d453-f571-4b77-91d9-599dd17d99cb"
+"2025-01-29_11-31-35 - [INFO] - Browser listening on: ws://127.0.0.1:60200/devtools/browser/923f404a-4247-4f33-b880-9f3b2192c626"
+"2025-01-29_11-31-37 - [INFO] - Browser listening on: ws://127.0.0.1:62563/devtools/browser/69b69bcd-17d4-42a5-9e30-62021ace2fd4"
+"2025-01-29_11-31-39 - [INFO] - Browser listening on: ws://127.0.0.1:52970/devtools/browser/bbd589f6-cf86-4af3-aed4-5bb49d074671"
+"2025-01-29_11-31-40 - [INFO] - Browser listening on: ws://127.0.0.1:60869/devtools/browser/28da7ffb-8a44-455c-9363-a0ba97582d72"
+"2025-01-29_11-31-42 - [INFO] - Browser listening on: ws://127.0.0.1:52481/devtools/browser/990260db-422a-4aeb-98d3-8cf8b274c62b"
+"2025-01-29_11-31-44 - [INFO] - Browser listening on: ws://127.0.0.1:53142/devtools/browser/8456075d-fdc1-40da-aed5-b74ce668e3d2"
+"2025-01-29_11-31-46 - [INFO] - Browser listening on: ws://127.0.0.1:52212/devtools/browser/5259276e-f420-457c-8be0-be430b75c07c"
+"2025-01-29_11-31-48 - [INFO] - Browser listening on: ws://127.0.0.1:54350/devtools/browser/ade81e70-b5e8-4e6b-a803-b3b28c1fe4b9"
+"2025-01-29_11-31-50 - [INFO] - Browser listening on: ws://127.0.0.1:51052/devtools/browser/6a3cf5b1-b81c-4252-b80e-ce2266100a46"
+"2025-01-29_11-31-53 - [INFO] - Browser listening on: ws://127.0.0.1:56708/devtools/browser/5f6fca85-b2db-43cc-a1ca-754e1b3a0a9a"
+"2025-01-29_11-31-55 - [INFO] - Browser listening on: ws://127.0.0.1:64799/devtools/browser/a5811727-3b63-416b-8054-d44abdc76c08"
+"2025-01-29_11-31-56 - [INFO] - Файл с результатами был сохранён."
+"2025-01-29_11-31-56 - [INFO] - Парсер завершил работу."
+"2025-01-29_11-31-56 - [INFO] - terminate chrome process..."
+"2025-01-29_11-31-56 - [INFO] - terminate chrome process..."
+"2025-01-29_11-31-56 - [INFO] - terminate chrome process..."
+"2025-01-29_11-31-56 - [INFO] - terminate chrome process..."
+"2025-01-29_11-31-56 - [INFO] - terminate chrome process..."
+"2025-01-29_11-31-56 - [INFO] - terminate chrome process..."
+"2025-01-29_11-31-56 - [INFO] - terminate chrome process..."
+"2025-01-29_11-31-56 - [INFO] - terminate chrome process..."
+"2025-01-29_11-31-56 - [INFO] - terminate chrome process..."
+"2025-01-29_11-31-56 - [INFO] - terminate chrome process..."
+"2025-01-29_11-31-56 - [INFO] - terminate chrome process..."
+"2025-01-29_11-31-56 - [INFO] - terminate chrome process..."
+"2025-01-29_11-31-56 - [INFO] - terminate chrome process..."
+"2025-01-29_11-31-56 - [INFO] - terminate chrome process..."
+"2025-01-29_11-31-56 - [INFO] - terminate chrome process..."
+"2025-01-29_11-31-56 - [INFO] - terminate chrome process..."
+"2025-01-29_11-31-56 - [INFO] - terminate chrome process..."
+"2025-01-29_11-31-56 - [INFO] - terminate chrome process..."
+"2025-01-29_11-31-57 - [INFO] - terminate chrome process..."
+"2025-01-29_11-31-57 - [INFO] - terminate chrome process..."
+"2025-01-29_11-31-57 - [INFO] - terminate chrome process..."
+"2025-01-29_11-31-57 - [INFO] - terminate chrome process..."
+"2025-01-29_11-31-57 - [INFO] - terminate chrome process..."
+"2025-01-29_11-31-57 - [INFO] - terminate chrome process..."
+"2025-01-29_11-31-57 - [INFO] - terminate chrome process..."
+"2025-01-29_11-31-57 - [INFO] - terminate chrome process..."
+"2025-01-29_11-31-57 - [INFO] - terminate chrome process..."
+"2025-01-29_11-31-57 - [INFO] - terminate chrome process..."
+"2025-01-29_11-32-33 - [INFO] - Парсер запущен!"
+"2025-01-29_11-32-33 - [INFO] - Clearing all items from the cache"
+"2025-01-29_11-32-34 - [INFO] - Browser listening on: ws://127.0.0.1:58770/devtools/browser/5a59f072-5594-483f-9412-7a8b5cf45725"
+"2025-01-29_11-32-52 - [INFO] - Файл с результатами был сохранён."
+"2025-01-29_11-32-52 - [INFO] - Парсер завершил работу."
+"2025-01-29_11-32-52 - [INFO] - terminate chrome process..."
+"2025-01-29_11-34-50 - [INFO] - Парсер запущен!"
+"2025-01-29_11-34-52 - [INFO] - Browser listening on: ws://127.0.0.1:57690/devtools/browser/6d0d3954-653c-46bc-b2d4-938fb65ea8e1"
+"2025-01-29_11-35-09 - [INFO] - Файл с результатами был сохранён."
+"2025-01-29_11-35-09 - [INFO] - Парсер завершил работу."
+"2025-01-29_11-35-09 - [INFO] - terminate chrome process..."
+"2025-01-29_19-09-59 - [INFO] - Парсер запущен!"
+"2025-01-29_19-10-00 - [INFO] - Browser listening on: ws://127.0.0.1:65441/devtools/browser/bed13e51-fdc2-4c17-8e4a-2590ceccd65d"
+"2025-01-29_19-10-05 - [ERROR] - 
+Возникло исключение (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+"
+Traceback (most recent call last):
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 146, in __init__
+    self._dbapi_connection = engine.raw_connection()
+                             ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 3298, in raw_connection
+    return self.pool.connect()
+           ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 449, in connect
+    return _ConnectionFairy._checkout(self)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 1263, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 712, in checkout
+    rec = pool._do_get()
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\pool\impl.py", line 179, in _do_get
+    with util.safe_reraise():
+         ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\pool\impl.py", line 177, in _do_get
+    return self._create_connection()
+           ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 390, in _create_connection
+    return _ConnectionRecord(self)
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 674, in __init__
+    self.__connect()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 900, in __connect
+    with util.safe_reraise():
+         ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 896, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+                                         ~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\engine\create.py", line 646, in connect
+    return dialect.connect(*cargs, **cparams)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 622, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 158, in main
+    results = MODE_TO_FUNCTION[parser_mode](session, args.input)
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 97, in get_user_wear
+    ).first()
+      ~~~~~^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\orm\query.py", line 2754, in first
+    return self.limit(1)._iter().first()  # type: ignore
+           ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\orm\query.py", line 2853, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+                                                  ~~~~~~~~~~~~~~~~~~~~^
+        statement,
+        ^^^^^^^^^^
+        params,
+        ^^^^^^^
+        execution_options={"_sa_orm_load_options": self.load_options},
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2365, in execute
+    return self._execute_internal(
+           ~~~~~~~~~~~~~~~~~~~~~~^
+        statement,
+        ^^^^^^^^^^
+    ...<4 lines>...
+        _add_event=_add_event,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2241, in _execute_internal
+    conn = self._connection_for_bind(bind)
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2110, in _connection_for_bind
+    return trans._connection_for_bind(engine, execution_options)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in _connection_for_bind
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\orm\state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 1189, in _connection_for_bind
+    conn = bind.connect()
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 3274, in connect
+    return self._connection_cls(self)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 148, in __init__
+    Connection._handle_dbapi_exception_noconnection(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        err, dialect, engine
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2439, in _handle_dbapi_exception_noconnection
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 146, in __init__
+    self._dbapi_connection = engine.raw_connection()
+                             ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 3298, in raw_connection
+    return self.pool.connect()
+           ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 449, in connect
+    return _ConnectionFairy._checkout(self)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 1263, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 712, in checkout
+    rec = pool._do_get()
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\pool\impl.py", line 179, in _do_get
+    with util.safe_reraise():
+         ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\pool\impl.py", line 177, in _do_get
+    return self._create_connection()
+           ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 390, in _create_connection
+    return _ConnectionRecord(self)
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 674, in __init__
+    self.__connect()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 900, in __connect
+    with util.safe_reraise():
+         ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 896, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+                                         ~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\engine\create.py", line 646, in connect
+    return dialect.connect(*cargs, **cparams)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 622, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\venv\Lib\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+Stack (most recent call last):
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 170, in <module>
+    main()
+  File "C:\Users\AlDmAl\Desktop\Python\VSC\Dev\pet_projects\haddan\parser\main.py", line 162, in main
+    logging.exception(
+"2025-01-29_19-10-05 - [INFO] - Парсер завершил работу."
+"2025-01-29_19-10-05 - [INFO] - terminate chrome process..."
+"2025-01-29_19-10-27 - [INFO] - Парсер запущен!"
+"2025-01-29_19-10-28 - [INFO] - Browser listening on: ws://127.0.0.1:55651/devtools/browser/5ff7cf64-f1ba-4f00-a0e4-132c72fdf919"
+"2025-01-29_19-10-55 - [INFO] - Файл с результатами был сохранён."
+"2025-01-29_19-10-55 - [INFO] - Парсер завершил работу."
+"2025-01-29_19-10-55 - [INFO] - terminate chrome process..."
+"2025-01-29_19-11-05 - [INFO] - Парсер запущен!"
+"2025-01-29_19-11-10 - [INFO] - Парсер запущен!"
+"2025-01-29_19-11-11 - [INFO] - Browser listening on: ws://127.0.0.1:55770/devtools/browser/0b0976bd-647b-4db3-b388-e1c3a456b687"
+"2025-01-29_19-11-34 - [INFO] - Файл с результатами был отправлен в Telegram."
+"2025-01-29_19-11-34 - [INFO] - Парсер завершил работу."
+"2025-01-29_19-11-34 - [INFO] - terminate chrome process..."
+"2025-01-29_19-14-54 - [INFO] - Парсер запущен!"
+"2025-01-29_19-14-55 - [INFO] - Browser listening on: ws://127.0.0.1:61686/devtools/browser/7f61adb0-f7f6-4a29-8189-bf307880f76e"
+"2025-01-29_19-15-29 - [INFO] - Файл с результатами был отправлен в Telegram."
+"2025-01-29_19-15-29 - [INFO] - Парсер завершил работу."
+"2025-01-29_19-15-29 - [INFO] - terminate chrome process..."
