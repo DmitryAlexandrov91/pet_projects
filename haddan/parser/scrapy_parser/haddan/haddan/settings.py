@@ -1,5 +1,4 @@
-import os
-from scrapy.utils.project import get_project_settings
+from .constants import RESULTS_DIR
 
 
 BOT_NAME = "haddan"
@@ -16,12 +15,12 @@ FEED_EXPORT_ENCODING = "utf-8"
 
 
 FEEDS = {
-    'results/items.csv': {
+    f'{RESULTS_DIR}/items.csv': {
         'format': 'csv',
         'fields': ['part_number', 'name', 'type', 'href'],
         'overwrite': True
     },
-    'results/wear.csv': {
+    f'{RESULTS_DIR}/wear.csv': {
         'format': 'csv',
         'fields': ['part_number', 'name', 'type',
                    'href',
@@ -33,6 +32,7 @@ FEEDS = {
 
 ITEM_PIPELINES = {
     'haddan.pipelines.HaddanItemsPipeline': 300,
+    'haddan.pipelines.HaddanWearPipeline': 300,
 }
 
 LOG_ENABLED = True
@@ -47,21 +47,9 @@ SPIDER_SETTINGS = {
                'haddan.pipelines.HaddanItemsPipeline': 300,
            },
        },
-       'SpiderB': {
-           'ITEM_PIPELINES': {
-               'myproject.pipelines.PipelineB': 200,
+       'WearSpider': {
+           'WearSpider': {
+               'haddan.pipelines.HaddanWearPipeline': 300,
            },
        },
    }
-
-
-def update_settings(settings):
-    spider = getattr(settings, 'SPIDER', None)
-    if spider:
-        settings.setdict(SPIDER_SETTINGS.get(spider.name, {}))
-
-
-PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
-os.environ['SCRAPY_SETTINGS_MODULE'] = 'haddan.settings'
-settings = get_project_settings()
-update_settings(settings)

@@ -4,8 +4,7 @@ import scrapy
 from scrapy.selector import Selector
 from selenium import webdriver
 
-from haddan.items import HaddanWear
-
+from haddan.items import HaddanThing
 
 THING_ID_URL = 'https://www.haddan.ru/thing.php?id='
 
@@ -55,4 +54,4 @@ class WearSpider(scrapy.Spider):
             'owner': self.owner,
             'serial_number': serial_number
         }
-        yield HaddanWear(data)
+        yield HaddanThing(data)

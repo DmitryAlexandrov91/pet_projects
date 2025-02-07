@@ -8,7 +8,7 @@ class HaddanItem(scrapy.Item):
     href = scrapy.Field()
 
 
-class HaddanWear(scrapy.Item):
+class HaddanThing(scrapy.Item):
     part_number = scrapy.Field()
     name = scrapy.Field()
     type = scrapy.Field()

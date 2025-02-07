@@ -9,9 +9,6 @@ THINGS_API_URL = 'https://haddan.ru/inner/api_lib.php?cat=thingtype&t=0'
 def parse_libriary(page, session):
     
 
-    
-
-
 if __name__ == '__main__':
     session = HTMLSession()
     response = session.get(THINGS_API_URL)
