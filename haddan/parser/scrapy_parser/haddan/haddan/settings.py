@@ -32,24 +32,24 @@ FEEDS = {
 
 ITEM_PIPELINES = {
     'haddan.pipelines.HaddanItemsPipeline': 300,
-    'haddan.pipelines.HaddanWearPipeline': 300,
+    # 'haddan.pipelines.HaddanWearPipeline': 300,
 }
 
 LOG_ENABLED = True
 LOG_LEVEL = 'ERROR'
-HTTP_CACHE = True
-HTTPCACHE_ENABLED = True
+HTTP_CACHE = False
+HTTPCACHE_ENABLED = False
 
 
-SPIDER_SETTINGS = {
-       'ItemsSpider': {
-           'ItemsSpider': {
-               'haddan.pipelines.HaddanItemsPipeline': 300,
-           },
-       },
-       'WearSpider': {
-           'WearSpider': {
-               'haddan.pipelines.HaddanWearPipeline': 300,
-           },
-       },
-   }
+# SPIDER_SETTINGS = {
+#        'ItemsSpider': {
+#            'ItemsSpider': {
+#                'haddan.pipelines.HaddanItemsPipeline': 300,
+#            },
+#        },
+#        'WearSpider': {
+#            'WearSpider': {
+#                'haddan.pipelines.HaddanWearPipeline': 300,
+#            },
+#        },
+#    }

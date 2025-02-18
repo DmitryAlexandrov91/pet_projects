@@ -14,7 +14,7 @@ class ItemsSpider(scrapy.Spider):
     '''
     name = "items"
     allowed_domains = ["haddan.ru"]
-    start_urls = [START_PAGE_URL + "103"]
+    start_urls = [START_PAGE_URL + "100"]
 
     def parse(self, response):
         items = response.css('item').getall()
@@ -30,6 +30,6 @@ class ItemsSpider(scrapy.Spider):
             yield HaddanItem(data)
         current_page = int(response.url.split('=')[-1])
         next_page = current_page + 1
-        if next_page < 106:
+        if next_page < 120:
             next_url = START_PAGE_URL + str(next_page)
             yield response.follow(next_url, callback=self.parse)

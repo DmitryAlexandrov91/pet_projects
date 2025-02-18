@@ -30,3 +30,5 @@ coverage.xml
 
 results/
 logs/
+
+.scrapy/
