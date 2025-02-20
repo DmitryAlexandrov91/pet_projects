@@ -1,0 +1,51 @@
+<html><head>
+
+<style>
+p {
+line-height: 1.7;
+}
+</style>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
+</head><body class="dialogbody"><metad http-equiv="X-UA-Compatible" content="IE=9"><title>Хаддан // Вопрос-ответ</title>
+<link href="/@!style/haddan.css?20220508192856" rel="stylesheet" type="text/css">
+<link href="/@!style/dialog.css?20200311192532" rel="stylesheet" type="text/css">
+<script language="javascript">var g_eh_version='8.1.2.d969ea2.m'</script>
+<script language="javascript" charset="utf-8" src="/@!script/eh.js?20221002150212"></script>
+<script language="javascript" charset="utf-8" src="/@!script/dialog.js?20211205125110"></script>
+<script language="javascript">ehge(); eh_check_inc('dialog'); ehgx()</script>
+
+<!--
+--><script language="JavaScript">
+ehgh('init');
+
+
+var g_dlg = {
+npcid: -82,
+npcname: 'Фея Поляны',
+npcsex: 0,
+npcrace: 'elf',
+changed: true,
+question: 'Приветствую тебя, странник! Сейчас пока нет для тебя работы. Приходи где-то через <span id=tm>?</span>.',
+answers: [[9000,'Хорошо, я подойду позже.']],
+close: false,
+color: '#0E790B',
+goto: ''
+};
+function dlgScript(){
+  var _c = eh_enter('dlgScript', arguments);
+  top.initPageTimer('tm',80,document);
+  eh_exit(_c);
+}
+
+ehgx();
+</script><!--
+--><div class="talksayBIG" id="dlgq">
+<script language="JavaScript">ehge(); writeQuestion(); ehgx()</script>&nbsp;&nbsp;— Приветствую тебя, странник! Сейчас пока нет для тебя работы. Приходи где-то через <span id="tm">1:06</span>.
+</div>
+<div id="dlga" style="margin-top: 10px">
+<p><script language="JavaScript">ehge(); writeAnswers(); ehgx()</script><span class="talksayTak0">&nbsp;&nbsp;—&nbsp;<a href="/room/func/qa.php?id=9000" onclick="return onSelAnswer(event,0)" class="talksayTak">Хорошо, я подойду позже.</a><br></span></p>
+</div>
+<script language="JavaScript">ehge(); processDlg(); ehgx()</script>
+</metad></body></html>
