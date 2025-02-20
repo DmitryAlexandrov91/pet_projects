@@ -1,10 +1,4 @@
-from time import sleep
-import sys
-import os
-
-
 from selenium import webdriver
-from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from telebot import TeleBot, types
@@ -12,19 +6,11 @@ from webdriver_manager.chrome import ChromeDriverManager
 
 from constants import (FIRST_CHAR, SCREENSHOT_PATH, SECOND_CHAR,
                        TELEGRAM_BOT_TOKEN)
-from utils import (HaddanBot, price_counter, save_url_content, send_photo,
-                   time_extractor,
-                   try_to_switch_to_central_frame, try_to_switch_to_dialog)
+from utils import HaddanBot, save_url_content, send_photo
+
 
 from haddan_bot import glade_farm
 
-
-if getattr(sys, 'frozen', False):
-    # В случае упакованного приложения
-    BASE_DIR = sys._MEIPASS
-else:
-    # В обычном режиме разработки
-    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 bot = TeleBot(token=TELEGRAM_BOT_TOKEN)
 

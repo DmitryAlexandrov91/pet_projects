@@ -1,5 +1,4 @@
 import os
-from pathlib import Path
 
 from dotenv import load_dotenv
 
@@ -38,8 +37,8 @@ PAUSE_DURATION_SECONDS = 50
 FIELD_PRICES = {
     'Мухожор': 9,
     'Подсолнух': 17,
-    'Капустница': 28,
-    'Мандрагора': 40,
+    'Капустница': 30,
+    'Мандрагора': 50,
     'Зеленая массивка': 67,
     'Колючник Черный': 101,
     'Гертаниум': 210

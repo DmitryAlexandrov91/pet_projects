@@ -50,7 +50,7 @@ def glade_farm(driver):
                     message_for_log = f'Выбрано: {res_price[most_cheep_res]} - {datetime.now().time()}'
                     print(message_for_log)
                     with open(GLADE_FARM_LOG_PATH, "a", encoding="utf-8") as file:
-                        file.write(message_for_log)
+                        file.write(f'{message_for_log}\n')
                     battle_start[most_cheep_res].click()
         while driver.find_elements(
                 By.PARTIAL_LINK_TEXT, 'Ударить'):
