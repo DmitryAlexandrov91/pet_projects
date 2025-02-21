@@ -1,5 +1,5 @@
 from constants import FIELD_PRICES
-import re 
+import re
 
 resurses_list = [
     'Зеленая массивка - 5 шт.',
@@ -23,5 +23,3 @@ def price_counter(resurses):
             result.append(part2 * FIELD_PRICES[f'{part1}'])
     most_cheep_res = result.index(max(result))
     return most_cheep_res
-
-

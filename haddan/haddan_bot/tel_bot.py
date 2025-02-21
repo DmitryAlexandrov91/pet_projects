@@ -1,15 +1,18 @@
+from time import sleep
+
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from telebot import TeleBot, types
 from webdriver_manager.chrome import ChromeDriverManager
 
-from constants import (FIRST_CHAR, SCREENSHOT_PATH, SECOND_CHAR,
-                       TELEGRAM_BOT_TOKEN)
-from utils import HaddanBot, save_url_content, send_photo
+from constants import (FIRST_CHAR, SECOND_CHAR,
+                       TELEGRAM_BOT_TOKEN, PASSWORD)
+from utils import (
+    HaddanBot, save_url_content, send_photo, try_to_switch_to_central_frame)
 
 
-from haddan_bot import glade_farm
+from haddan_bot import glade_farm, kaptcha_find
 
 
 bot = TeleBot(token=TELEGRAM_BOT_TOKEN)
@@ -39,7 +42,9 @@ def first_char_login_game(message):
         text='Заходим в игру под главным персонажем.',
         reply_markup=keyboard,
     )
-    SwordS.login_to_game()
+    SwordS.login_to_game(PASSWORD)
+    kaptcha_find(driver, bot)
+
 
 
 @bot.message_handler(commands=['2'])
@@ -53,6 +58,7 @@ def second_char_login_game(message):
         reply_markup=keyboard,
     )
     Nordman.login_to_game()
+    kaptcha_find(driver, bot)
 
 
 @bot.message_handler(commands=['html'])
@@ -89,7 +95,7 @@ def field_farm(message):
             text='Начинаю фарм поляны.',
             reply_markup=keyboard,
         )
-    glade_farm(driver)
+    glade_farm(driver, bot)
 
 
 @bot.message_handler(content_types=['text'])
@@ -97,20 +103,36 @@ def kaptcha_handler(message):
     chat = message.chat
     chat_id = chat.id
     text = message.text
-    buttons = driver.find_elements(
-        By.CSS_SELECTOR,
-        f'button[value="{text}"]')
-    if buttons:
-        buttons[0].click()
+    try:
+        try_to_switch_to_central_frame(driver)
+        kaptcha_runes = driver.find_elements(
+            By.CLASS_NAME,
+            'captcha_rune'
+        )
+
+        for number in text:
+            kaptcha_runes[int(number)].click()
+            sleep(0.5)
+        try_to_switch_to_central_frame(driver)
+        buttons = driver.find_elements(
+                        By.TAG_NAME, 'button')
+        if buttons:
+            buttons[1].click()
+
+    except Exception:
         bot.send_message(
             chat_id=chat_id,
-            text='Ответ на капчу получен, работа началась!',
+            text='Ошибка при вводе капчи, попробуйте ещё раз.',
             reply_markup=keyboard,
         )
 
 
 def main():
-    bot.polling()
+    try:
+        bot.polling()
+    except Exception as e:
+        print(f'Возникла ошибка {str(e)}')
+        sleep(20)
 
 
 if __name__ == '__main__':

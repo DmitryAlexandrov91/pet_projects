@@ -110,9 +110,6 @@ def try_to_switch_to_dialog(driver):
                 break
 
 
-# def try_to_find_kaptcha(driver):
-
-
 def find_kaptcha(driver):
     driver.switch_to.frame("func")
     image_element = driver.find_element(
