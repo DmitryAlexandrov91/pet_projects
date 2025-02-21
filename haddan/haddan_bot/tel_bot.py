@@ -71,13 +71,13 @@ def get_page_html(message):
 def get_page_screenshot(message):
     chat = message.chat
     chat_id = chat.id
-    driver.get_screenshot_as_file(f'{SCREENSHOT_PATH}')
+    driver.get_screenshot_as_file('screenshot.png')
     bot.send_message(
             chat_id=chat_id,
-            text='Что на экране.',
+            text='Отправляю скрин экрана.',
             reply_markup=keyboard,
         )
-    send_photo(bot, SCREENSHOT_PATH)
+    send_photo(bot, 'screenshot.png')
 
 
 @bot.message_handler(commands=['field_farm'])

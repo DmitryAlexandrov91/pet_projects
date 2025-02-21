@@ -129,7 +129,7 @@ def get_kaptcha_answer(message, driver):
     button.click()
 
 
-def price_counter(resurses):
+def price_counter(resurses, price_dit=FIELD_PRICES):
     """Находит самый дорогой ресурс из списка."""
     result = []
     for s in resurses:
@@ -138,7 +138,7 @@ def price_counter(resurses):
         if match:
             part1 = match.group(1).strip()
             part2 = int(match.group(2))
-            result.append(part2 * FIELD_PRICES[f'{part1}'])
+            result.append(part2 * price_dit[f'{part1}'])
     most_cheep_res = result.index(max(result))
     return most_cheep_res
 
@@ -172,7 +172,7 @@ class HaddanBot():
         if bot is not None:
             self.bot = bot
 
-    def login_to_game(self):
+    def login_to_game(self, password):
         """Заходит в игру под заданным именем char."""
         self.driver.get(HADDAN_MAIN_URL)
         self.driver.maximize_window()
@@ -183,7 +183,7 @@ class HaddanBot():
         sleep(1)
         password_field = self.driver.find_element(
             By.NAME, 'passwd')
-        password_field.send_keys(PASSWORD)
+        password_field.send_keys(password)
         sleep(1)
         submit_button = self.driver.find_element(
             By.CSS_SELECTOR,

@@ -7,7 +7,7 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
 
-from constants import FIRST_CHAR, GLADE_FARM_LOG_PATH, SECOND_CHAR
+from constants import FIRST_CHAR, GLADE_FARM_LOG_PATH, SECOND_CHAR, PASSWORD
 from utils import (HaddanBot, price_counter, time_extractor,
                    try_to_switch_to_central_frame, try_to_switch_to_dialog)
 
@@ -47,17 +47,23 @@ def glade_farm(driver):
                 if resurses:
                     res_price = [res.text for res in resurses]
                     most_cheep_res = price_counter(res_price)
-                    message_for_log = f'Выбрано: {res_price[most_cheep_res]} - {datetime.now().time()}'
+                    message_for_log = f'Выбрано: {res_price[most_cheep_res]} - {datetime.now()}'
                     print(message_for_log)
-                    with open(GLADE_FARM_LOG_PATH, "a", encoding="utf-8") as file:
+                    with open('glade_farm.txt', "a", encoding="utf-8") as file:
                         file.write(f'{message_for_log}\n')
                     battle_start[most_cheep_res].click()
         while driver.find_elements(
                 By.PARTIAL_LINK_TEXT, 'Ударить'):
-            hit = driver.find_element(
+            hits = driver.find_elements(
                 By.CSS_SELECTOR,
                 'img[onclick="touchFight();"]')
-            hit.click()
+            if hits:
+                try:
+                    hits[0].click()
+                except Exception:
+                    sleep(1)
+                    driver.refresh()
+                    continue
             sleep(0.5)
         come_back = driver.find_elements(
                 By.PARTIAL_LINK_TEXT, 'Вернуться')
@@ -74,6 +80,6 @@ if __name__ == '__main__':
     driver = webdriver.Chrome(service=service)
 
     SwordS = HaddanBot(char=FIRST_CHAR, driver=driver)
-    SwordS.login_to_game()
+    SwordS.login_to_game(PASSWORD)
 
     glade_farm(driver)
