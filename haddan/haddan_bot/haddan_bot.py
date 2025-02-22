@@ -7,7 +7,7 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
 
-from constants import FIRST_CHAR, PASSWORD, TELEGRAM_CHAT_ID
+from constants import FIRST_CHAR, SECOND_CHAR, PASSWORD, FIELD_PRICES
 from utils import (HaddanBot, price_counter, send_photo, time_extractor,
                    try_to_switch_to_central_frame, try_to_switch_to_dialog)
 
@@ -27,7 +27,7 @@ def kaptcha_find(driver, bot=None):
         sleep(60)
 
 
-def glade_farm(driver, bot=None):
+def glade_farm(driver, price_dict=FIELD_PRICES, bot=None):
     """Фарм поляны(пока без распознования капчи)"""
     while True:
         try:
@@ -43,6 +43,8 @@ def glade_farm(driver, bot=None):
                 By.CLASS_NAME,
                 'talksayTak')
             if battle_start:
+                answers = [answer.text for answer in battle_start]
+                print(answers)
                 if len(battle_start) == 1:
                     wait_tag = driver.find_elements(
                         By.CLASS_NAME,
@@ -58,7 +60,9 @@ def glade_farm(driver, bot=None):
                     resurses = driver.find_elements(By.TAG_NAME, 'li')
                     if resurses:
                         res_price = [res.text for res in resurses]
-                        most_cheep_res = price_counter(res_price)
+                        most_cheep_res = price_counter(
+                            res_price,
+                            price_diсt=price_dict)
                         message_for_log = f'Выбрано: {res_price[most_cheep_res]} - {datetime.now()}'
                         print(message_for_log)
                         with open(
@@ -95,17 +99,23 @@ def glade_farm(driver, bot=None):
                     send_photo(bot, 'runes.png')
                     sleep(30)
             driver.refresh()
-        except Exception:
+        except Exception as e:
+            print(e)
             sleep(2)
-            driver.refresh()
-            continue
+            if driver.session_id:
+                driver.refresh()
+                continue
+            break
 
 
 if __name__ == '__main__':
     service = Service(executable_path=ChromeDriverManager().install())
     driver = webdriver.Chrome(service=service)
 
-    SwordS = HaddanBot(char=FIRST_CHAR, driver=driver)
-    SwordS.login_to_game(PASSWORD)
+    # SwordS = HaddanBot(char=FIRST_CHAR, driver=driver)
+    # SwordS.login_to_game(PASSWORD)
+
+    Nordman = HaddanBot(char=SECOND_CHAR, driver=driver)
+    Nordman.login_to_game(PASSWORD)
 
     glade_farm(driver)

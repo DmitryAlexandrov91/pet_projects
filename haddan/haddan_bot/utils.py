@@ -126,7 +126,7 @@ def get_kaptcha_answer(message, driver):
     button.click()
 
 
-def price_counter(resurses, price_dit=FIELD_PRICES):
+def price_counter(resurses, price_diсt=FIELD_PRICES):
     """Находит самый дорогой ресурс из списка."""
     result = []
     for s in resurses:
@@ -135,7 +135,7 @@ def price_counter(resurses, price_dit=FIELD_PRICES):
         if match:
             part1 = match.group(1).strip()
             part2 = int(match.group(2))
-            result.append(part2 * price_dit[f'{part1}'])
+            result.append(part2 * price_diсt[f'{part1}'])
     most_cheep_res = result.index(max(result))
     return most_cheep_res
 
@@ -155,7 +155,7 @@ def time_extractor(text):
 
 class HaddanBot():
 
-    """Бот класс управления действий персонажа.
+    """Бот класс управления действиями персонажа.
 
     Принимает два обязательных аргумента при инициализации:
         char - никнейм персонажа,

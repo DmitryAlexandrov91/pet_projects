@@ -132,7 +132,7 @@ def main():
         bot.polling()
     except Exception as e:
         print(f'Возникла ошибка {str(e)}')
-        sleep(20)
+        sleep(30)
 
 
 if __name__ == '__main__':
