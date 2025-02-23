@@ -43,8 +43,6 @@ def glade_farm(driver, price_dict=FIELD_PRICES, bot=None):
                 By.CLASS_NAME,
                 'talksayTak')
             if battle_start:
-                answers = [answer.text for answer in battle_start]
-                print(answers)
                 if len(battle_start) == 1:
                     wait_tag = driver.find_elements(
                         By.CLASS_NAME,

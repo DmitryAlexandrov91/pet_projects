@@ -57,8 +57,8 @@ def tk_glade_farm():
     password = password_field.get().strip()
 
     if char is not None and password is not None:
-        SwordS = HaddanBot(char=char, driver=driver)
-        SwordS.login_to_game(password)
+        User = HaddanBot(char=char, driver=driver)
+        User.login_to_game(password)
 
         glade_farm(driver, price_dict=GLADE_PRICES)
 

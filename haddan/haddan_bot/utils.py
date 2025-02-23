@@ -110,12 +110,12 @@ def try_to_switch_to_dialog(driver):
                 break
 
 
-def find_kaptcha(driver):
-    driver.switch_to.frame("func")
-    image_element = driver.find_element(
-        By.CSS_SELECTOR,
-        'img[src="/inner/img/gc.php"]')
-    return image_element
+# def find_kaptcha(driver):
+#     driver.switch_to.frame("func")
+#     image_element = driver.find_element(
+#         By.CSS_SELECTOR,
+#         'img[src="/inner/img/gc.php"]')
+#     return image_element
 
 
 def get_kaptcha_answer(message, driver):
@@ -124,6 +124,36 @@ def get_kaptcha_answer(message, driver):
         By.CSS_SELECTOR,
         f'button[value="{message}"]')
     button.click()
+
+
+def fight(driver):
+    """Проводит бой."""
+    while driver.find_elements(
+                    By.PARTIAL_LINK_TEXT, 'Ударить'):
+        hits = driver.find_elements(
+            By.CSS_SELECTOR,
+            'img[onclick="touchFight();"]')
+        if hits:
+            hits[0].click()
+        sleep(0.5)
+
+
+def check_rune_kaptcha(driver, bot=None):
+    """Проверяет наличие сложной капчи на странице."""
+    kaptcha = driver.find_elements(
+                By.CSS_SELECTOR,
+                'img[src="/inner/img/bc.php"]'
+            )
+    if kaptcha:
+        print('Обнаружена капча!')
+        kaptcha[0].screenshot('kaptcha.png')
+        sleep(30)
+        if bot is not None:
+            send_photo(bot, 'kaptcha.png')
+            sleep(1)
+            send_photo(bot, 'runes.png')
+            sleep(30)
+    driver.refresh()
 
 
 def price_counter(resurses, price_diсt=FIELD_PRICES):
