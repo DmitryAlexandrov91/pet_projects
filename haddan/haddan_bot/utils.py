@@ -52,44 +52,6 @@ def second_char_login(driver):
     submit_button.click()
 
 
-def get_temple_kaptcha(driver):
-    """Возвращает картинку  капчей из храма."""
-    # Переключаемся в комнату копки.
-    driver.switch_to.frame("frmcenterandchat")
-    driver.switch_to.frame("frmcentral")
-    # Нажимаем кнопку медитация.
-    meditation_link = driver.find_element(By.LINK_TEXT, "медитация")
-    meditation_link.click()
-    sleep(1)
-    # Переключаемся на фрейм с медитацией
-    driver.switch_to.frame("func")
-    # Находим капчу и отправляем в телеграм
-    image_element = driver.find_element(
-        By.CSS_SELECTOR,
-        'img[src="/inner/img/gc.php"]')
-    if image_element:
-        return image_element
-
-
-def get_mine_kaptcha(driver):
-    """Возвращает картинку  капчей из храма."""
-    # Переключаемся в комнату медатации.
-    driver.switch_to.frame("frmcenterandchat")
-    driver.switch_to.frame("frmcentral")
-    # Нажимаем кнопку Копать.
-    mine_link = driver.find_element(By.LINK_TEXT, "Копать")
-    mine_link.click()
-    sleep(1)
-    # Переключаемся на фрейм с копкой
-    driver.switch_to.frame("func")
-    # Находим капчу и отправляем в телеграм
-    image_element = driver.find_element(
-        By.CSS_SELECTOR,
-        'img[src="/inner/img/gc.php"]')
-    if image_element:
-        return image_element
-
-
 def try_to_switch_to_central_frame(driver):
     """Переключается на центральный фрейм окна."""
     frames = driver.find_elements(By.TAG_NAME, 'iframe')
@@ -102,6 +64,7 @@ def try_to_switch_to_central_frame(driver):
 
 
 def try_to_switch_to_dialog(driver):
+    """Переключается на фрейм диалога."""
     frames = driver.find_elements(By.TAG_NAME, 'iframe')
     if frames:
         for frame in frames:
@@ -138,8 +101,8 @@ def fight(driver):
         sleep(0.5)
 
 
-def check_rune_kaptcha(driver, bot=None):
-    """Проверяет наличие сложной капчи на странице."""
+def check_kaptcha(driver, bot=None):
+    """Проверяет наличие капчи на странице."""
     kaptcha = driver.find_elements(
                 By.CSS_SELECTOR,
                 'img[src="/inner/img/bc.php"]'
@@ -156,8 +119,18 @@ def check_rune_kaptcha(driver, bot=None):
     driver.refresh()
 
 
+def try_to_click_to_glade_fairy(driver):
+    """Ищет фею поляны и щёлкает на неё."""
+    glade_fairy = driver.find_elements(
+                    By.CSS_SELECTOR,
+                    'img[id="roomnpc231778"]')
+    if len(glade_fairy) > 0:
+        glade_fairy[0].click()
+        sleep(1)
+
+
 def price_counter(resurses, price_diсt=FIELD_PRICES):
-    """Находит самый дорогой ресурс из списка."""
+    """Находит самый дорогой ресурс из списка и возвращает его индекс."""
     result = []
     for s in resurses:
         pattern = r'(\D+)\s+-\s+(\d+)'
@@ -166,21 +139,43 @@ def price_counter(resurses, price_diсt=FIELD_PRICES):
             part1 = match.group(1).strip()
             part2 = int(match.group(2))
             result.append(part2 * price_diсt[f'{part1}'])
-    most_cheep_res = result.index(max(result))
-    return most_cheep_res
+    return result.index(max(result))
 
 
 def time_extractor(text):
     """Извлекает время из строки с текстом."""
     pattern = r'-?\d+:\d+'
     matches = re.findall(pattern, text)
-    if matches:
-        time_str = matches[0]
-        minutes, secundes = map(int, time_str.split(':'))
-        if minutes >= 0 and secundes >= 0:
-            return minutes * 60 + secundes
+    if not matches:
         return 0
+    time_str = matches[0]
+    minutes, secundes = map(int, time_str.split(':'))
+    if minutes >= 0 and secundes >= 0:
+        return minutes * 60 + secundes
     return 0
+
+
+# Блок управления быстрыми слотами
+def select_slot(driver):
+    """Щёлкает по слоту(по умолчанию выбран слот с эликсирами)"""
+    slots = driver.find_element(
+                By.CSS_SELECTOR,
+                'a[href="javascript:slotsShow(0)"]'
+            )
+    print(slots)
+    slots.click()
+
+
+def select_spell(driver, spell='0'):
+    """Выбирает заклинание(по умолчанию самое первое)"""
+    spell = driver.find_elements(
+                By.CSS_SELECTOR,
+                f'a[id="slot{spell}"]'
+            )
+    print(spell)
+    if spell:
+        spell[0].click()
+
 
 
 class HaddanBot():

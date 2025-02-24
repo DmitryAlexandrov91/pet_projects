@@ -1,5 +1,7 @@
 """Приложение haddan."""
+import os
 import ctypes
+import threading
 import tkinter as tk
 
 from selenium import webdriver
@@ -8,6 +10,28 @@ from webdriver_manager.chrome import ChromeDriverManager
 
 from haddan_bot import glade_farm
 from utils import HaddanBot
+
+
+class DriverManager:
+    def __init__(self):
+        self.driver = None
+        self.thread = None
+
+    def start_driver(self):
+        if self.driver is None or self.driver.session_id is None:
+            service = Service(executable_path=ChromeDriverManager().install())
+            self.driver = webdriver.Chrome(service=service)
+            self.thread = threading.current_thread()
+    
+    def close_driver(self):
+        if self.driver is not None:
+            self.driver.quit()
+            self.driver = None
+            self.thread = None
+
+    def get_active_driver(self):
+        return self.driver
+
 
 
 GLADE_PRICES = {
@@ -49,6 +73,7 @@ app.bind("<Control-KeyPress>", keys)
 app.configure(bg='#FFF4DC')
 
 
+
 def tk_glade_farm():
     service = Service(executable_path=ChromeDriverManager().install())
     driver = webdriver.Chrome(service=service)
@@ -61,6 +86,15 @@ def tk_glade_farm():
         User.login_to_game(password)
 
         glade_farm(driver, price_dict=GLADE_PRICES)
+
+
+def start_thread():
+    thread = threading.Thread(target=tk_glade_farm)
+    thread.start()
+
+
+# def stop_farm():
+#     driver.quit()
 
 
 # Панель запуска фарма поляны
@@ -274,15 +308,46 @@ gertanium_button = tk.Button(
 gertanium_button.grid(row=11, column=2)
 
 
+# Кнопки управления фармом поляны.
+
 glade_farm_start_buttton = tk.Button(
     app,
     text='старт',
     width=9,
     bg='#FFF4DC',
-    command=tk_glade_farm
+    command=start_thread
     )
 glade_farm_start_buttton.grid(
     row=0, column=2
+)
+
+glade_farm_stop_buttton = tk.Button(
+    app,
+    text='стоп',
+    width=9,
+    bg='#FFF4DC',
+    command=stop_farm
+    )
+glade_farm_stop_buttton.grid(
+    row=2, column=2
+)
+
+# Информационный блок
+
+
+def glade_farm_txt_open():
+    os.startfile('glade_farm.txt')
+
+
+statistic_button = tk.Button(
+    app,
+    text='лог подбора трав',
+    width=15,
+    bg='#FFF4DC',
+    command=glade_farm_txt_open
+)
+statistic_button.grid(
+    row=12, column=1
 )
 
 
