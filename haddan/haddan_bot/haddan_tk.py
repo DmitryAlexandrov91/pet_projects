@@ -10,19 +10,23 @@ from webdriver_manager.chrome import ChromeDriverManager
 
 from haddan_bot import glade_farm
 from utils import HaddanBot
+from price_updater import get_glade_price_list
 
 
 class DriverManager:
-    def __init__(self):
+    def __init__(self, options=None):
         self.driver = None
         self.thread = None
+        self.options = webdriver.ChromeOptions()
 
     def start_driver(self):
         if self.driver is None or self.driver.session_id is None:
             service = Service(executable_path=ChromeDriverManager().install())
-            self.driver = webdriver.Chrome(service=service)
+            self.driver = webdriver.Chrome(
+                service=service,
+                options=self.options)
             self.thread = threading.current_thread()
-    
+
     def close_driver(self):
         if self.driver is not None:
             self.driver.quit()
@@ -33,13 +37,15 @@ class DriverManager:
         return self.driver
 
 
+manager = DriverManager()
+
 
 GLADE_PRICES = {
     'Мухожор': 9,
-    'Подсолнух': 17,
-    'Капустница': 30,
+    'Подсолнух': 15,
+    'Капустница': 27,
     'Мандрагора': 50,
-    'Зеленая массивка': 67,
+    'Зеленая массивка': 68,
     'Колючник Черный': 101,
     'Гертаниум': 210
 }
@@ -73,28 +79,26 @@ app.bind("<Control-KeyPress>", keys)
 app.configure(bg='#FFF4DC')
 
 
-
 def tk_glade_farm():
-    service = Service(executable_path=ChromeDriverManager().install())
-    driver = webdriver.Chrome(service=service)
+    manager.start_driver()
 
     char = username_field.get().strip()
     password = password_field.get().strip()
 
     if char is not None and password is not None:
-        User = HaddanBot(char=char, driver=driver)
+        User = HaddanBot(char=char, driver=manager.driver)
         User.login_to_game(password)
 
-        glade_farm(driver, price_dict=GLADE_PRICES)
+        glade_farm(manager.driver, price_dict=GLADE_PRICES)
 
 
 def start_thread():
-    thread = threading.Thread(target=tk_glade_farm)
-    thread.start()
+    manager.thread = threading.Thread(target=tk_glade_farm)
+    manager.thread.start()
 
 
-# def stop_farm():
-#     driver.quit()
+def stop_farm():
+    manager.close_driver()
 
 
 # Панель запуска фарма поляны
@@ -332,6 +336,7 @@ glade_farm_stop_buttton.grid(
     row=2, column=2
 )
 
+
 # Информационный блок
 
 
@@ -348,6 +353,35 @@ statistic_button = tk.Button(
 )
 statistic_button.grid(
     row=12, column=1
+)
+
+
+def update_price_from_search():
+    global price_label
+    global GLADE_PRICES
+    manager = DriverManager()
+    GLADE_PRICES = get_glade_price_list(manager)
+    price_dict_content = '\n'.join(
+        f'{key}: {value}' for key, value in GLADE_PRICES.items()
+    )
+    price_label.config(text=price_dict_content)
+    manager.close_driver()
+
+
+def start_price_update(manager):
+    manager.thread = threading.Thread(target=update_price_from_search)
+    manager.thread.start()
+
+
+sync_button = tk.Button(
+    app,
+    text='синхра цен с поисковиком',
+    width=20,
+    bg='#FFF4DC',
+    command=lambda: start_price_update(manager)
+)
+sync_button.grid(
+    row=3, column=0
 )
 
 

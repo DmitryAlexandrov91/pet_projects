@@ -6,8 +6,11 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
+from webdriver_manager.firefox import GeckoDriverManager
+from webdriver_manager.opera import OperaDriverManager
+from webdriver_manager.microsoft import EdgeChromiumDriverManager
 
-from constants import FIRST_CHAR, SECOND_CHAR, PASSWORD, FIELD_PRICES
+from constants import FIRST_CHAR, SECOND_CHAR, PASSWORD, FIELD_PRICES, TIME_FORMAT
 from utils import (HaddanBot, price_counter, send_photo, time_extractor,
                    try_to_switch_to_central_frame, try_to_switch_to_dialog,
                    fight, check_kaptcha, try_to_click_to_glade_fairy,
@@ -58,14 +61,19 @@ def glade_farm(driver, price_dict=FIELD_PRICES, bot=None):
                         most_cheep_res = price_counter(
                             res_price,
                             price_diсt=price_dict)
-                        message_for_log = f'{res_price[most_cheep_res]} - {datetime.now()}'
+                        now = datetime.now().strftime(TIME_FORMAT)
+                        message_for_log = f'{res_price[most_cheep_res]} {now}'
                         print(message_for_log)
                         with open(
                             'glade_farm.txt',
-                            "a",
+                            "r+",
                             encoding="utf-8"
                         ) as file:
+                            content = file.read()
+                            file.seek(0)
                             file.write(f'{message_for_log}\n')
+                            file.write(content)
+
                         glade_fairy_answers[most_cheep_res].click()
             fight(driver)
             come_back = driver.find_elements(
@@ -81,7 +89,6 @@ def glade_farm(driver, price_dict=FIELD_PRICES, bot=None):
                 driver.refresh()
                 continue
             break
-
 
 
 def lab_spirits_play(driver):

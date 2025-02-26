@@ -32,6 +32,7 @@ TELEGRAM_CHAT_ID = os.getenv('TELEGRAM_CHAT_ID')
 
 # Остальное.
 PAUSE_DURATION_SECONDS = 50
+TIME_FORMAT = '%d.%m.%Y %H:%M:%S'
 
 # Цена ресурсов поляны
 FIELD_PRICES = {

@@ -124,6 +124,11 @@ def try_to_click_to_glade_fairy(driver):
     glade_fairy = driver.find_elements(
                     By.CSS_SELECTOR,
                     'img[id="roomnpc231778"]')
+    if not glade_fairy:
+        glade_fairy = driver.find_elements(
+                    By.CSS_SELECTOR,
+                    'img[id="roomnpc17481"]')
+
     if len(glade_fairy) > 0:
         glade_fairy[0].click()
         sleep(1)
