@@ -52,14 +52,17 @@ app.configure(bg='#FFF4DC')
 
 
 def tk_glade_farm():
-    manager.start_driver()
 
     char = username_field.get().strip()
     password = password_field.get().strip()
 
-    if char is not None and password is not None:
-        User = HaddanBot(char=char, driver=manager.driver)
-        User.login_to_game(password)
+    if char and password:
+        manager.start_driver()
+        User = HaddanBot(
+            char=char,
+            password=password,
+            driver=manager.driver)
+        User.login_to_game()
 
         glade_farm(manager.driver, price_dict=GLADE_PRICES)
 

@@ -2,16 +2,13 @@
 from datetime import datetime
 from time import sleep
 
-from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
-from webdriver_manager.chrome import ChromeDriverManager
 
+from bot_classes import DriverManager, HaddanBot
 from constants import FIRST_CHAR, PASSWORD, FIELD_PRICES, TIME_FORMAT
 from utils import (price_counter, send_photo, time_extractor,
                    try_to_switch_to_central_frame, try_to_switch_to_dialog,
                    fight, check_kaptcha, try_to_click_to_glade_fairy)
-from bot_classes import DriverManager, HaddanBot
 
 
 def kaptcha_find(driver, bot=None):
@@ -89,16 +86,15 @@ def glade_farm(driver, price_dict=FIELD_PRICES, bot=None):
             break
 
 
-def lab_spirits_play(driver):
-    """Скрипт бега по лабиринту и фарма мобов."""
-
-
 if __name__ == '__main__':
     manager = DriverManager()
     manager.start_driver()
 
-    SwordS = HaddanBot(char=FIRST_CHAR, driver=manager.driver)
-    SwordS.login_to_game(PASSWORD)
+    SwordS = HaddanBot(
+        char=FIRST_CHAR,
+        password=PASSWORD,
+        driver=manager.driver)
+    SwordS.login_to_game()
 
     # Nordman = HaddanBot(char=SECOND_CHAR, driver=driver)
     # Nordman.login_to_game(PASSWORD)
