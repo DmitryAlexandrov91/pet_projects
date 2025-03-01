@@ -4,37 +4,9 @@ import ctypes
 import threading
 import tkinter as tk
 
-from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
-from webdriver_manager.chrome import ChromeDriverManager
-
 from haddan_bot import glade_farm
-from utils import HaddanBot
 from price_updater import get_glade_price_list
-
-
-class DriverManager:
-    def __init__(self, options=None):
-        self.driver = None
-        self.thread = None
-        self.options = webdriver.ChromeOptions()
-
-    def start_driver(self):
-        if self.driver is None or self.driver.session_id is None:
-            service = Service(executable_path=ChromeDriverManager().install())
-            self.driver = webdriver.Chrome(
-                service=service,
-                options=self.options)
-            self.thread = threading.current_thread()
-
-    def close_driver(self):
-        if self.driver is not None:
-            self.driver.quit()
-            self.driver = None
-            self.thread = None
-
-    def get_active_driver(self):
-        return self.driver
+from bot_classes import DriverManager, HaddanBot
 
 
 manager = DriverManager()

@@ -6,15 +6,12 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
-from webdriver_manager.firefox import GeckoDriverManager
-from webdriver_manager.opera import OperaDriverManager
-from webdriver_manager.microsoft import EdgeChromiumDriverManager
 
-from constants import FIRST_CHAR, SECOND_CHAR, PASSWORD, FIELD_PRICES, TIME_FORMAT
-from utils import (HaddanBot, price_counter, send_photo, time_extractor,
+from constants import FIRST_CHAR, PASSWORD, FIELD_PRICES, TIME_FORMAT
+from utils import (price_counter, send_photo, time_extractor,
                    try_to_switch_to_central_frame, try_to_switch_to_dialog,
-                   fight, check_kaptcha, try_to_click_to_glade_fairy,
-                   select_slot, select_spell)
+                   fight, check_kaptcha, try_to_click_to_glade_fairy)
+from bot_classes import DriverManager, HaddanBot
 
 
 def kaptcha_find(driver, bot=None):
@@ -49,15 +46,16 @@ def glade_farm(driver, price_dict=FIELD_PRICES, bot=None):
                         'talksayBIG')
                     if wait_tag:
                         sleep(time_extractor(wait_tag[0].text))
-                        glade_fairy_answers[0].click()
+                    glade_fairy_answers[0].click()
                     continue
-                if len(glade_fairy_answers) > 1 and len(glade_fairy_answers) < 5:
+                if len(glade_fairy_answers) == 3:
                     glade_fairy_answers[1].click()
                     sleep(1)
-                if len(glade_fairy_answers) > 4:
+                if len(glade_fairy_answers) > 3:
                     resurses = driver.find_elements(By.TAG_NAME, 'li')
                     if resurses:
                         res_price = [res.text for res in resurses]
+                        print(res_price)
                         most_cheep_res = price_counter(
                             res_price,
                             price_diсt=price_dict)
@@ -96,13 +94,13 @@ def lab_spirits_play(driver):
 
 
 if __name__ == '__main__':
-    service = Service(executable_path=ChromeDriverManager().install())
-    driver = webdriver.Chrome(service=service)
+    manager = DriverManager()
+    manager.start_driver()
 
-    SwordS = HaddanBot(char=FIRST_CHAR, driver=driver)
+    SwordS = HaddanBot(char=FIRST_CHAR, driver=manager.driver)
     SwordS.login_to_game(PASSWORD)
 
     # Nordman = HaddanBot(char=SECOND_CHAR, driver=driver)
     # Nordman.login_to_game(PASSWORD)
 
-    glade_farm(driver)
+    glade_farm(manager.driver)

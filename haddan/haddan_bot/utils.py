@@ -1,11 +1,12 @@
 """Утилитки приложения haddan_miner"""
-from time import sleep
 import re
+from time import sleep
 
 from selenium.webdriver.common.by import By
 
-from constants import (FIELD_PRICES, FIRST_CHAR, HADDAN_MAIN_URL, PAGE_SOURCE_PATH, PASSWORD,
-                       SECOND_CHAR, TELEGRAM_CHAT_ID)
+from constants import (FIELD_PRICES, FIRST_CHAR, HADDAN_MAIN_URL,
+                       PAGE_SOURCE_PATH, PASSWORD, SECOND_CHAR,
+                       TELEGRAM_CHAT_ID)
 
 
 def send_photo(bot, photo):
@@ -182,83 +183,3 @@ def select_spell(driver, spell='0'):
         spell[0].click()
 
 
-
-class HaddanBot():
-
-    """Бот класс управления действиями персонажа.
-
-    Принимает два обязательных аргумента при инициализации:
-        char - никнейм персонажа,
-        driver - экземпляр класса  webdriver.Chrome.
-
-    """
-
-    def __init__(self, char, driver, bot=None):
-        self.driver = driver
-        self.char = char
-        if bot is not None:
-            self.bot = bot
-
-    def login_to_game(self, password):
-        """Заходит в игру под заданным именем char."""
-        self.driver.get(HADDAN_MAIN_URL)
-        self.driver.maximize_window()
-        sleep(1)
-        username_field = self.driver.find_element(
-            By.NAME, 'username')
-        username_field.send_keys(self.char)
-        sleep(1)
-        password_field = self.driver.find_element(
-            By.NAME, 'passwd')
-        password_field.send_keys(password)
-        sleep(1)
-        submit_button = self.driver.find_element(
-            By.CSS_SELECTOR,
-            '[href="javascript:enterHaddan()"]')
-        submit_button.click()
-        sleep(4)
-
-    def save_page_content(self):
-        """Сохраняет HTML код страницы в файл."""
-        page_source = self.driver.page_source
-        with open(PAGE_SOURCE_PATH, "w", encoding="utf-8") as file:
-            file.write(page_source)
-
-    def switch_to_central_frame(self):
-        """Переключается на центральный фрейм окна."""
-        self.driver.switch_to.frame("frmcenterandchat")
-        self.driver.switch_to.frame("frmcentral")
-
-    def click_to_glade_fairy(self):
-        """Начать диалог с феей поляны."""
-        glade_fairy = self.driver.find_element(
-            By.CSS_SELECTOR,
-            'img[id="roomnpc231778"]')
-        glade_fairy.click()
-
-    def start_farm_herbs(self):
-        """Кликает на вариант ответа "Да, мне нужны новые травы"."""
-        self.driver.switch_to.frame("thedialog")
-        battle_start = self.driver.find_element(
-            By.CLASS_NAME,
-            'talksayTak')
-        battle_start.click()
-        if self.driver.find_element(
-            By.CLASS_NAME,
-            'talksayTak'
-        ):
-            confirm = self.driver.find_element(
-                By.CLASS_NAME,
-                'talksayTak')
-            confirm.click()
-
-    def battle(self):
-        """Автобой (тыкает на изображение npc пока бой не закончится)."""
-        while self.driver.find_element(
-                By.PARTIAL_LINK_TEXT, 'Ударить'
-                ):
-            hit = self.driver.find_element(
-                By.CSS_SELECTOR,
-                'img[onclick="touchFight();"]')
-            hit.click()
-            sleep(1)

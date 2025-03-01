@@ -46,6 +46,12 @@ def res_price_finder(driver, res):
 
 
 def get_glade_price_list(manager):
+    """Возвращает словарь с ценами ресурсов поляны.
+
+    Парсит поисковик по базару на сайте
+    'http://ordenpegasa.ru/shop/'
+    На полный цикл функции уходит примерно 15 секунд.
+    """
     manager.options.add_argument('--headless')
     manager.start_driver()
     manager.driver.get(SHOP_URL)
@@ -64,4 +70,3 @@ def get_glade_price_list(manager):
     for key, value in zip(GLADE_PRICES.keys(), result):
         GLADE_PRICES[key] = float(value)
     return GLADE_PRICES
-
