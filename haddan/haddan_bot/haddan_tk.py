@@ -4,23 +4,15 @@ import ctypes
 import threading
 import tkinter as tk
 
-from haddan_bot import glade_farm
-from price_updater import get_glade_price_list
+from utils import get_glade_price_list
 from bot_classes import DriverManager, HaddanBot
 
+from constants import FIELD_PRICES
 
 manager = DriverManager()
 
 
-GLADE_PRICES = {
-    'Мухожор': 9,
-    'Подсолнух': 15,
-    'Капустница': 27,
-    'Мандрагора': 50,
-    'Зеленая массивка': 68,
-    'Колючник Черный': 101,
-    'Гертаниум': 210
-}
+GLADE_PRICES = FIELD_PRICES.copy()
 
 
 def is_ru_lang_keyboard():
@@ -64,7 +56,7 @@ def tk_glade_farm():
             driver=manager.driver)
         User.login_to_game()
 
-        glade_farm(manager.driver, price_dict=GLADE_PRICES)
+        manager.glade_farm(price_dict=GLADE_PRICES)
 
 
 def start_thread():

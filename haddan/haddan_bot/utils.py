@@ -3,136 +3,10 @@ import re
 from time import sleep
 
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
-from constants import (FIELD_PRICES, FIRST_CHAR, HADDAN_MAIN_URL,
-                       PAGE_SOURCE_PATH, PASSWORD, SECOND_CHAR,
-                       TELEGRAM_CHAT_ID)
-
-
-def send_photo(bot, photo):
-    """Отправляет фотку в телеграм."""
-    bot.send_photo(TELEGRAM_CHAT_ID, open(photo, 'rb'))
-
-
-def save_url_content(driver):
-    """Сохраняет контент страницы."""
-    page_source = driver.page_source
-    with open(PAGE_SOURCE_PATH, "w", encoding="utf-8") as file:
-        file.write(page_source)
-
-
-def first_char_login(driver):
-    """Вход в игру."""
-    username_field = driver.find_element(
-        By.NAME, 'username')
-    username_field.send_keys(FIRST_CHAR)
-    sleep(1)
-    password_field = driver.find_element(
-        By.NAME, 'passwd')
-    password_field.send_keys(PASSWORD)
-    sleep(1)
-    submit_button = driver.find_element(
-        By.CSS_SELECTOR,
-        '[href="javascript:enterHaddan()"]')
-    submit_button.click()
-
-
-def second_char_login(driver):
-    """Вход в игру."""
-    username_field = driver.find_element(
-        By.NAME, 'username')
-    username_field.send_keys(SECOND_CHAR)
-    sleep(1)
-    password_field = driver.find_element(
-        By.NAME, 'passwd')
-    password_field.send_keys(PASSWORD)
-    sleep(1)
-    submit_button = driver.find_element(
-        By.CSS_SELECTOR,
-        '[href="javascript:enterHaddan()"]')
-    submit_button.click()
-
-
-def try_to_switch_to_central_frame(driver):
-    """Переключается на центральный фрейм окна."""
-    frames = driver.find_elements(By.TAG_NAME, 'iframe')
-    if frames:
-        for frame in frames:
-            if frame.get_attribute('name') == 'frmcenterandchat':
-                driver.switch_to.frame("frmcenterandchat")
-                driver.switch_to.frame("frmcentral")
-                break
-
-
-def try_to_switch_to_dialog(driver):
-    """Переключается на фрейм диалога."""
-    frames = driver.find_elements(By.TAG_NAME, 'iframe')
-    if frames:
-        for frame in frames:
-            if frame.get_attribute('id') == 'thedialog':
-                driver.switch_to.frame("thedialog")
-                break
-
-
-# def find_kaptcha(driver):
-#     driver.switch_to.frame("func")
-#     image_element = driver.find_element(
-#         By.CSS_SELECTOR,
-#         'img[src="/inner/img/gc.php"]')
-#     return image_element
-
-
-def get_kaptcha_answer(message, driver):
-    """Отправляет ответ на капчу."""
-    button = driver.find_element(
-        By.CSS_SELECTOR,
-        f'button[value="{message}"]')
-    button.click()
-
-
-def fight(driver):
-    """Проводит бой."""
-    while driver.find_elements(
-                    By.PARTIAL_LINK_TEXT, 'Ударить'):
-        hits = driver.find_elements(
-            By.CSS_SELECTOR,
-            'img[onclick="touchFight();"]')
-        if hits:
-            hits[0].click()
-        sleep(0.5)
-
-
-def check_kaptcha(driver, bot=None):
-    """Проверяет наличие капчи на странице."""
-    kaptcha = driver.find_elements(
-                By.CSS_SELECTOR,
-                'img[src="/inner/img/bc.php"]'
-            )
-    if kaptcha:
-        print('Обнаружена капча!')
-        kaptcha[0].screenshot('kaptcha.png')
-        sleep(30)
-        if bot is not None:
-            send_photo(bot, 'kaptcha.png')
-            sleep(1)
-            send_photo(bot, 'runes.png')
-            sleep(30)
-    driver.refresh()
-
-
-def try_to_click_to_glade_fairy(driver):
-    """Ищет фею поляны и щёлкает на неё."""
-    glade_fairy = driver.find_elements(
-                    By.CSS_SELECTOR,
-                    'img[id="roomnpc231778"]')
-    if not glade_fairy:
-        glade_fairy = driver.find_elements(
-                    By.CSS_SELECTOR,
-                    'img[id="roomnpc17481"]')
-
-    if len(glade_fairy) > 0:
-        glade_fairy[0].click()
-        sleep(1)
+from constants import FIELD_PRICES, SHOP_URL, RES_LIST
 
 
 def price_counter(resurses, price_diсt=FIELD_PRICES):
@@ -161,25 +35,51 @@ def time_extractor(text):
     return 0
 
 
-# Блок управления быстрыми слотами
-def select_slot(driver):
-    """Щёлкает по слоту(по умолчанию выбран слот с эликсирами)"""
-    slots = driver.find_element(
-                By.CSS_SELECTOR,
-                'a[href="javascript:slotsShow(0)"]'
-            )
-    print(slots)
-    slots.click()
+def res_price_finder(driver, res):
+    res_label = driver.find_elements(
+        By.CSS_SELECTOR,
+        f'input[value="{res}"]'
+    )
+    if res_label:
+        WebDriverWait(driver, 10).until(
+            EC.element_to_be_clickable(res_label[0]))
+        res_label[0].click()
+    sleep(2)
+    all_shops = driver.find_element(
+        By.CSS_SELECTOR, 'table[id="response"]'
+    )
+    shops = all_shops.find_elements(
+        By.TAG_NAME, 'tr'
+    )
+    first_shop_price = shops[1].text.split()
+    if len(first_shop_price) == 4:
+        return first_shop_price[2]
+    return first_shop_price[3]
 
 
-def select_spell(driver, spell='0'):
-    """Выбирает заклинание(по умолчанию самое первое)"""
-    spell = driver.find_elements(
-                By.CSS_SELECTOR,
-                f'a[id="slot{spell}"]'
-            )
-    print(spell)
-    if spell:
-        spell[0].click()
+def get_glade_price_list(manager):
+    """Возвращает словарь с ценами ресурсов поляны.
 
-
+    Парсит поисковик по базару на сайте
+    'http://ordenpegasa.ru/shop/'
+    На полный цикл функции уходит примерно 15 секунд.
+    """
+    manager.options.add_argument('--headless')
+    manager.start_driver()
+    manager.driver.get(SHOP_URL)
+    glade_button = manager.driver.find_elements(
+        By.CSS_SELECTOR,
+        'label[for="tab_4"]'
+    )
+    if glade_button:
+        glade_button[0].click()
+    sleep(1)
+    result = []
+    for res in RES_LIST:
+        result.append(
+            res_price_finder(manager.driver, res)
+        )
+    result_dict = {}
+    for key, value in zip(FIELD_PRICES.keys(), result):
+        result_dict[key] = float(value)
+    return result_dict

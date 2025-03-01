@@ -22,6 +22,7 @@ HADDAN_MAIN_URL = 'https://haddan.ru/'
 HADDAN_RESERVE_URL = 'https://www.online-igra.ru/'
 MEDITATION_URL = 'https://haddan.ru/room/func/temple.php'
 KAPCHA_URL = 'https://haddan.ru/inner/img/gc.php'
+SHOP_URL = 'http://ordenpegasa.ru/shop/'
 
 # Переменные окружения.
 FIRST_CHAR = os.getenv('FIRST_CHAR')
@@ -44,3 +45,7 @@ FIELD_PRICES = {
     'Колючник Черный': 101,
     'Гертаниум': 210
     }
+
+# Список для парсинга сайта
+RES_LIST = ['Мухожор', 'Подсолнух', 'Капустница', 'Мандрагора',
+            'Зеленая массивка', 'Колючник черный', 'Гертаниум']
