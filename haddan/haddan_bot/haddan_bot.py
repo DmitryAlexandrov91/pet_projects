@@ -2,7 +2,6 @@
 from bot_classes import DriverManager, HaddanBot
 from constants import FIRST_CHAR, PASSWORD
 
-
 if __name__ == '__main__':
     manager = DriverManager()
     manager.start_driver()

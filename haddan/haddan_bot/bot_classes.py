@@ -1,4 +1,4 @@
-"""Классые управления работой бота.
+"""Классы управления работой бота.
 
 DriverManager - класс управления объектом webdriver
 HaddanBot  - класс управления действиями персонажа.
@@ -8,12 +8,13 @@ from datetime import datetime
 from time import sleep
 
 from selenium import webdriver
-from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
 
-from constants import HADDAN_MAIN_URL, TELEGRAM_CHAT_ID, FIELD_PRICES, TIME_FORMAT
-from utils import time_extractor, price_counter
+from constants import (FIELD_PRICES, HADDAN_MAIN_URL, TELEGRAM_CHAT_ID,
+                       TIME_FORMAT)
+from utils import price_counter, time_extractor
 
 
 class DriverManager:

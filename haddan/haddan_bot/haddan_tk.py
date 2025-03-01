@@ -1,13 +1,12 @@
 """Приложение haddan."""
-import os
 import ctypes
+import os
 import threading
 import tkinter as tk
 
-from utils import get_glade_price_list
 from bot_classes import DriverManager, HaddanBot
-
 from constants import FIELD_PRICES
+from utils import get_glade_price_list
 
 manager = DriverManager()
 
