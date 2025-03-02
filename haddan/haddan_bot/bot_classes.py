@@ -20,7 +20,7 @@ from utils import price_counter, time_extractor
 class DriverManager:
     """Класс управления объектом driver."""
 
-    def __init__(self, options=None):
+    def __init__(self):
         self.driver = None
         self.thread = None
         self.options = webdriver.ChromeOptions()
@@ -123,6 +123,7 @@ class DriverManager:
     def glade_farm(self, price_dict=FIELD_PRICES):
         """Фарм поляны(пока без распознования капчи)"""
         while True:
+            sleep(1)
             try:
                 self.try_to_switch_to_central_frame()
                 self.try_to_click_to_glade_fairy()
@@ -151,7 +152,8 @@ class DriverManager:
                                 res_price,
                                 price_diсt=price_dict)
                             now = datetime.now().strftime(TIME_FORMAT)
-                            message_for_log = f'{res_price[most_cheep_res]} {now}'
+                            message_for_log = (
+                                f'{res_price[most_cheep_res]} {now}')
                             print(message_for_log)
                             with open(
                                 'glade_farm.txt',
@@ -180,13 +182,13 @@ class DriverManager:
                 break
 
 
-class HaddanBot():
+class HaddanBot:
 
     """Бот класс управления действиями персонажа.
 
     Принимает два обязательных аргумента при инициализации:
         char - никнейм персонажа,
-        driver - обхект класса webdriver.Chrome.
+        driver - объект класса webdriver.Chrome.
 
     """
 
