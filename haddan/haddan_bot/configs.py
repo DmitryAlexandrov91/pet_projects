@@ -7,7 +7,8 @@ from constants import (DATETIME_FORMAT, LOG_FILE_PATH, LOG_FORMAT,
 
 
 def configure_logging():
-    os.makedirs(LOGS_DIR_PATH, exist_ok=True)
+    logs_dir = os.path.join(os.getcwd(), 'logs')
+    os.makedirs(logs_dir, exist_ok=True)
     rotating_handler = RotatingFileHandler(
         LOG_FILE_PATH,
         maxBytes=MAX_LOG_SIZE,

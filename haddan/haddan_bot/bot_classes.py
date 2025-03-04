@@ -31,6 +31,7 @@ class DriverManager:
         self.thread = None
         self.options = webdriver.ChromeOptions()
         self.bot = None
+        self.choises = {}
 
     def start_driver(self):
         """Создаёт объект класса webdriver учитывая self.options."""
@@ -104,6 +105,9 @@ class DriverManager:
         """Открывает меню быстрых слотов."""
         slots = WebDriverWait(self.driver, 10).until(
             EC.visibility_of_element_located((By.ID, 'lSlotsBtn')))
+        self.wait_while_element_will_be_clickable(
+            slots
+        )
         slots.click()
 
     def quick_slot_choise(self, slots_number):
@@ -118,6 +122,9 @@ class DriverManager:
                 (By.ID, f'slotsBtn{slots_number}')
                 )
             )
+        self.wait_while_element_will_be_clickable(
+            slots
+        )
         slots.click()
 
     def spell_choise(self, spell_number):
@@ -127,6 +134,9 @@ class DriverManager:
                 (By.ID, f'lSlot{spell_number}')
                 )
             )
+        self.wait_while_element_will_be_clickable(
+            spell
+        )
         spell.click()
 
     def try_to_click_to_glade_fairy(self):
@@ -148,13 +158,23 @@ class DriverManager:
 
     def one_spell_fight(self, slots=2, spell=1):
         """Проводит бой одним заклом."""
-        while self.driver.find_elements(
-                        By.PARTIAL_LINK_TEXT, 'Ударить'):
+        choise = self.choises.get('choised', False)
+        if not choise:
             self.driver.switch_to.default_content()
             self.quick_slots_open()
             self.quick_slot_choise(slots)
             self.spell_choise(spell)
+            self.choises['choised'] = True
             self.try_to_switch_to_central_frame()
+        come_back = self.driver.find_elements(
+                    By.PARTIAL_LINK_TEXT, 'Вернуться')
+        if come_back:
+            self.wait_while_element_will_be_clickable(
+                come_back[0]
+            )
+            come_back[0].click()
+        else:
+            ActionChains(self.driver).send_keys(Keys.TAB).perform()
             hits = self.driver.find_elements(
                 By.CSS_SELECTOR,
                 'img[onclick="touchFight();"]')
@@ -162,10 +182,9 @@ class DriverManager:
                 self.wait_while_element_will_be_clickable(
                     hits[0]
                 )
-                ActionChains(self.driver).send_keys(Keys.TAB).perform()
                 hits[0].click()
                 sleep(0.5)
-                self.driver.switch_to.default_content()
+                self.one_spell_fight(slots=2, spell=1)
 
     def send_photo(self, bot, photo):
         """Отправляет фотку в телеграм."""
@@ -188,7 +207,11 @@ class DriverManager:
                 sleep(30)
         self.driver.refresh()
 
-    def glade_farm(self, price_dict=FIELD_PRICES):
+    def glade_farm(
+            self,
+            price_dict: dict = FIELD_PRICES,
+            slots=2,
+            spell=1):
         """Фарм поляны(пока без распознования капчи)"""
         while True:
             sleep(1)
@@ -209,10 +232,11 @@ class DriverManager:
                                 wait_tag[0]
                             )
                             sleep(time_extractor(wait_tag[0].text))
-                        self.wait_while_element_will_be_clickable(
-                            glade_fairy_answers[0]
-                        )
-                        glade_fairy_answers[0].click()
+                            self.try_to_click_to_glade_fairy()
+                            self.wait_while_element_will_be_clickable(
+                                glade_fairy_answers[0]
+                            )
+                            glade_fairy_answers[0].click()
                     if len(glade_fairy_answers) == 3:
                         self.wait_while_element_will_be_clickable(
                             glade_fairy_answers[1]
@@ -246,14 +270,13 @@ class DriverManager:
                                 file.write(f'{message_for_log}\n')
                                 file.write(content)
                             print(message_for_log)
-                self.one_spell_fight()
-                come_back = self.driver.find_elements(
-                        By.PARTIAL_LINK_TEXT, 'Вернуться')
-                if come_back:
-                    self.wait_while_element_will_be_clickable(
-                        come_back[0]
-                    )
-                    come_back[0].click()
+                hits = self.driver.find_elements(
+                    By.CSS_SELECTOR,
+                    'img[onclick="touchFight();"]')
+                if hits:
+                    sleep(2)
+                    self.one_spell_fight(slots=slots, spell=spell)
+                self.choises = {}
                 self.check_kaptcha()
             except Exception as e:
                 configure_logging()

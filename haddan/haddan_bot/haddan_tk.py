@@ -62,7 +62,8 @@ def tk_glade_farm():
             driver=manager.driver)
         User.login_to_game()
 
-        manager.glade_farm(price_dict=GLADE_PRICES)
+        manager.glade_farm(
+            price_dict=GLADE_PRICES)
 
 
 def start_thread():
