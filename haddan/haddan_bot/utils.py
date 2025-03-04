@@ -1,4 +1,5 @@
 """Утилитки приложения haddan_miner"""
+import os
 import re
 from time import sleep
 

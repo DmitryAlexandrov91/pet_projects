@@ -4,10 +4,10 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+
 # Константы для директорий/путей.
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+BASE_DIR = os.getcwd()
 DOWNLOADS_DIR_NAME = os.path.join(BASE_DIR, 'temp')
-LOGS_DIR_NAME = os.path.join(BASE_DIR, 'logs')
 KAPCHA_NAME = 'kapcha.png'
 SCREENSHOT_NAME = 'screenshot.png'
 PAGE_SOURCE_NAME = 'page_source.html'
@@ -15,7 +15,15 @@ GLADE_FARM_LOG = 'glade_farm.txt'
 KAPCHA_PATH = os.path.join(DOWNLOADS_DIR_NAME, KAPCHA_NAME)
 PAGE_SOURCE_PATH = os.path.join(DOWNLOADS_DIR_NAME, PAGE_SOURCE_NAME)
 SCREENSHOT_PATH = os.path.join(DOWNLOADS_DIR_NAME, SCREENSHOT_NAME)
-GLADE_FARM_LOG_PATH = os.path.join(LOGS_DIR_NAME, GLADE_FARM_LOG)
+
+# Константы логгера
+LOGS_DIR_PATH = os.path.join(BASE_DIR, 'logs')
+LOG_FILE_NAME = 'haddan.log'
+LOG_FILE_PATH = os.path.join(LOGS_DIR_PATH, LOG_FILE_NAME)
+MAX_LOG_SIZE = 10 ** 6
+MAX_LOGS_COUNT = 5
+DATETIME_FORMAT = '%Y-%m-%d_%H-%M-%S'
+LOG_FORMAT = '"%(asctime)s - [%(levelname)s] - %(message)s"'
 
 # константы адресов.
 HADDAN_MAIN_URL = 'https://haddan.ru/'

@@ -3,6 +3,7 @@
 DriverManager - класс управления объектом webdriver
 HaddanBot  - класс управления действиями персонажа.
 """
+import logging
 import threading
 from datetime import datetime
 from time import sleep
@@ -11,7 +12,12 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.common.action_chains import ActionChains
 
+from configs import configure_logging
 from constants import (FIELD_PRICES, HADDAN_MAIN_URL, TELEGRAM_CHAT_ID,
                        TIME_FORMAT)
 from utils import price_counter, time_extractor
@@ -55,6 +61,18 @@ class DriverManager:
         with open('page.html', "w", encoding="utf-8") as file:
             file.write(page_source)
 
+    def wait_while_element_will_be_clickable(self, element):
+        """Ждёт пока элемент станет кликабельным."""
+        WebDriverWait(self.driver, 3).until(
+            EC.element_to_be_clickable(element))
+
+    def scroll_to_element(self, element):
+        """Прокручивает до нужного жлемента."""
+        self.driver.execute_script(
+            "arguments[0].scrollIntoView();",
+            element
+        )
+
     def try_to_switch_to_central_frame(self):
         """Переключается на центральный фрейм окна."""
         frames = self.driver.find_elements(By.TAG_NAME, 'iframe')
@@ -74,6 +92,43 @@ class DriverManager:
                     self.driver.switch_to.frame("thedialog")
                     break
 
+    def find_all_iframes(self):
+        """Выводит в терминал список всех iframe егов на странице."""
+        frames = self.driver.find_elements(By.TAG_NAME, 'iframe')
+        if frames:
+            print([frame.get_attribute('name') for frame in frames])
+        else:
+            print('iframe на странице не найдены')
+
+    def quick_slots_open(self):
+        """Открывает меню быстрых слотов."""
+        slots = WebDriverWait(self.driver, 10).until(
+            EC.visibility_of_element_located((By.ID, 'lSlotsBtn')))
+        slots.click()
+
+    def quick_slot_choise(self, slots_number):
+        """Открывает нужную страницу быстрых слотов.
+
+        1 - страница с напитками
+        2 - страница с заклами №1
+        3 - страница с заклами №2 и тд
+        """
+        slots = WebDriverWait(self.driver, 10).until(
+            EC.visibility_of_element_located(
+                (By.ID, f'slotsBtn{slots_number}')
+                )
+            )
+        slots.click()
+
+    def spell_choise(self, spell_number):
+        """Щёлкает по нужному заклинанию на странице слотов 1-7"""
+        spell = WebDriverWait(self.driver, 10).until(
+            EC.visibility_of_element_located(
+                (By.ID, f'lSlot{spell_number}')
+                )
+            )
+        spell.click()
+
     def try_to_click_to_glade_fairy(self):
         """Ищет фею поляны и щёлкает на неё."""
         glade_fairy = self.driver.find_elements(
@@ -85,19 +140,32 @@ class DriverManager:
                         'img[id="roomnpc17481"]')
 
         if len(glade_fairy) > 0:
+            self.wait_while_element_will_be_clickable(
+                 glade_fairy[0]
+            )
             glade_fairy[0].click()
             sleep(1)
 
-    def fight(self):
-        """Проводит бой."""
+    def one_spell_fight(self, slots=2, spell=1):
+        """Проводит бой одним заклом."""
         while self.driver.find_elements(
                         By.PARTIAL_LINK_TEXT, 'Ударить'):
+            self.driver.switch_to.default_content()
+            self.quick_slots_open()
+            self.quick_slot_choise(slots)
+            self.spell_choise(spell)
+            self.try_to_switch_to_central_frame()
             hits = self.driver.find_elements(
                 By.CSS_SELECTOR,
                 'img[onclick="touchFight();"]')
             if hits:
+                self.wait_while_element_will_be_clickable(
+                    hits[0]
+                )
+                ActionChains(self.driver).send_keys(Keys.TAB).perform()
                 hits[0].click()
-            sleep(0.5)
+                sleep(0.5)
+                self.driver.switch_to.default_content()
 
     def send_photo(self, bot, photo):
         """Отправляет фотку в телеграм."""
@@ -137,12 +205,19 @@ class DriverManager:
                             By.CLASS_NAME,
                             'talksayBIG')
                         if wait_tag:
+                            self.wait_while_element_will_be_clickable(
+                                wait_tag[0]
+                            )
                             sleep(time_extractor(wait_tag[0].text))
+                        self.wait_while_element_will_be_clickable(
+                            glade_fairy_answers[0]
+                        )
                         glade_fairy_answers[0].click()
-                        continue
                     if len(glade_fairy_answers) == 3:
+                        self.wait_while_element_will_be_clickable(
+                            glade_fairy_answers[1]
+                        )
                         glade_fairy_answers[1].click()
-                        sleep(1)
                     if len(glade_fairy_answers) > 3:
                         resurses = self.driver.find_elements(By.TAG_NAME, 'li')
                         if resurses:
@@ -154,7 +229,13 @@ class DriverManager:
                             now = datetime.now().strftime(TIME_FORMAT)
                             message_for_log = (
                                 f'{res_price[most_cheep_res]} {now}')
-                            print(message_for_log)
+                            self.wait_while_element_will_be_clickable(
+                                glade_fairy_answers[most_cheep_res]
+                            )
+                            self.scroll_to_element(
+                                glade_fairy_answers[most_cheep_res]
+                            )
+                            glade_fairy_answers[most_cheep_res].click()
                             with open(
                                 'glade_farm.txt',
                                 "r+",
@@ -164,22 +245,24 @@ class DriverManager:
                                 file.seek(0)
                                 file.write(f'{message_for_log}\n')
                                 file.write(content)
-
-                            glade_fairy_answers[most_cheep_res].click()
-                self.fight()
+                            print(message_for_log)
+                self.one_spell_fight()
                 come_back = self.driver.find_elements(
                         By.PARTIAL_LINK_TEXT, 'Вернуться')
                 if come_back:
+                    self.wait_while_element_will_be_clickable(
+                        come_back[0]
+                    )
                     come_back[0].click()
-                    continue
                 self.check_kaptcha()
             except Exception as e:
-                print(e)
+                configure_logging()
+                logging.exception(
+                    f'\nВозникло исключение {str(e)}\n',
+                    stack_info=True
+                )
                 sleep(2)
-                if self.driver.session_id:
-                    self.driver.refresh()
-                    continue
-                break
+                self.driver.refresh()
 
 
 class HaddanBot:
@@ -203,18 +286,17 @@ class HaddanBot:
     def login_to_game(self):
         """Заходит в игру под заданным именем char."""
         self.driver.get(self.login_url)
-        self.driver.maximize_window()
-        sleep(1)
         username_field = self.driver.find_element(
             By.NAME, 'username')
         username_field.send_keys(self.char)
-        sleep(1)
         password_field = self.driver.find_element(
             By.NAME, 'passwd')
         password_field.send_keys(self.password)
-        sleep(1)
         submit_button = self.driver.find_element(
             By.CSS_SELECTOR,
             '[href="javascript:enterHaddan()"]')
+        WebDriverWait(self.driver, 10).until(
+            EC.element_to_be_clickable(
+                submit_button)
+            )
         submit_button.click()
-        sleep(4)
