@@ -30,3 +30,14 @@ coverage.xml
 wear/
 
 .env*
+
+dist*
+build*
+logs*
+temp*
+
+.exe*
+haddan_bot.exe*
+tel_bot.exe*
+haddan_tk.exe*
+haddan_tk_profile*

@@ -1,0 +1,1 @@
+pyinstaller --onefile --windowed haddan_tk.py

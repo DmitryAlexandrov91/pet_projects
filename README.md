@@ -5,6 +5,15 @@
 
 ## Команды
 
+### FastAPI
+
+**pip install fastapi==0.78.0** - *установка фреймвора(версия опционально, на ней учил яндекс)*
+**pip install "uvicorn[standard]==0.17.6"** - *установка веб сервера uvicorn*
+**pip install python-multipart==0.0.5** - *библиотека  python-multipart для работы с формами*
+
+**uvicorn form:app** - *запустить приложение app из файла form.py*
+**uvicorn form:app --reload --port 8001** - *запустить приложение в режиме "обновления" и на порте 8001*
+
 ### Git
 
 **git rm -r --cached example_folder**   *удаляет репозиторий из отслеживания в git после добавления папки в gitignore*

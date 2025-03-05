@@ -232,10 +232,10 @@ class DriverManager:
                                 wait_tag[0]
                             )
                             sleep(time_extractor(wait_tag[0].text))
-                            self.try_to_click_to_glade_fairy()
-                            self.wait_while_element_will_be_clickable(
-                                glade_fairy_answers[0]
-                            )
+                            # self.try_to_click_to_glade_fairy()
+                            # self.wait_while_element_will_be_clickable(
+                            #     glade_fairy_answers[0]
+                            # )
                             glade_fairy_answers[0].click()
                     if len(glade_fairy_answers) == 3:
                         self.wait_while_element_will_be_clickable(

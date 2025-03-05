@@ -25,3 +25,7 @@ htmlcov/
 .coverage.*
 coverage.xml
 *.cover
+
+*.build
+*.dist
+*.logs
