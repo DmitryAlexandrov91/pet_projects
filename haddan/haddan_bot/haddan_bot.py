@@ -19,4 +19,5 @@ if __name__ == '__main__':
         driver=manager.driver)
     user.login_to_game()
 
-    manager.glade_farm()
+    manager.quick_slots_open()
+    sleep(5)

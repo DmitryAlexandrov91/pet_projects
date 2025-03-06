@@ -44,7 +44,7 @@ def keys(event):
 
 
 app = tk.Tk()
-app.title("Собиратель трав")
+app.title("Собиратель трав v0.0.7")
 app.bind("<Control-KeyPress>", keys)
 app.configure(bg='#FFF4DC')
 

@@ -53,6 +53,10 @@ class DriverManager:
         """Функция для проверки наличия активного драйвера."""
         return self.driver
 
+    def print_element_content(self, element):
+        """Выводит в терминал html код элемента"""
+        print(element.get_attribute('outerHTML'))
+
     def save_url_content(self):
         """Сохраняет контент страницы.
 
@@ -103,6 +107,9 @@ class DriverManager:
 
     def quick_slots_open(self):
         """Открывает меню быстрых слотов."""
+        # slot_buttons = self.driver.find_elements(
+        #     By.ID, 'lSlot1')
+        # if not slot_buttons:
         slots = WebDriverWait(self.driver, 10).until(
             EC.visibility_of_element_located((By.ID, 'lSlotsBtn')))
         self.wait_while_element_will_be_clickable(
@@ -165,6 +172,7 @@ class DriverManager:
             self.quick_slot_choise(slots)
             self.spell_choise(spell)
             self.choises['choised'] = True
+            self.quick_slots_open()
             self.try_to_switch_to_central_frame()
         come_back = self.driver.find_elements(
                     By.PARTIAL_LINK_TEXT, 'Вернуться')
@@ -205,7 +213,9 @@ class DriverManager:
                 sleep(1)
                 self.send_photo(bot, 'runes.png')
                 sleep(30)
-        self.driver.refresh()
+        # self.driver.refresh()
+        self.driver.execute_script("window.location.reload();")
+        self.driver.switch_to.default_content()
 
     def glade_farm(
             self,
@@ -232,10 +242,6 @@ class DriverManager:
                                 wait_tag[0]
                             )
                             sleep(time_extractor(wait_tag[0].text))
-                            # self.try_to_click_to_glade_fairy()
-                            # self.wait_while_element_will_be_clickable(
-                            #     glade_fairy_answers[0]
-                            # )
                             glade_fairy_answers[0].click()
                     if len(glade_fairy_answers) == 3:
                         self.wait_while_element_will_be_clickable(
@@ -285,7 +291,9 @@ class DriverManager:
                     stack_info=True
                 )
                 sleep(2)
-                self.driver.refresh()
+                # self.driver.refresh()
+                self.driver.execute_script("window.location.reload();")
+                self.driver.switch_to.default_content()
 
 
 class HaddanBot:

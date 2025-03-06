@@ -3,7 +3,7 @@ import os
 from logging.handlers import RotatingFileHandler
 
 from constants import (DATETIME_FORMAT, LOG_FILE_PATH, LOG_FORMAT,
-                       LOGS_DIR_PATH, MAX_LOG_SIZE, MAX_LOGS_COUNT)
+                       MAX_LOG_SIZE, MAX_LOGS_COUNT)
 
 
 def configure_logging():
