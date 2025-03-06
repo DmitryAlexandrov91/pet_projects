@@ -214,7 +214,7 @@ class DriverManager:
                 self.send_photo(bot, 'runes.png')
                 sleep(30)
         # self.driver.refresh()
-        self.driver.execute_script("window.location.reload();")
+        # self.driver.execute_script("window.location.reload();")
         self.driver.switch_to.default_content()
 
     def glade_farm(
@@ -292,7 +292,7 @@ class DriverManager:
                 )
                 sleep(2)
                 # self.driver.refresh()
-                self.driver.execute_script("window.location.reload();")
+                # self.driver.execute_script("window.location.reload();")
                 self.driver.switch_to.default_content()
 
 
