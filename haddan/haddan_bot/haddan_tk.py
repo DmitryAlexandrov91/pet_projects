@@ -3,6 +3,7 @@ import ctypes
 import os
 import threading
 import tkinter as tk
+from PIL import Image, ImageTk
 
 from bot_classes import DriverManager, HaddanBot
 from constants import FIELD_PRICES
@@ -44,9 +45,13 @@ def keys(event):
 
 
 app = tk.Tk()
-app.title("Собиратель трав v0.0.7")
+app.title("Собиратель трав v1.0")
 app.bind("<Control-KeyPress>", keys)
 app.configure(bg='#FFF4DC')
+img = Image.open('icon.ico')
+photo = ImageTk.PhotoImage(img)
+
+app.iconphoto(True, photo)
 
 
 def tk_glade_farm():

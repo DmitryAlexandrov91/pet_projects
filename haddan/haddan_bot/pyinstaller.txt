@@ -1,1 +1,1 @@
-pyinstaller --onefile --windowed haddan_tk.py
+pyinstaller --onefile --windowed --icon icon.ico haddan_tk.py
