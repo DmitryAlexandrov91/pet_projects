@@ -17,24 +17,6 @@ class PreBase:
 Base = declarative_base(cls=PreBase)
 
 
-class Thing(Base):
-    """Модель вещей игроков."""
-    name = Column(String)
-    type = Column(String(200))
-    serial_number = Column(String, unique=True)
-    part_number = Column(String)
-    owner = Column(String, nullable=True)
-    href = Column(String, unique=True)
-
-
-class Item(Base):
-    """Модель предмета"""
-    part_number = Column(String, unique=True)
-    name = Column(String)
-    type = Column(String)
-    href = Column(String, unique=True)
-
-
 database_url = (f'postgresql+psycopg2://{settings.postgres_user}:'
                 f'{settings.postgres_password}@'
                 f'{settings.db_host}:{settings.db_port}/{settings.db_name}')
@@ -43,3 +25,8 @@ engine = create_async_engine(database_url)
 
 # SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 AsyncSessionLocal = sessionmaker(engine, class_=AsyncSession)
+
+
+async def get_async_session():
+    async with AsyncSessionLocal() as async_session:
+        yield async_session

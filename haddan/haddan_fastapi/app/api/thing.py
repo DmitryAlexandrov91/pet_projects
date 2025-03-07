@@ -2,23 +2,21 @@ from typing import Optional
 
 from fastapi import APIRouter, Query
 
-from app.schemas.schemas import Gamer, ThingTypes
+from app.schemas.schemas import ThingTypes
 
 
-router = APIRouter()
+thing_router = APIRouter(
+    prefix='/thing',
+    tags=['All Hadddan Items']
+)
 
 
-@router.get('/item')
-def get_items():
-    return 'Здесь будут все предметы из таблицы item'
-
-
-@router.get('/things')
+@thing_router.get('/')
 def get_things():
     return 'Здесь будут все предметы из таблицы thing '
 
 
-@router.get('/things/{user}')
+@thing_router.get('/{user}')
 def get_user_things(
     user: str,
     types: Optional[list[ThingTypes]] = Query(None)
@@ -30,8 +28,3 @@ def get_user_things(
     return {
         user.capitalize(): ''
     }
-
-
-@router.post('/reg')
-def registration(user: Gamer) -> str:
-    return f'Приветствеую {user.username} с id {user.user_id}'
