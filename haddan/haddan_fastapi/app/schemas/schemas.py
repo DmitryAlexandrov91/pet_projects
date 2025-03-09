@@ -47,3 +47,5 @@ class Gamer(BaseModel):
         """Докстринг чтобы был"""
         # Проверяем поля pydantic модели по ключам словаря values
         # Возвращаем values
+
+

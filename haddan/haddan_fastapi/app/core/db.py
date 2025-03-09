@@ -1,8 +1,8 @@
-from sqlalchemy import Column, Integer, String
+from sqlalchemy import Column, Integer
 from sqlalchemy.ext.asyncio import AsyncSession, create_async_engine
 from sqlalchemy.orm import declarative_base, declared_attr, sessionmaker
 
-from .config import settings
+from app.core.config import settings
 
 
 class PreBase:
@@ -17,9 +17,9 @@ class PreBase:
 Base = declarative_base(cls=PreBase)
 
 
-database_url = (f'postgresql+psycopg2://{settings.postgres_user}:'
+database_url = (f'postgresql+asyncpg://{settings.postgres_user}:'
                 f'{settings.postgres_password}@'
-                f'{settings.db_host}:{settings.db_port}/{settings.db_name}')
+                f'localhost:{settings.db_port}/{settings.db_name}')
 
 engine = create_async_engine(database_url)
 
